@@ -1,0 +1,48 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	margin: 10px;
+	font-family: sans-serif;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	//width: 100%;
+	//heigth: 100%;
+	//justify-content: center;
+	align-items: center;
+}
+
+.header {
+	//justify-content: center;
+	//align-items: center;
+	position: fixed;
+	top: 0;
+}
+
+.footer {
+	position: fixed;
+	bottom: 0;
+
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	top: 150px;
+	align-items: center;
+}
+
+.welcome {
+	position: relative;
+	padding: 10px;
+}
+
+.section1 {
+	position: relative;
+	padding: 30px;
+}
