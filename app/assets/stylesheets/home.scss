@@ -3,6 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 body {
 	font-family: sans-serif;
@@ -16,7 +18,9 @@ body {
 	color: white;
 }
 
-.container:before{
+
+
+body:before{
 	content: "";
   position: fixed;
   left: 0;
@@ -49,12 +53,12 @@ body {
 
 
 
-.header {
+/*.header {
 	//justify-content: center;
 	//align-items: center;
 	position: fixed;
 	top: 0;
-}
+}*/
 
 .footer {
     width: 100%;
