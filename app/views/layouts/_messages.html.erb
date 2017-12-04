@@ -1,7 +1,10 @@
-<% devise_flash %>
-    <% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>">
-            <a href="#" data-dismiss="alert" class="close">×</a>
-            <%= value %>
-        </div>
-        <% end %>
+<% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>">
+        <a href="#" data-dismiss="alert" class="close">×</a>
+        <ul>
+            <li>
+                <%= value %>
+            </li>
+        </ul>
+    </div>
+    <% end %>
