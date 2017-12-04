@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TheSeriousGame</title>
+
+<head>
+    <title>Codex Bezae</title>
     <%= csrf_meta_tags %>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+            <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
+<body>
+    <p class="notice">
+        <%= notice %>
+    </p>
+    <p class="alert">
+        <%= alert %>
+    </p>
     <%= yield %>
+<<<<<<< HEAD
     <%= render 'footer' %>
   </body>
 </html>
+=======
+</body>
+
+</html>
+>>>>>>> origin/master
