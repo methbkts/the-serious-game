@@ -16,5 +16,3 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
-
-alert('Bonjour Bonjour Bonjour!');
