@@ -27,31 +27,51 @@ body {
 
 .footer {
     width: 100%;
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     bottom: 0;
     background-color: #1D1F21;
     color: #FFFFFF;
-    font-size: 0.8em;
+    font-size: 0.7em;
 }
 
 .footerleft,
 .footerright {
     padding: 0 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .footerleft a,
 .footerright a,
-.footerleft a:hover,
-.footerright a:hover,
 .footerleft a:visited,
 .footerright a:visited,
 .footerleft a:active,
-.footerright a:active, {
+.footerright a:active {
     text-decoration: none;
+    font-weight: bold;
     color: #FFFFFF;
+}
+
+.footerleft a:hover,
+.footerright a:hover {
+    font-weight: bold;
+    color: #1975C5;
+}
+
+.footerright img {
+    width: 1.4em;
+    height: 1.4em;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    padding: 0 5px;
+}
+
+.footerrightfirst {
+    padding: 0 0 0 10px;
 }
 
 .content {
