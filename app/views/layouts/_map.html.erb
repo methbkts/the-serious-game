@@ -5,6 +5,7 @@
    integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
    crossorigin=""></script>
 <style>
+    /* Pour fonctionner, Leaflet nécessite impérativement une hauteur pour la div */
     #mapid {
         height: 300px;
         width: 600px;
@@ -14,11 +15,15 @@
 <div id="mapid"></div>
 
 <script>
+
+    //Ajout de la carte Leaflet dans la div #mapid avec coordonnées et niveau de zoom
     var map = L.map('mapid').setView([45.760041, 4.8351343], 13);
 
+    //Ajout du thème (Impossibilité de le modifier pour le moment)
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     }).addTo(map);
 
+    //Ajout d'un marqueur auc positions indiquées et d'un popup cliquable qui affiche le texte
     L.marker([45.760041, 4.8351343]).addTo(map)
     .bindPopup('Cher Collègue,\nJe travaille actuellement à l\'étude du Codex Bezae, un manuscrit bilingue grec et latin du Vème siècle contenant les évangiles et les actes des apôtres. Au cours de mon travail, j\'ai identifié une piste solide dans la recherche des pages disparues en 1562 lorsque le Codex a été volé à l\'Eglise par les Huguenots.\nC\'est un de mes confrères, Palamède, qui s\'est rendu à Lyon pour enquêter sur place. J\'ai reçu de manière cryptée chaque étape de ses avancées, mais depuis son dernier message la semaine dernière, je suis sans nouvelles. Il semble avoir disparu\nNe pouvant venir moi-même à sa recherche, je vous prie de bien vouloir mettre tout en œuvre pour les retrouver: lui, et les fameuses pages manquantes.\nTous les éléments à ma disposition, dont nos derniers échanges, vous ont été transmis dans cette missive.\nD\'avance je vous remercie\nEpiphane')
 </script>
