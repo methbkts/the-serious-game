@@ -16,10 +16,9 @@
 <script>
     var map = L.map('mapid').setView([45.760041, 4.8351343], 13);
 
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-}).addTo(map);
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    }).addTo(map);
 
-L.marker([45.760041, 4.8351343]).addTo(map)
+    L.marker([45.760041, 4.8351343]).addTo(map)
     .bindPopup('Bienvenue à Lyon')
-    .openPopup();
 </script>
