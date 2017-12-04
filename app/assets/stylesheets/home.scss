@@ -2,6 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
@@ -47,10 +50,12 @@ body {
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     color: white;
+    padding: 0 2rem 0 2rem;
 }
 
-
+//Image de fond floue
 body:before{
 	content: "";
   position: fixed;
