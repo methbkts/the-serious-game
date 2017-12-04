@@ -2,9 +2,11 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+
 body {
-	margin: 10px;
 	font-family: sans-serif;
+    margin: 0;
 }
 
 .container {
@@ -24,9 +26,32 @@ body {
 }
 
 .footer {
-	position: fixed;
-	bottom: 0;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    bottom: 0;
+    background-color: #1D1F21;
+    color: #FFFFFF;
+    font-size: 0.8em;
+}
 
+.footerleft,
+.footerright {
+    padding: 0 10px;
+}
+
+.footerleft a,
+.footerright a,
+.footerleft a:hover,
+.footerright a:hover,
+.footerleft a:visited,
+.footerright a:visited,
+.footerleft a:active,
+.footerright a:active, {
+    text-decoration: none;
+    color: #FFFFFF;
 }
 
 .content {
