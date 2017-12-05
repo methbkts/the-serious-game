@@ -79,7 +79,7 @@ body {
     justify-content: space-between;
     align-items: center;
     color: rgba(0,0,0,1);
-    padding: 0 2rem 0 2rem;
+    padding: 0 5rem 0 2rem;
     //background-color: rgba(0,0,0,0.2)
 }
 
@@ -131,35 +131,6 @@ body {
   margin:0;
 }
 
-ul.dropdown{
-    background: rgba(255,255,255,0.7);
-    display: none;    
-    z-index: 999;    
-}
-
-
-
-ul li:hover ul.dropdown{
-  display: flex; /* Display the dropdown */
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  text-align: center;
-}
-
-ul.dropdown li a{
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  text-align: left;
-}
-
-ul.dropdown li a:hover{
-  color: rgba(0,0,0,0.6);
-  text-decoration: none;
-  font-weight: bold;
-  text-align: left;
-}
 
 
 
@@ -170,16 +141,16 @@ body:before{
   position: fixed;  
   z-index: -1;
   
-  background-image: url('fond_2.jpeg');
+  background-image: url('fond_3.png');
   background-size: cover;
   width: 100%;
   height: 100%;
 
-    -webkit-filter: blur(5px) sepia(100%) contrast(150%) opacity(70%);
-    -moz-filter: blur(5px) sepia(100%) contrast(150%) opacity(70%);
-    -o-filter: blur(5px) sepia(100%) contrast(150%) opacity(70%);
-    -ms-filter: blur(5px) sepia(100%) contrast(150%) opacity(70%);
-    filter: blur(5px) sepia(100%) contrast(150%) opacity(70%);
+    -webkit-filter: blur(2px) sepia(90%) grayscale(40%) contrast(80%);
+    -moz-filter: blur(2px) sepia(90%) grayscale(40%) contrast(80%);
+    -o-filter: blur(2px) sepia(90%) grayscale(40%) contrast(80%);
+    -ms-filter: blur(2px) sepia(90%) grayscale(40%) contrast(80%);
+    filter: blur(2px) sepia(90%) grayscale(40%) contrast(80%);
     transform: scale(1.02);
 }
 
