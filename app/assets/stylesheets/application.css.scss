@@ -146,11 +146,11 @@ body:before{
   width: 100%;
   height: 100%;
 
-    -webkit-filter: blur(2px) sepia(90%) grayscale(40%) contrast(80%);
-    -moz-filter: blur(2px) sepia(90%) grayscale(40%) contrast(80%);
-    -o-filter: blur(2px) sepia(90%) grayscale(40%) contrast(80%);
-    -ms-filter: blur(2px) sepia(90%) grayscale(40%) contrast(80%);
-    filter: blur(2px) sepia(90%) grayscale(40%) contrast(80%);
+    -webkit-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%);
+    -moz-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%);
+    -o-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%);
+    -ms-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%);
+    filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%);
     transform: scale(1.02);
 }
 
