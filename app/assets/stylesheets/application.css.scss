@@ -29,6 +29,7 @@ body {
     //margin: 0;
     min-height: 100%;
     position: relative;
+
 }
 
 .container-fluid{
@@ -136,7 +137,17 @@ body {
   margin:0;
 }
 
-
+#mapid {
+        
+        height: 40rem;
+        width: 100rem;
+        -webkit-filter: sepia(100%) grayscale(30%);
+        -moz-filter: sepia(100%) grayscale(30%);
+        -o-filter: sepia(100%) grayscale(30%);
+        -ms-filter: sepia(100%) grayscale(30%);
+        filter: sepia(100%) grayscale(30%);
+        opacity: 0;
+    }
 
 
 
@@ -145,17 +156,18 @@ body:before{
 	content: "";
   position: fixed;  
   z-index: -1;
+
   
   background-image: url('fond_3.png');
   background-size: cover;
   width: 100%;
   height: 100%;
 
-    -webkit-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%);
-    -moz-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%);
-    -o-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%);
-    -ms-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%);
-    filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%);
+    -webkit-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%) opacity(100%);
+    -moz-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%) opacity(100%);
+    -o-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%) opacity(100%);
+    -ms-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%) opacity(100%);
+    filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%) opacity(100%);
     transform: scale(1.02);
 }
 
