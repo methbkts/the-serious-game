@@ -1,9 +1,15 @@
 <div class="header">
 	<div id="logo_entete">
-		<%= image_tag("codex_noir.png", size: "125")%>
+
+		<%=link_to image_tag("codex_noir.png", size: "125", class:"logo_lien"),root_path%>
 	</div>
 	<div class="menu">
-		<p>Se Connecter</p>
+		<%if user_signed_in?%>
+			<li><%=link_to 'Déconnexion', destroy_user_session_path, method: :delete, class:'connexion_lien' %></li>
+		<%else%>
+		<%= link_to 'Se connecter', new_user_session_path, class:'connexion_lien' %>
+		<%end%>
+
 		<i class="fa fa-bars big"></i>
 	</div>
 </div>

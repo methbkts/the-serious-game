@@ -67,19 +67,30 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.menu>p{
+.connexion_lien{
+  color:black;
   font-size: 1rem;
   font-weight: bold;
   margin-right: 2rem;
   margin-bottom: 0;
 }
+
 .fa.big{
   font-size: 2rem;
 }
 
-.menu>p:hover, .fa.big:hover{
+.logo_lien:hover{
+  -webkit-filter: opacity(50%);
+    -moz-filter: opacity(50%);
+    -o-filter: opacity(50%);
+    -ms-filter: opacity(50%);
+    filter: opacity(50%);
+}
+
+.connexion_lien:hover, .fa.big:hover{
   color: rgba(0,0,0,0.5);
   cursor: pointer;
+  text-decoration: none;
 }
 
 //Image de fond floue
@@ -98,6 +109,7 @@ body:before{
     -o-filter: blur(5px) sepia(100%) contrast(150%) opacity(70%);
     -ms-filter: blur(5px) sepia(100%) contrast(150%) opacity(70%);
     filter: blur(5px) sepia(100%) contrast(150%) opacity(70%);
+    transform: scale(1.02);
 }
 
 .container {
