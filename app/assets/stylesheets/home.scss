@@ -108,7 +108,6 @@ body:before{
     width: 100%;
     position: absolute;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     bottom: 0;
     background-color: #1D1F21;
@@ -117,11 +116,11 @@ body:before{
 }
 
 .footerleft,
-.footerright {
+.footerright,
+.footerrightlast {
     padding: 0 10px;
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 
 .footerleft a,
@@ -142,8 +141,7 @@ body:before{
 }
 
 .footerright img {
-    width: 1.4em;
-    height: 1.4em;
+    width: 2em;
     -webkit-filter: invert(100%);
     filter: invert(100%);
     padding: 0 5px;
@@ -169,4 +167,9 @@ body:before{
 .section1 {
     position: relative;
     padding: 30px;
+}
+
+.formfor {
+    width: 500px;
+    background-color: aqua;
 }
