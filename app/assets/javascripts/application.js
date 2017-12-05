@@ -17,3 +17,10 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+    $('#mapid').on('click', '#startgame', function() {
+         L.marker([45.7623314, 4.8275598]).addTo(map)
+        .bindPopup('<h4>Là où tout devient clair</h4><p>Dans la cathédrale, j’ai trouvé un extrait de l’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.<p>A l’aide du texte, tu pourras traduire:</p>')
+    });
+})
