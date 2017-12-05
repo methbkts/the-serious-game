@@ -3,13 +3,25 @@
 
 		<%=link_to image_tag("codex_noir.png", size: "125", class:"logo_lien"),root_path%>
 	</div>
-	<div class="menu">
+	<ul class="menu">
+
 		<%if user_signed_in?%>
-			<li><%=link_to 'Déconnexion', destroy_user_session_path, method: :delete, class:'connexion_lien' %></li>
+		<li><%=link_to 'Déconnexion', destroy_user_session_path, method: :delete, class:'connexion_lien' %></li>
 		<%else%>
-		<%= link_to 'Se connecter', new_user_session_path, class:'connexion_lien' %>
+		<li><%= link_to 'Se connecter', new_user_session_path, class:'connexion_lien' %></li>
 		<%end%>
-		<ul class="hamb_menu">
+
+		<ul class="dropdown">
+			<a href="#" class="dropdown" data-toggle="dropdown">
+				<i class="fa fa-bars big"></i>
+			</a>
+			<ul class="dropdown-menu">
+				<li><a class="dropdown-item" href="#">Contact</a></li>
+				<li><a class="dropdown-item" href="#">A Propos</a></li>
+			</ul>
+			</ul>
+
+				<!--<ul class="hamb_menu">
 		<li>
 			<a href="#" class="entete"><i class="fa fa-bars big"></i></a>
 				<ul class="dropdown">
@@ -17,8 +29,8 @@
 					<li><a href="#">A Propos</a></li>
 				</ul>
 		</li>
-		</ul>
+	</ul>-->
 
-		
-	</div>
+
+</ul>
 </div>
