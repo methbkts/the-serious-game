@@ -1,7 +1,7 @@
 <div class='formfor'>
-<p>Welcome <%= @email %>!</p>
+<p>Bienvenue <%= @email %> dans la course au Codex Bezae!</p>
 
-<p>You can confirm your account email through the link below:</p>
+<p>Merci de bine vouloir confirmer votre email en cliquant ci-dessous:</p>
 
 <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
 </div>
