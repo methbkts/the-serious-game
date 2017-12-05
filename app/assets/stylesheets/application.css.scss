@@ -231,8 +231,8 @@ body:before{
     align-items: center;
     width: 350px;
     padding: 20px 0;
-    background-image: image-url("oldpaper.png");
-    color: #1D1F21;
+    background-color: #1D1F21;
+    color: #FFFFFF;
     border-radius: 5px;
     -webkit-box-shadow: -12px 15px 0px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: -12px 15px 0px 0px rgba(0,0,0,0.3);
@@ -245,7 +245,7 @@ body:before{
 .formfor a:visited {
     text-decoration: none;
     font-weight: bold;
-    color: #1D1F21;
+    color: #FFFFFF;
 
 }
 
