@@ -129,7 +129,7 @@ body:before{
     justify-content: space-between;
     width: 100%;
     margin-top: 30px;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     background-color: #1D1F21;
     color: #FFFFFF;
@@ -181,13 +181,11 @@ body:before{
 }
 
 .welcome {
-    position: relative;
     padding: 10px;
     text-align: center;
 }
 
 .section1 {
-    position: relative;
     padding: 30px;
 }
 
@@ -206,6 +204,13 @@ body:before{
     -webkit-box-shadow: -12px 15px 0px 0px rgba(0,0,0,0.3);
     -moz-box-shadow: -12px 15px 0px 0px rgba(0,0,0,0.3);
     box-shadow: -12px 15px 0px 0px rgba(0,0,0,0.3);
+}
+
+.formfor a,
+.formfor a:hover,
+.formfor a:active,
+.formfor a:visited {
+    text-decoration: none;
 }
 
 .field,
