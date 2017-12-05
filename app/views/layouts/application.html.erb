@@ -2,20 +2,22 @@
 <html>
 
 <head>
-    <title>Codex Bezae</title>
-    <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%=favicon_link_tag 'codex_noir.png'%>
+  <title>Codex Bezae</title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%=favicon_link_tag 'codex_noir.png'%>
 </head>
 
 <body>
-      <%= render 'layouts/messages' %>
-      <%= render 'layouts/header' %>
-      <div class='allcontent'>
+  <div class="container-fluid">
+    <%= render 'layouts/messages' %>
+    <%= render 'layouts/header' %>
+    <div class='content'>
       <%= yield %>
-      </div>
-      <%= render 'layouts/footer' %>
+    </div>
+    <%= render 'layouts/footer' %>
+  </div>
 </body>
 
 </html>
