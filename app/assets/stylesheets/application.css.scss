@@ -89,7 +89,10 @@ body {
     //justify-content: space-between;
     //align-items: center;
     color: rgba(0, 0, 0, 1);
-    padding: 0 5rem 0 2rem; //background-color: rgba(0,0,0,0.2)
+    //padding: 0 5rem 0 2rem; //background-color: rgba(0,0,0,0.2)
+}
+.ax{
+    border: 2px solid black;
 }
 
 .logo_lien:hover {
@@ -99,11 +102,19 @@ body {
     -ms-filter: opacity(50%);
     filter: opacity(50%);
 }
+.row{
+    padding: 0;
+}
+
+.logo_entete{
+    display: flex;
+    justify-content: center;
+}
 
 .menu {
-    //display: flex;
-    //justify-content: space-around;
-    //align-items: center;
+    display: flex;
+    justify-content: center;
+   
 
 }
 
@@ -111,7 +122,6 @@ body {
     color: black;
     font-size: 1rem;
     font-weight: bold;
-    margin-right: 2rem;
     margin-bottom: 0;
 }
 

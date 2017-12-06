@@ -1,26 +1,34 @@
-<div class="header col-sm-12">
-	<div class="row">
-		<div id="logo_entete col-sm-1">
+<div class="header">
+
+
+	<div class="row align-items-center justify-content-between">
+
+		<div class="logo_entete col-sm-2">
 
 			<%=link_to image_tag("codex_noir.png", size: "125", class:"logo_lien"),root_path%>
 		</div>
-		<ul class="menu">
+		<div class="col-sm-2">
+			<ul class="row justify-content-around padding:'0'">
 
-			<%if user_signed_in?%>
-			<li class="offset-sm-7 col-sm-2"><%=link_to 'Déconnexion', destroy_user_session_path, method: :delete, class:'connexion_lien' %></li>
-			<%else%>
-			<li class="col-sm-2"><%= link_to 'Se connecter', new_user_session_path, class:'connexion_lien' %></li>
-			<%end%>
 
-			<ul class="dropdown col-sm-2">
-				<a href="#" class="dropdown" data-toggle="dropdown">
-					<i class="fa fa-bars big"></i>
-				</a>
-				<ul class="dropdown-menu">
-					<li><%= link_to 'Contact', home_contact_path, class: 'dropdown-item' %></li>
-					<li><%= link_to 'A Propos', home_about_path, class: 'dropdown-item' %></li>
+				<%if user_signed_in?%>
+				<li class="menu col-sm-2"><%=link_to 'Déconnexion', destroy_user_session_path, method: :delete, class:'connexion_lien' %></li>
+				<%else%>
+				<li class="menu col-sm-2"><%= link_to 'Se connecter', new_user_session_path, class:'connexion_lien' %></li>
+				<%end%>
+
+				<ul class="menu dropdown col-sm-6">
+					<a href="#" class="dropdown" data-toggle="dropdown">
+						<i class="fa fa-bars big"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<li><%= link_to 'Contact', home_contact_path, class: 'dropdown-item' %></li>
+						<li><%= link_to 'A Propos', home_about_path, class: 'dropdown-item' %></li>
+					</ul>
 				</ul>
+
 			</ul>
-		</ul>
+		</div>
 	</div>
 </div>
+
