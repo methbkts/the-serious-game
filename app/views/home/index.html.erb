@@ -4,17 +4,17 @@
 	</div>
 	<% if user_signed_in? %>
 
-	<div class="section1">
+	<div class="section1 col-sm-12">
         <div class="row">
 
 
-            <div class=" col personnage">
+            <div class=" col-sm-4 personnage">
                 <%= image_submit_tag("personnage_homme.gif", class: 'start') %>
             </div>
-            <div class="col personnage">
+            <div class="col-sm-4 personnage">
             <p class="start"><strong>Choisis ton personnage</strong></p>
          </div>
-         <div class="col personnage">
+         <div class="col-sm-4 personnage">
             <%= image_submit_tag("personnage_femme.gif", class: 'start') %>
         </div>
 
