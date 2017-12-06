@@ -78,6 +78,7 @@ body {
     text-align: center;
 }
 
+
 //cssheader
 
 .header {
@@ -148,6 +149,10 @@ body {
         filter: sepia(100%) grayscale(30%);
         opacity: 0;
     }
+
+.start{
+    text-align: center;
+}
 
 
 
@@ -234,6 +239,10 @@ body:before{
 
 .section1 {
     padding: 30px;
+}
+
+.choix{
+    font-size: 2rem;
 }
 
 // Formulaires
