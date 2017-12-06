@@ -23,16 +23,18 @@ $(document).ready(function(){
 	$('html').on('click', '.start', function(){
 		$('.start').hide();
 		$('body').append('<style>body:before{-webkit-filter: blur(1.5px) sepia(100%) grayscale(80%) contrast(50%) opacity(50%); -moz-filter: blur(1.5px) sepia(90%) grayscale(80%) contrast(50%) opacity(50%); -o-filter: blur(1.5px) sepia(90%) grayscale(80%) contrast(50%) opacity(50%); -ms-filter: blur(1.5px) sepia(90%) grayscale(80%) contrast(50%) opacity(50%); filter: blur(1.5px) sepia(90%) grayscale(80%) contrast(50%) opacity(50%); transform: scale(1.02)!important;}</style>');
+        $('#mapid').css('height', '40rem');
 		$('#mapid').fadeTo( 2000, 1);
 		player = document.getElementById('sound');
 		player.play();
 	});
-});
-
-$(document).ready(function(){
     $('html').on('click', '#startgame', function() {
          firstMarker.closePopup();
          var secondMarker = L.marker([45.7623314, 4.8275598]).addTo(map)
         .bindPopup('<h4>Là où tout devient clair</h4><p>Dans la cathédrale, j’ai trouvé un extrait de l’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.<p>A l’aide du texte, tu pourras traduire:</p>').openPopup();
     });
+});
+
+$(document).ready(function(){
+
 });
