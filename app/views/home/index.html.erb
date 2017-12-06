@@ -7,25 +7,26 @@
 	<div class="section1">
         <div class="row">
 
-           
-                <div class="col">
-                    <%= image_submit_tag("personnage_homme.gif", class: 'start') %>
-                </div>
-                <div class="col">
-                    <%= image_submit_tag("personnage_femme.gif", class: 'start') %>
-                </div>
 
-            
+            <div class=" col personnage">
+                <%= image_submit_tag("personnage_homme.gif", class: 'start') %>
+            </div>
+            <div class="col personnage">
+            <p class="start"><strong>Choisis ton personnage</strong></p>
+         </div>
+         <div class="col personnage">
+            <%= image_submit_tag("personnage_femme.gif", class: 'start') %>
         </div>
-            <div class="row">
-               <p class="start choix"><strong>Choix du personnage</strong></p>
-           </div>
 
-          
-           <%= render 'layouts/map' %>
 
-           <% else %>
-           <div class='welcome'>
-               <h1><%= link_to 'JOUER', new_user_session_path, class:'connexion_lien' %></h1>
-           </div>
-           <% end %>
+    </div>
+
+
+
+    <%= render 'layouts/map' %>
+
+    <% else %>
+    <div class='welcome'>
+     <h1><%= link_to 'JOUER', new_user_session_path, class:'connexion_lien' %></h1>
+ </div>
+ <% end %>
