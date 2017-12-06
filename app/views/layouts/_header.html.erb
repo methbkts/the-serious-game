@@ -7,17 +7,17 @@
 
 			<%=link_to image_tag("codex_noir.png", size: "125", class:"logo_lien"),root_path%>
 		</div>
-		<div class="col-sm-2">
-			<ul class="row justify-content-around padding:'0'">
+		<div class="col-sm-5 col-lg-3 col-xl-2">
+			<ul class="row col-sm-12 justify-content-around">
 
 
 				<%if user_signed_in?%>
-				<li class="menu col-sm-2"><%=link_to 'Déconnexion', destroy_user_session_path, method: :delete, class:'connexion_lien' %></li>
+				<li class="menu col-sm-8"><%=link_to 'Déconnexion', destroy_user_session_path, method: :delete, class:'connexion_lien' %></li>
 				<%else%>
-				<li class="menu col-sm-2"><%= link_to 'Se connecter', new_user_session_path, class:'connexion_lien' %></li>
+				<li class="menu col-sm-8"><%= link_to 'Se connecter', new_user_session_path, class:'connexion_lien' %></li>
 				<%end%>
 
-				<ul class="menu dropdown col-sm-6">
+				<ul class="menu dropdown col-sm-2">
 					<a href="#" class="dropdown" data-toggle="dropdown">
 						<i class="fa fa-bars big"></i>
 					</a>
