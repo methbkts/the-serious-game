@@ -20,7 +20,7 @@
 
 //Quand le joueur est connecté, et qu'il clique sur commencer la partie => Changement du background, apparition de la map, lancement musique.
 $(document).ready(function(){
-	$('.start').click(function(){
+	$('html').on('click', '.start', function(){
 		$('.start').hide();
 		$('body').append('<style>body:before{-webkit-filter: blur(1.5px) sepia(100%) grayscale(80%) contrast(50%) opacity(50%); -moz-filter: blur(1.5px) sepia(90%) grayscale(80%) contrast(50%) opacity(50%); -o-filter: blur(1.5px) sepia(90%) grayscale(80%) contrast(50%) opacity(50%); -ms-filter: blur(1.5px) sepia(90%) grayscale(80%) contrast(50%) opacity(50%); filter: blur(1.5px) sepia(90%) grayscale(80%) contrast(50%) opacity(50%); transform: scale(1.02)!important;}</style>');
 		$('#mapid').fadeTo( 2000, 1);
