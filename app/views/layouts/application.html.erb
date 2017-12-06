@@ -16,8 +16,8 @@
     <%= render 'layouts/header' %>
     <div class='content'>
       <%= yield %>
-      <!--lance musique au chargement de la page. Work in progress pour le lancer quand carte apparait-->
-      <%= audio_tag "Mourioche_Red_files.mp3", id: "sound", class: "audio_to_play", autoplay: true%>
+      <!--charge la musique en avancce-->
+      <%= audio_tag "Mourioche_Red_files.mp3", id: "sound", class: "audio_to_play", preload: "auto"%>
     </div>
     <%= render 'layouts/footer' %>
   </div>
