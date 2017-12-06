@@ -5,7 +5,10 @@
 	<% if user_signed_in? %>
 
 	<div class="section1">
-        <button class="start">Commencer la partie</button>
+        <%= image_submit_tag("personnage_homme.gif", class: 'start') %>
+        <%= image_submit_tag("personnage_femme.gif", class: 'start') %>
+        <p class="start choix"><strong>Choix du personnage</strong></p>
+        
 		<%= render 'layouts/map' %>
 	</div>
 	<% else %>
