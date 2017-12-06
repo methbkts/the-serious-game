@@ -14,7 +14,6 @@
  *= require_self
  */
 
-<<<<<<< HEAD
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
@@ -22,16 +21,6 @@
 html {
     margin: 0;
     height: 100%;
-=======
-
- @import "bootstrap";
- @import "font-awesome-sprockets";
- @import "font-awesome";
-
- html {
-   margin: 0;
-   height: 100%;
->>>>>>> origin/master
 }
 
 body {
@@ -100,21 +89,12 @@ body {
     padding: 0 5rem 0 2rem; //background-color: rgba(0,0,0,0.2)
 }
 
-<<<<<<< HEAD
 .logo_lien:hover {
     -webkit-filter: opacity(50%);
     -moz-filter: opacity(50%);
     -o-filter: opacity(50%);
     -ms-filter: opacity(50%);
     filter: opacity(50%);
-=======
-.logo_lien:hover{
-  -webkit-filter: opacity(50%);
-  -moz-filter: opacity(50%);
-  -o-filter: opacity(50%);
-  -ms-filter: opacity(50%);
-  filter: opacity(50%);
->>>>>>> origin/master
 }
 
 .menu {
@@ -149,27 +129,16 @@ body {
 
 
 //Dropdown
-<<<<<<< HEAD
 ul,
 li {
     list-style: none;
-=======
-
-ul, li{
-  list-style: none;
->>>>>>> origin/master
 }
 
 .hamb_menu {
     margin: 0;
 }
 
-<<<<<<< HEAD
 #mapid {
-=======
-map {
-
->>>>>>> origin/master
     height: 40rem;
     width: 100rem;
     -webkit-filter: sepia(100%) grayscale(30%);
