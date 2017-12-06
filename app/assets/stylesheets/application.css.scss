@@ -15,13 +15,13 @@
  */
 
 
-@import "bootstrap";
-@import "font-awesome-sprockets";
-@import "font-awesome";
+ @import "bootstrap";
+ @import "font-awesome-sprockets";
+ @import "font-awesome";
 
-html {
-	margin: 0;
-	height: 100%;
+ html {
+   margin: 0;
+   height: 100%;
 }
 
 body {
@@ -51,6 +51,9 @@ body {
 .alert {
     font-family: sans-serif;
     text-align: center;
+    position: fixed;  
+    z-index: 10;
+    width: 100%;
 }
 
 .alert-error {
@@ -94,10 +97,10 @@ body {
 
 .logo_lien:hover{
   -webkit-filter: opacity(50%);
-    -moz-filter: opacity(50%);
-    -o-filter: opacity(50%);
-    -ms-filter: opacity(50%);
-    filter: opacity(50%);
+  -moz-filter: opacity(50%);
+  -o-filter: opacity(50%);
+  -ms-filter: opacity(50%);
+  filter: opacity(50%);
 }
 
 .menu{
@@ -132,7 +135,7 @@ body {
 
 //Dropdown
 
- ul, li{
+ul, li{
   list-style: none;
 }
 
@@ -141,16 +144,16 @@ body {
 }
 
 map {
-        
-        height: 40rem;
-        width: 100rem;
-        -webkit-filter: sepia(100%) grayscale(30%);
-        -moz-filter: sepia(100%) grayscale(30%);
-        -o-filter: sepia(100%) grayscale(30%);
-        -ms-filter: sepia(100%) grayscale(30%);
-        filter: sepia(100%) grayscale(30%);
-        opacity: 0;
-    }
+
+    height: 40rem;
+    width: 100rem;
+    -webkit-filter: sepia(100%) grayscale(30%);
+    -moz-filter: sepia(100%) grayscale(30%);
+    -o-filter: sepia(100%) grayscale(30%);
+    -ms-filter: sepia(100%) grayscale(30%);
+    filter: sepia(100%) grayscale(30%);
+    opacity: 0;
+}
 
 .start{
     text-align: center;
@@ -170,12 +173,12 @@ body:before{
   width: 100%;
   height: 100%;
 
-    -webkit-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%) opacity(100%);
-    -moz-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%) opacity(100%);
-    -o-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%) opacity(100%);
-    -ms-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%) opacity(100%);
-    filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%) opacity(100%);
-    transform: scale(1.02);
+  -webkit-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%) opacity(100%);
+  -moz-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%) opacity(100%);
+  -o-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%) opacity(100%);
+  -ms-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%) opacity(100%);
+  filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%) opacity(100%);
+  transform: scale(1.02);
 }
 
 // Footer
