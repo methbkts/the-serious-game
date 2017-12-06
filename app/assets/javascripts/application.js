@@ -18,15 +18,6 @@
 //= require turbolinks
 //= require_tree .
 
-$(document).ready(function() {
-    $('#mapid').on('click', '#startgame', function() {
-         firstMarker.closePopup();
-         L.marker([45.7623314, 4.8275598]).addTo(map)
-        .bindPopup('<h4>Là où tout devient clair</h4><p>Dans la cathédrale, j’ai trouvé un extrait de l’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.<p>A l’aide du texte, tu pourras traduire:</p>').openPopup()
-    });
-})
-
-
 //Quand le joueur est connecté, et qu'il clique sur commencer la partie => Changement du background, apparition de la map, lancement musique.
 $(document).ready(function(){
 	$(".start").click(function(){
@@ -39,3 +30,11 @@ $(document).ready(function(){
 	});
 });
 
+//Quand le jouer clique sur le premier premier marker 'Commencer', le premier Popup se ferme, un second marker s'ajout et le Popup de celui-ci s'ouvre
+$(document).ready(function() {
+    $('#mapid').on('click', '#startgame', function() {
+         firstMarker.closePopup();
+         var secondMarker = L.marker([45.7623314, 4.8275598]).addTo(map)
+        .bindPopup('<h4>Là où tout devient clair</h4><p>Dans la cathédrale, j’ai trouvé un extrait de l’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.<p>A l’aide du texte, tu pourras traduire:</p>').openPopup()
+    });
+});
