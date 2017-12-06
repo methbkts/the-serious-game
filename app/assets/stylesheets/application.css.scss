@@ -172,17 +172,17 @@ body:before {
     z-index: -1;
 
 
-    background-image: url('fond_3.png');
+    background-image: url('fond_4.png');
     background-size: cover;
     width: 100%;
     height: 100%;
 
-    -webkit-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%) opacity(100%);
-    -moz-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%) opacity(100%);
-    -o-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%) opacity(100%);
-    -ms-filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%) opacity(100%);
-    filter: blur(1.5px) sepia(90%) grayscale(40%) contrast(80%) opacity(100%);
-    transform: scale(1.02);
+    -webkit-filter: blur(2px) grayscale(40%) opacity(70%);
+    -moz-filter: blur(2px) grayscale(40%) opacity(70%);
+    -o-filter: blur(2px) grayscale(40%) opacity(70%);
+    -ms-filter: blur(2px) grayscale(40%) opacity(70%);
+    filter: blur(2px) grayscale(40%) opacity(70%);
+    transform: scale(1);
 }
 
 // Footer
