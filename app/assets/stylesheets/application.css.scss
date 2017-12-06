@@ -28,7 +28,7 @@ body {
     position: relative;
 }
 
-*:not(.footer) {
+*:not(.footer, .dropdown) {
     font-family: 'MedievalSharp', cursive;
 }
 
