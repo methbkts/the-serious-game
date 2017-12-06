@@ -92,6 +92,7 @@ body {
     color: rgba(0, 0, 0, 1);
 }
 
+
 .logo_lien:hover {
     -webkit-filter: opacity(50%);
     -moz-filter: opacity(50%);
@@ -99,11 +100,19 @@ body {
     -ms-filter: opacity(50%);
     filter: opacity(50%);
 }
+.row{
+    padding: 0;
+}
+
+.logo_entete{
+    display: flex;
+    justify-content: center;
+}
 
 .menu {
-    //display: flex;
-    //justify-content: space-around;
-    //align-items: center;
+    display: flex;
+    justify-content: center;
+   
 
 }
 

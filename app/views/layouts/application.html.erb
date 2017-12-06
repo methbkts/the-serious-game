@@ -12,9 +12,10 @@
 </head>
 
 <body>
+<%= render 'layouts/header' %>
   <div class="container-fluid">
     <%= render 'layouts/messages' %>
-    <%= render 'layouts/header' %>
+    
     <div class='content'>
       <%= yield %>
       <!--charge la musique en avance / Meilleur endroit pour le mettre?-->
