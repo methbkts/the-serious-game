@@ -12,7 +12,6 @@
     //Ajout de la carte Leaflet dans la div #mapid avec coordonnées et niveau de zoom
     var map = L.map('mapid', {zoomControl: false}).setView([45.760041, 4.8351343], 13);
     map.scrollWheelZoom.disable();
-    setTimeout(function () { map.invalidateSize() }, 1500);
 
     //Ajout du thème (Impossibilité de le modifier pour le moment)
     L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
