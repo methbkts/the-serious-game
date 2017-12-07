@@ -35,12 +35,13 @@ $(document).ready(function () {
             .bindPopup('<br><center><img src="https://lyonfrance.ca/images/saintjeancathedral.jpg" width="100%"></center><br><h4>Là où tout devient clair</h4><p>Dans la cathédrale, j’ai trouvé un extrait de l’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.<p>A l’aide du texte, tu pourras traduire:</p><%= image_tag("code.png") %><center><p id="openbook">Ouvrir le Livre</p></center>');
         secondMarker.openPopup();
         $('html').on('click', '#openbook', function () {
-        secondMarker.closePopup();
 
         var popup = L.popup({className: 'bookpopup'})
-            .setLatLng([45.755, 4.785])
+            .setLatLng([45.7623314, 4.67])
             .setContent('<%= image_tag("book.png", width: "850px") %>')
-            .openOn(map);
+
+        popup.addTo(map);
+        secondMarker.addTo(map);
         });
     });
 });
