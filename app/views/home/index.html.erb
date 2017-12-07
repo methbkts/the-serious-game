@@ -1,7 +1,9 @@
-	<div class="welcome">
-		<!--<p>Rejoins l'historien Epiphane dans sa quête des pages disparues du Codex Bezae.</p>
-		<p>Arpente la ville, découvre les indices dissimulés dans les plus anciens bâtiments de Lyon et aide à résoudre une des plus grandes intrigues historiques!!</p>-->
+	<div class="welcome" style="background-image: url(http://secretvibes-shop.fr/crbst_vieux-papier_20sv_20site.jpg)">
+		<p>Rejoins l'historien Epiphane dans sa quête des pages disparues du Codex Bezae.</p>
+		<p>Arpente la ville, découvre les indices dissimulés dans les plus anciens bâtiments de Lyon et aide à résoudre une des plus grandes intrigues historiques!!</p>
+        <h1><%= link_to 'JOUER', new_user_session_path, class:'jouer_lien' %></h1>
 	</div>
+    <h1 class="titre" style="background-image: url(http://secretvibes-shop.fr/crbst_vieux-papier_20sv_20site.jpg)">CODEX BEZAE </h1> 
 	<% if user_signed_in? %>
 
 	<div class="section1 col-sm-12">
@@ -24,7 +26,23 @@
     <%= render 'layouts/map' %>
 
     <% else %>
-    <div class='welcome'>
-     <h1><%= link_to 'JOUER', new_user_session_path, class:'connexion_lien' %></h1>
- </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+    $(".titre").click(function(){
+        $(".welcome").slideToggle('slow');
+    });
+});
+</script>
+
+<script> 
+$(document).ready(function(){
+    $(".welcome").click(function(){
+        $(".JOUER").slideToggle('slow');
+    });
+});
+</script>
  <% end %>
