@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
   <%=favicon_link_tag 'codex_noir.png'%>
 </head>
 
@@ -20,10 +20,12 @@
       <%= yield %>
       <!--charge la musique en avance / Meilleur endroit pour le mettre?-->
       <%= audio_tag "Mourioche_Red_files.mp3", id: "sound", class: "audio_to_play", preload: "auto"%>
+
     </div>
     
   </div>
   <%= render 'layouts/footer' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </body>
 
 </html>
