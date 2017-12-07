@@ -277,10 +277,13 @@ body:before {
     box-shadow: -12px 15px 0px 0px rgba(0, 0, 0, 0.3);
 }
 
+
+
 .formfor a,
 .formfor a:hover,
 .formfor a:active,
 .formfor a:visited {
+    font-family: sans-serif;
     text-decoration: none;
     font-weight: bold;
     color: #FFFFFF;
@@ -297,6 +300,7 @@ form label,
 form input,
 form select,
 form textarea {
+    font-family: sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
