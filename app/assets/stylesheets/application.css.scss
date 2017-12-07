@@ -315,3 +315,8 @@ form textarea {
 #openbook {
     cursor: pointer;
 }
+
+.bookpopup .leaflet-popup-content-wrapper {
+    background-color: #11ffee00 !important;
+    box-shadow: none;
+}
