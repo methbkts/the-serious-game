@@ -121,8 +121,7 @@ $(document).ready(function () {
                     var thirdMarker = L.marker([45.763, 4.8326874]).addTo(map)
                         .bindPopup('<center><h4>Là où il y a des tâches d\'encre</h4></center><br><center><img src="http://static.panoramio.com/photos/large/20834705.jpg" width="100%"></center><br><p>Cher Ami,</p><p>Lyon est la capitale de beaucoup de domaines : la capitale des Gaules, celle de la gastronomie... mais également celle de l\'imprimerie en son temps.</p><p>En 1472, Barthélemy Buyer installe le premier atelier dans sa maison sur les quais de Saône. Au cours du siècle suivant, presque un tiers des éditions françaises sont imprimées à Lyon notamment dans la rue Mercière et ses alentours.</p><p>Beaucoup d\'imprimeurs sont d\'ailleurs protestants. Tant et si bien que lorsque la ville fut reprise par les catholiques, ils fuirent aux Pays-Bas ou à Genève. C\'est d\'ailleurs là-bas que s\'était réfugié Théodore de Bèze. Il y réceptionna le Codex, qu\'il avait demandé à ses amis de voler pour lui.</p><p>Mais au IXème siècle, bien avant la Bible de Gutenberg et les presses, Lyon a accueilli un diacre reconnu pour son ouvrage littéraire : Florus. Celui-ci a été authentifié comme l\'auteur de plusieurs pages du Codex.</p><p>Le musée de l\'imprimerie, déjà en lien avec le Codex par ces biais, possède également les Tables Claudiennes, qui, bien qu\'antérieures à la disparition des pages, a visiblement inspiré ceux qui les ont cachées.</p>');
 
-                    map.closePopup();
-                    thirdMarker.openPopup();
+                    thirdMarker.addTo(map);
 
                 } else {
 
