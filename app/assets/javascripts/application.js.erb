@@ -19,6 +19,30 @@
 //= require_tree .
 
 //Quand le joueur est connecté, et qu'il clique sur commencer la partie => Changement du background, apparition de la map, lancement musique.
+
+//Ajout de la carte Leaflet dans la div #mapid avec coordonnées et niveau de zoom
+    var map = L.map('mapid', {zoomControl: false}).setView([45.760041, 4.8351343], 13);
+    map.scrollWheelZoom.disable();
+
+    //Ajout du thème (Impossibilité de le modifier pour le moment)
+    L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
+	   attribution: false,
+	   subdomains: 'abcd',
+	   minZoom: 13,
+	   maxZoom: 13,
+	   ext: 'png'
+    }).addTo(map);
+
+    //Ajout d'un marqueur aux positions indiquées et d'un popup cliquable qui affiche le texte
+    var firstMarker = L.marker([45.760041, 4.8351343]).addTo(map)
+        .bindPopup('<p id="startmap">Commencer</p>').openPopup();
+
+        $('html').on('click', '#startmap', function () {
+
+                    firstMarker.setPopupContent('<p>Cher Collègue,</p><p>Je travaille actuellement à l\'étude du Codex Bezae, un manuscrit bilingue grec et latin du Vème siècle contenant les évangiles et les actes des apôtres.</p><p>Au cours de mon travail, j\'ai identifié une piste solide dans la recherche des pages disparues en 1562 lorsque le Codex a été volé à l\'Eglise par les Huguenots.</p><p>C\'est un de mes confrères, Palamède, qui s\'est rendu à Lyon pour enquêter sur place.</p><p>J\'ai reçu de manière cryptée chaque étape de ses avancées, mais depuis son dernier message la semaine dernière, je suis sans nouvelles.</p><p>Il semble avoir disparu\nNe pouvant venir moi-même à sa recherche, je vous prie de bien vouloir mettre tout en œuvre pour les retrouver: lui, et les fameuses pages manquantes.</p><p>Tous les éléments à ma disposition, dont nos derniers échanges, vous ont été transmis dans cette missive.</p><p>D\'avance je vous remercie,</p><p>Epiphane</p><center><p id="startgame">Commencer</p></center>');
+        });
+
+
 $(document).ready(function () {
 
     $('html').on('click', '.start', function () {
@@ -50,7 +74,7 @@ $(document).ready(function () {
 
             $('html').on('click', '#cathedrale', function () {
 
-                    secondMarker.setPopupContent('</center><br><h4>Là où tout devient clair</h4><p id="message_alert"></p><p>Dans la cathédrale, j\’ai trouvé un extrait de l\’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.<p>A l\’aide du texte, tu pourras traduire:</p><%= image_tag("code.png") %><center><p id="openbook">Ouvrir le Livre</p></center><input id="reponse1" type="text" placeholder="Saisir la réponse ici"/><button id="valider1">Valider</button>');
+                    secondMarker.setPopupContent('</center><br><h4>Là où tout devient clair</h4><p id="message_alert"></p><p>Dans la cathédrale, j\’ai trouvé un extrait de l\’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.<p>A l\’aide du texte, tu pourras traduire:</p><%= image_tag("code.png") %><center><p id="openbook">Ouvrir le Livre</p></center><center><input id="reponse1" type="text" placeholder="Saisir la réponse ici"/><button id="valider1">Valider</button></center>');
 
                 $('html').on('click', '#valider1', function () {
 
