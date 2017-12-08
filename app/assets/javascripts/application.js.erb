@@ -20,6 +20,7 @@
 
 //Quand le joueur est connecté, et qu'il clique sur commencer la partie => Changement du background, apparition de la map, lancement musique.
 
+
 //Ajout de la carte Leaflet dans la div #mapid avec coordonnées et niveau de zoom
     var map = L.map('mapid', {zoomControl: false}).setView([45.760041, 4.8351343], 13);
     map.scrollWheelZoom.disable();
@@ -43,6 +44,7 @@
         });
 
 
+
 $(document).ready(function () {
 
     $('html').on('click', '.start', function () {
@@ -63,6 +65,22 @@ $(document).ready(function () {
 
     });
 
+
+    //fonction pour que dropdown fonctionne même après retour sur home
+   
+
+    $('html').on('click', '.dropdown_test', function(){
+        
+        if($('.dropdown-menu').hasClass('show')){
+           $('.dropdown-menu').removeClass('show');
+           
+        }else{
+           $('.dropdown-menu').addClass('show');
+         }
+    });
+
+
+
     $('html').on('click', '#startgame', function () {
 
             firstMarker.closePopup();
@@ -74,13 +92,13 @@ $(document).ready(function () {
 
             $('html').on('click', '#cathedrale', function () {
 
-                    secondMarker.setPopupContent('</center><br><h4>Là où tout devient clair</h4><p id="message_alert"></p><p>Dans la cathédrale, j\’ai trouvé un extrait de l\’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.<p>A l\’aide du texte, tu pourras traduire:</p><%= image_tag("code.png") %><center><p id="openbook">Ouvrir le Livre</p></center><center><input id="reponse1" type="text" placeholder="Saisir la réponse ici"/><button id="valider1">Valider</button></center>');
 
-                $('html').on('click', '#valider1', function () {
+                    secondMarker.setPopupContent('</center><br><h4>Là où tout devient clair</h4><p id="message_alert"></p><p>Dans la cathédrale, j\’ai trouvé un extrait de l\’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.<p>A l\’aide du texte, tu pourras traduire:</p><%= image_tag("code.png") %><center><p id="openbook">Ouvrir le Livre</p></center><center><input id="reponse1" type="text" placeholder="Saisir la réponse ici"/><button id="valider1">Valider</button></center>');
 
                 function verif() {
 
                     let maReponse = document.getElementById('reponse1').value.toLowerCase();
+
 
                     if (maReponse == 'eglise' || maReponse == 'église') {
 
@@ -93,11 +111,15 @@ $(document).ready(function () {
 
                     } else {
 
+
                         $('#message_alert').html('Malheureusement, ce n\est pas le mot qu\'il fallait deviner. Essaie encore !').css('color', 'white').css('background-color', 'red').css('text-align', 'center').css('font-size', '1rem');
 
                     }
 
                 }
+
+                $('html').on('click', '#valider1', function () {
+                           
 
                     verif()
 
