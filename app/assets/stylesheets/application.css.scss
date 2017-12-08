@@ -152,7 +152,12 @@ li {
 
 // cssmap
 #mapid {
-
+    -webkit-filter: sepia(100%) grayscale(30%);
+    -moz-filter: sepia(100%) grayscale(30%);
+    -o-filter: sepia(100%) grayscale(30%);
+    -ms-filter: sepia(100%) grayscale(30%);
+    filter: sepia(100%) grayscale(30%);
+    opacity: 0;
 }
 
 .personnage {
