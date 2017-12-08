@@ -52,6 +52,8 @@ $(document).ready(function () {
 
                     secondMarker.setPopupContent('</center><br><h4>Là où tout devient clair</h4><p id="message_alert"></p><p>Dans la cathédrale, j\’ai trouvé un extrait de l\’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.<p>A l\’aide du texte, tu pourras traduire:</p><%= image_tag("code.png") %><center><p id="openbook">Ouvrir le Livre</p></center><input id="reponse1" type="text" placeholder="Saisir la réponse ici"/><button id="valider1">Valider</button>');
 
+                $('html').on('click', '#valider1', function () {
+
                 function verif() {
 
                     let maReponse = document.getElementById('reponse1').value.toLowerCase();
@@ -72,8 +74,6 @@ $(document).ready(function () {
                     }
 
                 }
-
-                $('html').on('click', '#valider1', function () {
 
                     verif()
 
