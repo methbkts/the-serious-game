@@ -33,23 +33,20 @@ $(document).ready(function () {
         firstMarker.closePopup();
         var secondMarker = L.marker([45.7623314, 4.8275598]).addTo(map)
 
-            .bindPopup('<center><h4>Là où l\on se recueille</h4></center><br><center><img src="https://lyonfrance.ca/images/saintjeancathedral.jpg" width="100%"></center><br><h4>Là où tout devient clair</h4><p>Dans la cathédrale, j’ai trouvé un extrait de l’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.<p>A l’aide du texte, tu pourras traduire:</p><%= image_tag("code.png") %><center><p id="openbook">Ouvrir le Livre</p></center><input id="reponse1" type="text" placeholder="Saisir la réponse ici"/><button id="valider1">Valider</button>');
+
+            .bindPopup('<center><h4>Là où l\on se recueille</h4></center><br><center><img src="https://lyonfrance.ca/images/saintjeancathedral.jpg" width="100%"></center><br><h4>Là où tout devient clair</h4><p id="message_alert"></p><p>Dans la cathédrale, j’ai trouvé un extrait de l’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.<p>A l’aide du texte, tu pourras traduire:</p><%= image_tag("code.png") %><center><p id="openbook">Ouvrir le Livre</p></center><input id="reponse1" type="text" placeholder="Saisir la réponse ici"/><button id="valider1">Valider</button>');
+
         secondMarker.openPopup();
 
-
-
-
-
-
-        function verif() {
-            let maReponse = document.getElementById('reponse1').value.toLowerCase();
-            if (maReponse == 'eglise' || maReponse == 'église') {
-                alert('Bien joué ! Pour passer à l\'étape suivante, cliquez sur OK');
+        function verif(){
+            let maReponse = document.getElementById('reponse1').value.toLowerCase(); 
+            if(maReponse=='eglise' || maReponse=='église'){
+                $('#message_alert').html('Bien joué ! Pour passer à l\'étape suivante, <a class="next_step">cliquez ici</a>').css('color','white').css('background-color','red').css('text-align','center').css('font-size','1rem');
                 var thirdMarker = L.marker([45.763, 4.8326874]).addTo(map)
-                    .bindPopup('<center><h4>Là où il y a des tâches d\'encre</h4></center><br><center><img src="http://static.panoramio.com/photos/large/20834705.jpg" width="100%"></center><br><p>Cher Ami,</p><p>Lyon est la capitale de beaucoup de domaines : la capitale des Gaules, celle de la gastronomie... mais également celle de l\'imprimerie en son temps.</p><p>En 1472, Barthélemy Buyer installe le premier atelier dans sa maison sur les quais de Saône. Au cours du siècle suivant, presque un tiers des éditions françaises sont imprimées à Lyon notamment dans la rue Mercière et ses alentours.</p><p>Beaucoup d\'imprimeurs sont d\'ailleurs protestants. Tant et si bien que lorsque la ville fut reprise par les catholiques, ils fuirent aux Pays-Bas ou à Genève. C\'est d\'ailleurs là-bas que s\'était réfugié Théodore de Bèze. Il y réceptionna le Codex, qu\'il avait demandé à ses amis de voler pour lui.</p><p>Mais au IXème siècle, bien avant la Bible de Gutenberg et les presses, Lyon a accueilli un diacre reconnu pour son ouvrage littéraire : Florus. Celui-ci a été authentifié comme l\'auteur de plusieurs pages du Codex.</p><p>Le musée de l\'imprimerie, déjà en lien avec le Codex par ces biais, possède également les Tables Claudiennes, qui, bien qu\'antérieures à la disparition des pages, a visiblement inspiré ceux qui les ont cachées.</p>');
-                thirdMarker.openOn(map);
-            } else {
-                alert('Malheureusement, ce n\est pas le mot qu\'il fallait deviner. Essaie encore !');
+                .bindPopup('<center><h4>Là où il y a des tâches d\'encre</h4></center><br><center><img src="http://static.panoramio.com/photos/large/20834705.jpg" width="100%"></center><br><p>Cher Ami,</p><p>Lyon est la capitale de beaucoup de domaines : la capitale des Gaules, celle de la gastronomie... mais également celle de l\'imprimerie en son temps.</p><p>En 1472, Barthélemy Buyer installe le premier atelier dans sa maison sur les quais de Saône. Au cours du siècle suivant, presque un tiers des éditions françaises sont imprimées à Lyon notamment dans la rue Mercière et ses alentours.</p><p>Beaucoup d\'imprimeurs sont d\'ailleurs protestants. Tant et si bien que lorsque la ville fut reprise par les catholiques, ils fuirent aux Pays-Bas ou à Genève. C\'est d\'ailleurs là-bas que s\'était réfugié Théodore de Bèze. Il y réceptionna le Codex, qu\'il avait demandé à ses amis de voler pour lui.</p><p>Mais au IXème siècle, bien avant la Bible de Gutenberg et les presses, Lyon a accueilli un diacre reconnu pour son ouvrage littéraire : Florus. Celui-ci a été authentifié comme l\'auteur de plusieurs pages du Codex.</p><p>Le musée de l\'imprimerie, déjà en lien avec le Codex par ces biais, possède également les Tables Claudiennes, qui, bien qu\'antérieures à la disparition des pages, a visiblement inspiré ceux qui les ont cachées.</p>');
+                thirdMarker.openOn(map);     
+            }else{
+                $('#message_alert').html('Malheureusement, ce n\est pas le mot qu\'il fallait deviner. Essaie encore !').css('color','white').css('background-color','red').css('text-align','center').css('font-size','1rem');
             }
         }
 
