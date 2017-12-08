@@ -21,7 +21,7 @@
  html {
     margin: 0;
     height: 100%;
-    width: 100vm;
+    width: 100%;
 }
 
 body {
@@ -40,7 +40,8 @@ body {
 
 .content {
     width: 100%;
-    padding-bottom: 10%; //height: 100%;
+    // height: 100%;
+    padding-bottom: 10%;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -84,14 +85,13 @@ body {
 }
 
 
-//cssheader
+// cssheader
 .header {
-    //display: flex;
-    //justify-content: space-between;
-    //align-items: center;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
     color: rgba(0, 0, 0, 1);
 }
-
 
 .logo_lien:hover {
     -webkit-filter: opacity(50%);
@@ -140,7 +140,7 @@ body {
 
 
 
-//Dropdown
+// Dropdown
 ul,
 li {
     list-style: none;
@@ -150,7 +150,7 @@ li {
     margin: 0;
 }
 
-//cssmap
+// cssmap
 #mapid {
     -webkit-filter: sepia(100%) grayscale(30%);
     -moz-filter: sepia(100%) grayscale(30%);
@@ -175,7 +175,7 @@ li {
 
 
 
-//Image de fond floue
+// Image de fond floue
 body:before {
     content: "";
     position: fixed;
@@ -279,8 +279,8 @@ pitch:before {
     -moz-filter: blur(2px) grayscale(40%) opacity(70%);
     -o-filter: blur(2px) grayscale(40%) opacity(70%);
     -ms-filter: blur(2px) grayscale(40%) opacity(70%);
-    //filter: blur(2px) grayscale(40%) opacity(70%);
-    //transform: scale(1);
+    // filter: blur(2px) grayscale(40%) opacity(70%);
+    // transform: scale(1);
 }
 
 .titre {
@@ -290,38 +290,43 @@ pitch:before {
     font-size: 70px;
     height: 100px;
     width: 480px;
-    /*bottom: 165px;*/
-    //opacity: 0.8;
+    // bottom: 165px;
+    // opacity: 0.8;
     cursor: pointer;
-    /*z-index: 1;*/
+    // z-index: 1;
     background-image: url(http://secretvibes-shop.fr/crbst_vieux-papier_20sv_20site.jpg);
     
 }
+
 .JOUER {
     text-align: center;
     height: 220px;
     width: 380px;
     border-radius: 220px;
     text-decoration-color: black;
-    /*position: absolute;*/
-    /*  z-index: 1; */
+    // position: absolute;
+    // z-index: 1;
     display: none;
     bottom: 720px;
 }
+
 .jouer-lien {
     font-size: 700px;
     text-decoration-color: black;
 }
 
-/*.titre:hover {
+/*
+.titre:hover {
     transition-duration: 2s;
     transform: translateX(-480px);
 }
+
 .welcome:hover {
     transition-duration: 2s;
     transform: translateY(450px);
 }
 */
+
 .welcome a {
     font-weight: bold;
     font-size: 3em;
