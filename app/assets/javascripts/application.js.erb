@@ -32,33 +32,47 @@ $(document).ready(function () {
     $('html').on('click', '#startgame', function () {
         firstMarker.closePopup();
         var secondMarker = L.marker([45.7623314, 4.8275598]).addTo(map)
-        .bindPopup('<br><center><img src="https://lyonfrance.ca/images/saintjeancathedral.jpg" width="100%"></center><br><h4>Là où tout devient clair</h4><p>Dans la cathédrale, j’ai trouvé un extrait de l’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.<p>A l’aide du texte, tu pourras traduire:</p><%= image_tag("code.png") %><center><p id="openbook">Ouvrir le Livre</p></center><input id="reponse1" type="text" value="Saisir la réponse ici"/><button id="valider1">Valider</button>');
+        .bindPopup('<br><center><img src="https://lyonfrance.ca/images/saintjeancathedral.jpg" width="100%"></center><br><h4>Là où tout devient clair</h4><p>Dans la cathédrale, j’ai trouvé un extrait de l’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.<p>A l’aide du texte, tu pourras traduire:</p><%= image_tag("code.png") %><center><p id="openbook">Ouvrir le Livre</p></center><input id="reponse1" class="reponse" type="text" placeholder="Saisir la réponse ici"/><button id="valider1">Valider</button>');
         secondMarker.openPopup();
-        
-        $('html').on('click', 'input',function(){
-            $('input').attr("value" , "")
-        });
+
+    
+
+    
+
+    function verif(){
+        let maReponse = document.getElementById('reponse1').value.toLowerCase(); 
+        if(maReponse=='eglise' || maReponse=='église'){
+            alert('ok')  ;     
+        }else{
+            alert('not ok') ;
+        }
+    }
 
         $('html').on('click', '#valider1',function(){
-            
-            let maReponse = document.getElementById('reponse1').value; 
-            //maReponseBis = maReponse.uppercase()
-            //alert(maReponseBis)
-            if(maReponse=='eglise'){
-                alert('ok')  ;     
-            }else{
-                alert('not ok') ;
-            }
+            verif()
         });
+        // Lance la fonction verif quand on presse entrée
+        $('html').on('keypress','#reponse1',function (e) {
+         var key = e.which;
+        if(key == 13)  // the enter key code
+            { verif()
+
+            }
+
+        }); 
+
+       
+
+
 
         $('html').on('click', '#openbook', function () {
 
 
             var popup = L.popup({
-                    className: 'bookpopup'
-                })
-                .setLatLng([45.7623314, 4.67])
-                .setContent('<%= image_tag("book.png", width: "850px") %>')
+                className: 'bookpopup'
+            })
+            .setLatLng([45.7623314, 4.67])
+            .setContent('<%= image_tag("book.png", width: "850px") %>')
 
 
             popup.addTo(map);
@@ -66,7 +80,7 @@ $(document).ready(function () {
         });
     });
 
-});
+    });
 
 
 
