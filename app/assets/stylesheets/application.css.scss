@@ -255,11 +255,12 @@ body:before {
     display: none;
     position: relative;
     top: 100px;
+    padding: 10px;
     text-align: center;
-    max-width: 480px;
+    max-width: 550px;
     max-height: 340px;
     font-size: 25px;
-    background-image: url(http://secretvibes-shop.fr/crbst_vieux-papier_20sv_20site.jpg);
+    background-image: image-url("oldpaper.png");
     border-radius: 40px;
     opacity: 0.8;
 }
@@ -270,7 +271,7 @@ pitch:before {
     z-index: 1;
 
 
-    background-image: url('http://secretvibes-shop.fr/crbst_vieux-papier_20sv_20site.jpg');
+    background-image: image-url("oldpaper.png");
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -289,12 +290,12 @@ pitch:before {
     border-radius: 40px; 
     font-size: 70px;
     height: 100px;
-    width: 480px;
+    width: 550px;
     // bottom: 165px;
     // opacity: 0.8;
     cursor: pointer;
     // z-index: 1;
-    background-image: url(http://secretvibes-shop.fr/crbst_vieux-papier_20sv_20site.jpg);
+    background-image: image-url("oldpaper.png");
     
 }
 
@@ -341,6 +342,7 @@ pitch:before {
 }
 
 // Formulaires
+
 .formfor {
     display: flex;
     flex-direction: column;
@@ -348,7 +350,7 @@ pitch:before {
     width: 350px;
     padding: 20px 0;
     background-image: image-url("oldpaper.png");
-    color: #FFFFFF;
+    color: #222222;
     border-radius: 5px;
     -webkit-box-shadow: -12px 15px 0px 0px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: -12px 15px 0px 0px rgba(0, 0, 0, 0.3);
@@ -364,7 +366,7 @@ pitch:before {
     font-family: sans-serif;
     text-decoration: none;
     font-weight: bold;
-    color: #FFFFFF;
+    color: #222222;
 
 }
 
