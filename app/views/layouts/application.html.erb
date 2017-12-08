@@ -4,35 +4,31 @@
 <head>
   <title>Codex Bezae</title>
   <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1"> // maximum-scale=1, user-scalable=no
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- maximum-scale=1, user-scalable=no -->
   <link href="https://fonts.googleapis.com/css?family=MedievalSharp" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
-   integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
-   crossorigin=""/>
+  integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
+  crossorigin=""/>
 
-   <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
-   integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
-   crossorigin=""></script>
-   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
+  integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
+  crossorigin=""></script>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
   <%=favicon_link_tag 'codex_noir.png'%>
 </head>
 
 <body>
-
   <div class="container-fluid">
-  <%= render 'layouts/messages' %>
-   <%= render 'layouts/header' %>
+    <%= render 'layouts/messages' %>
+    <%= render 'layouts/header' %>
     <div class='content'>
       <%= yield %>
       <!--charge la musique en avance / Meilleur endroit pour le mettre?-->
       <%= audio_tag "Mourioche_Red_files.mp3", id: "sound", class: "audio_to_play", preload: "auto"%>
-
     </div>
-    
   </div>
   <%= render 'layouts/footer' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </body>
-
 </html>
