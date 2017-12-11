@@ -392,7 +392,19 @@ form textarea {
     text-indent: 10px;
 }
 
-.field input:hover,
+em{
+    font-size: 0.8rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 0.8rem;
+    align-self: flex-start;
+}
+
+.field input:hover{   
+    border: 1px solid #618380;
+    outline: none;
+}
+
 .field input:active,
 .field input:focus{
     box-shadow: 0 0 5px 1px #3F6864;
@@ -467,7 +479,7 @@ form textarea {
 }
 
 .gamification p:last-child{
-     padding-bottom: 2rem;
+   padding-bottom: 2rem;
 }
 
 .transition{
@@ -476,7 +488,7 @@ form textarea {
 }
 
 .about .row .contenu .titre_section h2{
-    
+
     margin:2rem 0rem 2rem 0rem ;
 }
 
@@ -487,4 +499,6 @@ form textarea {
     border: 2px solid white;
     filter: grayscale(100%);
 }
+
+
 
