@@ -6,21 +6,21 @@
   <%= devise_error_messages! %>
 
   <div class="field">
-    <%= f.label :email %>
-    <%= f.email_field :email, autofocus: true %>
+    <!--<%= f.label :email %>-->
+    <%= f.email_field :email, placeholder: 'E-mail', autofocus: true %>
   </div>
 
   <div class="field">
-    <%= f.label :mot_de_passe %>
+    <!--<%= f.label :mot_de_passe %>-->
+    <%= f.password_field :password, placeholder: 'Mot de passe*',  autocomplete: "off" %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> charactères minimum)</em>
+    <em>*<%= @minimum_password_length %> caractères minimum</em>
     <% end %>
-    <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
   <div class="field">
-    <%= f.label :confirmation_du_mot_de_passe %>
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <!--<%= f.label :confirmation_du_mot_de_passe %>-->
+    <%= f.password_field :password_confirmation, placeholder: 'Mot de passe*', autocomplete: "off" %>
   </div>
 
   <div class="actions">
