@@ -45,7 +45,7 @@ var firstMarker = L.marker([45.760041, 4.8351343], {
 var popup = L.popup({
         className: 'bookpopup'
     })
-    .setLatLng([45.7623314, 4.751234])
+    .setLatLng([45.7623314, 4.7512])
     .setContent('<%= image_tag("book.png", width: "850px") %>');
 
 var secondMarker = L.marker([45.7623314, 4.8275598], {
@@ -59,6 +59,12 @@ var thirdMarker = L.marker([45.763, 4.8326874], {
 var fourthMarker = L.marker([45.759722, 4.819722], {
     title: 'Etape 3 - Théatre Antique de Fourvière'
 });
+
+var popup2 = L.popup({
+        className: 'bookpopup'
+    })
+    .setLatLng([45.775167, 4.7461])
+    .setContent('<%= image_tag("cnsdm.gif") %>');
 
 var fifthMarker = L.marker([45.769167, 4.8125], {
     title: 'Etape 4 - Conservatoire National Supérieur de Musique et de Danse'
@@ -261,7 +267,7 @@ $(document).ready(function () {
 
                 $('html').on('click', '#cybelestart', function () {
 
-                    fourthMarker.setPopupContent('<h4>Là où j\'aurai dû être archéologue</h4></p><p>Au gré de ma balade parmi les ruines de ce temple païen, je suis tombé sur un ancien symbole chrétien gravé sur une pierre.</p><p>A l\'origine, c\'était l\'abréviation d\'un mot signifiant "utile, de bon augure".</p><p>Il serait très mal vu de voler la pierre, mais mon instinct me dicte que ce pourrait être important, mieux vaudrait-il en faire une esquisse pour en garder un trace.</p><p>Cherche le nom de ce symbole et entre la réponse ci-dessous:</p><p id="message_alert3"><center><input id="reponse3" type="text" placeholder="Saisir la réponse ici"/><button id="valider3">Valider</button></center>');
+                    fourthMarker.setPopupContent('<h4>Là où j\'aurai dû être archéologue</h4></p><p>Au gré de ma balade parmi les ruines de ce temple païen, je suis tombé sur un ancien symbole chrétien gravé sur une pierre.</p><p>A l\'origine, c\'était l\'abréviation d\'un mot signifiant "utile, de bon augure".</p><p>Il serait très mal vu de voler la pierre, mais mon instinct me dicte que ce pourrait être important, mieux vaudrait-il en faire une esquisse pour en garder un trace.</p><center><%= image_tag("chisme.png") %></center><p>Cherche le nom de ce symbole et entre la réponse ci-dessous:</p><p id="message_alert3"><center><input id="reponse3" type="text" placeholder="Saisir la réponse ici"/><button id="valider3">Valider</button></center>');
 
                     function verif3() {
 
@@ -322,19 +328,28 @@ $(document).ready(function () {
 
                     $('html').on('click', '#artistestart', function () {
 
-                        fifthMarker.setPopupContent('<h4>Là où les arts et les maths se rejoignent</h4></p><p>C\'est étrange, le bâtiment est assez différents de ce que j\'imaginais.</p><p>J\'ai trouvé ce matin un message sous ma porte de chambre qui m\'a fait froid dans le dos. J\'ai donc décidé de protéger mes dernières conclusions dans ma boite de sureté et j\'en ai changé le code. Pour être sûr que toi seul puisses le retrouver, j\'ai fait appel à ton goût pour les mathématiques :</p><p>*A l\'étage, la balustrade est ornée d\'un certain nombre de vases. Ajoute-les au nombre de bourgeons sur le portail. Multiplie-le par le nombre d\'étages du bâtiment, puis par le nombre de fenêtres du mur du fond.</p><p>Prends ensuite le nombre d\'années qu\'a vécu M.S. Arloing. Multiplie-le par le nombre d\'arches autour du cloître.</p><p>Et additionne le tout !*</p><p id="message_alert4"><center><input id="reponse4" type="text" placeholder="Saisir la réponse ici"/><button id="valider4">Valider</button></center>');
+                        fifthMarker.setPopupContent('<h4>Là où les arts et les maths se rejoignent</h4></p><p>C\'est étrange, le bâtiment est assez différents de ce que j\'imaginais.</p><p>J\'ai trouvé ce matin un message sous ma porte de chambre qui m\'a fait froid dans le dos. J\'ai donc décidé de protéger mes dernières conclusions dans ma boite de sureté et j\'en ai changé le code. Pour être sûr que toi seul puisses le retrouver, j\'ai fait appel à ton goût pour les mathématiques :</p><p>*Soustrait le nombre de cloches se trouvant sur le toit au nombres d\'arches en rez de jardin.</p><p>Multiplie ce chiffre par le nombre de fenetres ouvertes sur la photo.</p><p>Ajoutes-y le nombre de fenetres présentes sur la façace (au premier, second et troisième étages) et multiplie le tout par le nombre d\années qu\a vécu Saturnin Arloing, célèbre vétérinaire ayant occupé les lieux.*</p><center><p id="openimg">Voir le Conservatoire</p></center><p id="message_alert4"><center><input id="reponse4" type="text" placeholder="Saisir la réponse ici"/><button id="valider4">Valider</button></center>');
+
+                        $('html').on('click', '#openimg', function () {
+
+
+                            popup2.addTo(map);
+                            secondMarker.addTo(map);
+
+                        });
 
                         function verif4() {
 
                             let maReponse4 = document.getElementById('reponse4').value.toLowerCase();
 
 
-                            if (maReponse4 == '53') {
+                            if (maReponse4 == '4875') {
 
                                 $('#message_alert4').html('Bien joué ! Pour passer à l\'étape suivante, <span id="next_step4">cliquez ici</a>').css('color', 'white').css('background-color', 'green').css('text-align', 'center').css('font-size', '1rem');
 
                                 $('html').on('click', '#next_step4', function () {
 
+                                    map.removeLayer(popup2);
                                     fifthMarker.closePopup();
 
                                     map.panTo(new L.LatLng(45.770556, 4.830556));
