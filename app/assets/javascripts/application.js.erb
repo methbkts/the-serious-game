@@ -22,12 +22,35 @@
 
 
 //Ajout de la carte Leaflet dans la div #mapid avec coordonnées et niveau de zoom
+L.Map.ScrollWheelPan = L.Map.ScrollWheelZoom.extend({
+  _performZoom: function() {
+    var map = this._map,
+      delta = this._delta;
+
+    map.stop(); // stop panning and fly animations if any
+
+    delta = delta > 0 ? Math.ceil(delta) : Math.floor(delta);
+    delta = Math.max(Math.min(delta, 4), -4);
+
+    this._delta = 0;
+    this._startTime = null;
+
+    if (!delta) {
+      return;
+    }
+
+    map.panBy([0, -delta * 30]); // Adjust 40 to your feeling.
+  }
+});
+
+L.Map.addInitHook('addHandler', 'scrollWheelPan', L.Map.ScrollWheelPan);
+
 var map = L.map('mapid', {
     zoomControl: false,
-    fullscreenControl: true
+    fullscreenControl: true,
+    scrollWheelZoom: false,
+  scrollWheelPan: true
 }).setView([45.760041, 4.8351343], 14);
-
-map.scrollWheelZoom.disable();
 
 //Ajout du thème (Impossibilité de le modifier pour le moment)
 L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
