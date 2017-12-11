@@ -38,7 +38,7 @@ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{e
 }).addTo(map);
 
 //Ajout d'un marqueur aux positions indiquées et d'un popup cliquable qui affiche le texte
-var firstMarker = L.marker([45.760041, 4.8351343]);
+var firstMarker = L.marker([45.760041, 4.8351343], {title: 'Lieu de départ - Place des Jacobins'});
 
 var popup = L.popup({
         className: 'bookpopup'
@@ -46,17 +46,17 @@ var popup = L.popup({
     .setLatLng([45.7623314, 4.67])
     .setContent('<%= image_tag("book.png", width: "850px") %>');
 
-var secondMarker = L.marker([45.7623314, 4.8275598]);
+var secondMarker = L.marker([45.7623314, 4.8275598], {title: 'Etape 1 - Cathédrale Saint-Jean'});
 
-var thirdMarker = L.marker([45.763, 4.8326874]);
+var thirdMarker = L.marker([45.763, 4.8326874], {title: 'Etape 2 - Quais de Saone'});
 
-var fourthMarker = L.marker([45.759722, 4.819722]);
+var fourthMarker = L.marker([45.759722, 4.819722], {title: 'Etape 3 - Théatre Antique de Fourvière'});
 
-var fifthMarker = L.marker([45.769167, 4.8125]);
+var fifthMarker = L.marker([45.769167, 4.8125], {title: 'Etape 4 - Conservatoire National Supérieur de Musique et de Danse'});
 
-var sixthMarker = L.marker([45.770556, 4.830556]);
+var sixthMarker = L.marker([45.770556, 4.830556], {title: 'Etape 5 - Amphithéatre des 3 Gaules'});
 
-var seventhMarker = L.marker([45.755086, 4.813786]);
+var seventhMarker = L.marker([45.755086, 4.813786], {title: 'Lieu final - Eglise Saint-Irénée'});
 
 firstMarker.addTo(map)
     .bindPopup('<p id="startmap">Commencer</p>').openPopup();
