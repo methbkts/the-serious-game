@@ -25,6 +25,7 @@
 var map = L.map('mapid', {
     zoomControl: false
 }).setView([45.760041, 4.8351343], 13);
+
 map.scrollWheelZoom.disable();
 
 //Ajout du thème (Impossibilité de le modifier pour le moment)
@@ -37,7 +38,17 @@ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{e
 }).addTo(map);
 
 //Ajout d'un marqueur aux positions indiquées et d'un popup cliquable qui affiche le texte
-var firstMarker = L.marker([45.760041, 4.8351343]).addTo(map)
+var firstMarker = L.marker([45.760041, 4.8351343]);
+
+var popup = L.popup({className: 'bookpopup'})
+                    .setLatLng([45.7623314, 4.67])
+                    .setContent('<%= image_tag("book.png", width: "850px") %>');
+
+var secondMarker = L.marker([45.7623314, 4.8275598]);
+
+var thirdMarker = L.marker([45.763, 4.8326874]);
+
+    firstMarker.addTo(map)
     .bindPopup('<p id="startmap">Commencer</p>').openPopup();
 
 $('html').on('click', '#startmap', function () {
@@ -48,9 +59,6 @@ $('html').on('click', '#startmap', function () {
 
 
 $(document).ready(function () {
-    
-    
-
 
     $('html').on('click', '.start', function () {
 
@@ -70,9 +78,7 @@ $(document).ready(function () {
 
     });
 
-
     //fonction pour que dropdown fonctionne même après retour sur home
-
 
     $('html').on('click', '.dropdown_test', function () {
 
@@ -84,17 +90,11 @@ $(document).ready(function () {
         }
     });
 
-
-
     $('html').on('click', '#startgame', function () {
-
-         var popup = L.popup({className: 'bookpopup'})
-                    .setLatLng([45.7623314, 4.67])
-                    .setContent('<%= image_tag("book.png", width: "850px") %>')
 
         firstMarker.closePopup();
 
-        var secondMarker = L.marker([45.7623314, 4.8275598]).addTo(map)
+            secondMarker.addTo(map)
             .bindPopup('<div id="cathedrale"><center><h4>Là où l\'on se recueille</h4></center><br><center><img src="https://lyonfrance.ca/images/saintjeancathedral.jpg" width="100%"><p>Cher Ami,</p><p>Au cœur du vieux Lyon se trouve la cathédrale St Jean. Elle fut le théâtre d\'événements importants: couronnement du Pape, mariage royal, conciles et autres distinctions...</p><p>Sa construction s\'étale sur 3 siècles, mélangeant les styles gothiques et romans sur sa façade. Elle possède une horloge astronomique du XIVème siècle. Je suis resté sous le charme de la rosace de sa façade.</p><p>La cathédrale a été dévastée par les troupes du Baron des Adrets en 1562. L\'intérieur de l\'édifice a subi de nombreuses transformations et il est encore régulièrement rénové.</p><p>Heureusement, j\'ai tout de même pu localiser un livre enluminé en exposition. Les paragraphes de l\'Évangile selon St Jean m\'ont donné une indication précieuse.</p><p>Palamède</p></div>');
 
         secondMarker.openPopup();
@@ -121,7 +121,7 @@ $(document).ready(function () {
 
                     $('#message_alert').html('Bien joué ! Pour passer à l\'étape suivante, <a class="next_step">cliquez ici</a>').css('color', 'white').css('background-color', 'red').css('text-align', 'center').css('font-size', '1rem');
 
-                    var thirdMarker = L.marker([45.763, 4.8326874]).addTo(map)
+                        thirdMarker.addTo(map)
                         .bindPopup('<center><h4>Là où il y a des tâches d\'encre</h4></center><br><center><img src="http://static.panoramio.com/photos/large/20834705.jpg" width="100%"></center><br><p>Cher Ami,</p><p>Lyon est la capitale de beaucoup de domaines : la capitale des Gaules, celle de la gastronomie... mais également celle de l\'imprimerie en son temps.</p><p>En 1472, Barthélemy Buyer installe le premier atelier dans sa maison sur les quais de Saône. Au cours du siècle suivant, presque un tiers des éditions françaises sont imprimées à Lyon notamment dans la rue Mercière et ses alentours.</p><p>Beaucoup d\'imprimeurs sont d\'ailleurs protestants. Tant et si bien que lorsque la ville fut reprise par les catholiques, ils fuirent aux Pays-Bas ou à Genève. C\'est d\'ailleurs là-bas que s\'était réfugié Théodore de Bèze. Il y réceptionna le Codex, qu\'il avait demandé à ses amis de voler pour lui.</p><p>Mais au IXème siècle, bien avant la Bible de Gutenberg et les presses, Lyon a accueilli un diacre reconnu pour son ouvrage littéraire : Florus. Celui-ci a été authentifié comme l\'auteur de plusieurs pages du Codex.</p><p>Le musée de l\'imprimerie, déjà en lien avec le Codex par ces biais, possède également les Tables Claudiennes, qui, bien qu\'antérieures à la disparition des pages, a visiblement inspiré ceux qui les ont cachées.</p>');
 
                     thirdMarker.addTo(map);
