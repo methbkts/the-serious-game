@@ -102,7 +102,10 @@ var seventhMarker = L.marker([45.755086, 4.813786], {
     title: 'Lieu final - Eglise Saint-Irénée'
 });
 
+
 $(document).ready(function () {
+
+    
 
     $('html').on('click', '.start', function () {
 
@@ -489,4 +492,9 @@ $(document).ready(function () {
         });
 
     });
+});
+
+
+$(window).on('beforeunload', function() {
+    return 'La partie ne sera pas sauvegardée';
 });
