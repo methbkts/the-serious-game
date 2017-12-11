@@ -23,7 +23,8 @@
 
 //Ajout de la carte Leaflet dans la div #mapid avec coordonnées et niveau de zoom
 var map = L.map('mapid', {
-    zoomControl: false
+    zoomControl: false,
+    fullscreenControl: true
 }).setView([45.760041, 4.8351343], 14);
 
 map.scrollWheelZoom.disable();
