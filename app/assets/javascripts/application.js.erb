@@ -153,7 +153,7 @@ $(document).ready(function () {
 
                     $('html').on('click', '#next_step', function () {
 
-                        popup.closePopup();
+                        map.removeLayer(popup);
                         secondMarker.closePopup();
 
                         map.panTo(new L.LatLng(45.763, 4.8326874));
