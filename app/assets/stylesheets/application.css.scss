@@ -154,6 +154,11 @@ li {
 
 // cssmap
 #mapid {
+    border-radius: 15px;
+    -webkit-box-shadow: 5px 7px 5px 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 5px 7px 5px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 5px 7px 5px 3px rgba(0, 0, 0, 0.3);;
+
     -webkit-filter: sepia(100%) grayscale(30%);
     -moz-filter: sepia(100%) grayscale(30%);
     -o-filter: sepia(100%) grayscale(30%);
