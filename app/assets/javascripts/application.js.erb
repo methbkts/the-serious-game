@@ -54,7 +54,7 @@ var map = L.map('mapid', {
 
 //Ajout du thème (Impossibilité de le modifier pour le moment)
 L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
-    attribution: false,
+    attribution: 'Codex Bezae 2017 ©',
     subdomains: 'abcd',
     minZoom: 14,
     maxZoom: 14,
@@ -102,9 +102,24 @@ var seventhMarker = L.marker([45.755086, 4.813786], {
     title: 'Lieu final - Eglise Saint-Irénée'
 });
 
+function manageStars(etoile){
+    var star = etoile.id;        
+    var selectedStar = document.getElementById(star);
+    selectedStar.style.color = "yellow";
+    while (star>=0){
+        star = star-1
+        var befSelectedStar = document.getElementById(star);
+        befSelectedStar.style.color = "yellow";
+    }
+    
+    };
+
+
 
 $(document).ready(function () {
-
+   
+    
+    
 
 
     $('html').on('click', '.start', function () {
@@ -131,17 +146,9 @@ $(document).ready(function () {
 
     });
 
-    //fonction pour que dropdown fonctionne même après retour sur home
+    
 
-    $('html').on('click', '.dropdown_test', function () {
-
-        if ($('.dropdown-menu').hasClass('show')) {
-            $('.dropdown-menu').removeClass('show');
-
-        } else {
-            $('.dropdown-menu').addClass('show');
-        }
-    });
+    
 
     firstMarker.addTo(map)
         .bindPopup('<p id="startmap">Commencer</p>').openPopup();
@@ -181,7 +188,7 @@ $(document).ready(function () {
 
             function verif() {
 
-                let maReponse = document.getElementById('reponse1').value.toLowerCase();
+                var maReponse = document.getElementById('reponse1').value.toLowerCase();
 
 
                 if (maReponse == 'eglise' || maReponse == 'église') {
@@ -239,11 +246,11 @@ $(document).ready(function () {
 
             $('html').on('click', '#encre', function () {
 
-                thirdMarker.setPopupContent('<h4>Là où l\'on ouvre les yeux</h4><p>C\'est une phrase en latin qui m\a poussé à me rendre sur Lyon. Cette phrase, la voici:</p><p>T E M P U S C E S T I A M T I</p><p>C A R E S A R G E R M A N I C E</p><p>D E T E G E R E T E P A T Y R I B U S</p><p>C O N S C R I P T I S Q U O</p><p>T E N D A T O R A T I O T U A</p><p>I P A M E N I M A D E X T R E M O S</p><p>F I N E S G A L L I T A E N A R</p><p>B O N E N E S I S V E N I S T I</p><p>J\'ai cependant noté quelques différences avec l\'originale...<p><p id="message_alert2"><center><input id="reponse2" type="text" placeholder="Saisir la réponse ici"/><button id="valider2">Valider</button></center>');
+                thirdMarker.setPopupContent('<h4>Là où l\'on ouvre les yeux</h4><p>C\'est une phrase en latin qui m\a poussé à me rendre sur Lyon. Cette phrase, la voici:</p><p>T E M P U S C E S T I A M T I</p><p>C A R E S A R G E R M A N I C E</p><p>D E T E G E R E T E P A T Y R I B U S</p><p>C O N S C R I P T I S Q U O</p><p>T E N D A T O R A T I O T U A</p><p>I P A M E N I M A D E X T R E M O S</p><p>F I N E S G A L L I T A E N A R</p><p>B O N E N E S I S V E N I S T I</p><p>J\'ai cependant noté quelques différences avec l\'originale provenant des Tables Claudiennes (Discours de Claude).<p><p id="message_alert2"><center><input id="reponse2" type="text" placeholder="Saisir la réponse ici"/><button id="valider2">Valider</button></center>');
 
                 function verif2() {
 
-                    let maReponse2 = document.getElementById('reponse2').value.toLowerCase();
+                    var maReponse2 = document.getElementById('reponse2').value.toLowerCase();
 
 
                     if (maReponse2 == 'crypte') {
@@ -304,7 +311,7 @@ $(document).ready(function () {
 
                     function verif3() {
 
-                        let maReponse3 = document.getElementById('reponse3').value.toLowerCase();
+                        var maReponse3 = document.getElementById('reponse3').value.toLowerCase();
 
 
                         if (maReponse3 == 'chrisme') {
@@ -373,7 +380,7 @@ $(document).ready(function () {
 
                         function verif4() {
 
-                            let maReponse4 = document.getElementById('reponse4').value.toLowerCase();
+                            var maReponse4 = document.getElementById('reponse4').value.toLowerCase();
 
 
                             if (maReponse4 == '4875') {
@@ -435,10 +442,10 @@ $(document).ready(function () {
 
                             function verif5() {
 
-                                let maReponse5 = document.getElementById('reponse5').value.toLowerCase();
+                                var maReponse5 = document.getElementById('reponse5').value.toLowerCase();
 
 
-                                if (maReponse5 == 'saint-irénée' || maReponse5 == 'st-irénée' || maReponse5 == 'st-irenee' || maReponse5 == 'saint-irenee' || maReponse5 == 'st irénée' || maReponse5 == 'saint irénée' || maReponse5 == 'st irenee' || maReponse5 == 'saint irenee') {
+                                if (maReponse5 == 'saint-irénée' || maReponse5=='saint-irenée' || maReponse5 == 'st-irénée' || maReponse5 == 'st-irenee' || maReponse5 == 'saint-irenee' || maReponse5 == 'st irénée' || maReponse5 == 'saint irénée' || maReponse5 == 'st irenee' || maReponse5 == 'saint irenee') {
 
                                     $('#message_alert5').html('Bien joué ! Pour passer à l\'étape suivante, <span id="next_step5">cliquez ici</span>').css('color', 'white').css('background-color', 'green').css('text-align', 'center').css('font-size', '1rem');
 
@@ -453,7 +460,7 @@ $(document).ready(function () {
 
                                         $('html').on('click', '#startgame7', function () {
 
-                                            seventhMarker.setPopupContent('<center><h4>Là où l\'on obtient des réponses</h4></center><p>Bravo cher ami.</p><p>Tu es parvenu au lieu final de notre quête !</p><p>J\'ai pu identifier le lieu où reposent les pages du codex Bezae. C\'est sous terre qu\'elles sont dissimulées à la vue de tous. Dans la cour de l\'église Sainte Irénée, on trouve un portail qui mène à des souterrains qui se perdent sous la ville de Lyon. Ces souterrains ont d\'ailleurs été utilisés par les résistants durant les différentes guerres.</p><p>J\'ai pu retrouver une page lors de mes explorations et je l\'ai dissimulée dans la crypte, car j\'ai peur que notre initiative ne soit pas vue d\'un bon œil par ceux qui gardent le secret.</p><p>Gràce au code obtenu lors de notre voyage, vous découvrirez la page manqante du Codex Bezae dans un coffre fort caché dans la crypte.</p><p>Féliciations ! Vous avez terminé le jeu!</p>');
+                                            seventhMarker.setPopupContent('<center><h4>Là où l\'on obtient des réponses</h4></center><p>Bravo cher ami.</p><p>Tu es parvenu au lieu final de notre quête !</p><p>J\'ai pu identifier le lieu où reposent les pages du codex Bezae. C\'est sous terre qu\'elles sont dissimulées à la vue de tous. Dans la cour de l\'église Sainte Irénée, on trouve un portail qui mène à des souterrains qui se perdent sous la ville de Lyon. Ces souterrains ont d\'ailleurs été utilisés par les résistants durant les différentes guerres.</p><p>J\'ai pu retrouver une page lors de mes explorations et je l\'ai dissimulée dans la crypte, car j\'ai peur que notre initiative ne soit pas vue d\'un bon œil par ceux qui gardent le secret.</p><p>Gràce au code obtenu lors de notre voyage, vous découvrirez la page manqante du Codex Bezae dans un coffre fort caché dans la crypte.</p><p>Féliciations ! Vous avez terminé le jeu! <span class="note">Noter le jeu</span></p><span class="note">Noter le jeu</span>');
 
                                             seventhMarker.openPopup();
 
@@ -489,6 +496,14 @@ $(document).ready(function () {
                                 }
 
                             });
+                         
+                        $('html').on('click', '.note', function(){
+                            $('.satisfaction').show();
+                        });
+
+
+
+                         
 
                         });
                     });
