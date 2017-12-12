@@ -9,7 +9,7 @@
             <%= image_submit_tag("personnage_homme.gif", class: 'start img-responsive') %>
         </div>
         <div class="col-sm-4 personnage">
-            <p class="start"><strong>Choisis ton personnage</strong></p>
+            <p id="main_titre" class="start"><strong>Choisis ton personnage</strong></p>
         </div>
         <div class="col-sm-4 personnage">
             <%= image_submit_tag("personnage_femme.gif", class: 'start img-responsive') %>
@@ -51,4 +51,16 @@
         });
     });
 </script>
+
 <% end %>
+
+<div class="satisfaction"><h3></h3>
+    
+
+    <div class="etoile" id="1" onclick="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
+    <div class="etoile" id="2" onclick="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
+    <div class="etoile" id="3" onclick="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
+    <div class="etoile" id="4" onclick="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
+    <div class="etoile" id="5" onclick="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
+
+</div>
