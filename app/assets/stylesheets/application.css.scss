@@ -511,5 +511,23 @@ em{
     filter: grayscale(100%);
 }
 
+.satisfaction{
+    /*display: none;*/
+    background-color: white;
+    display: flex;
+
+}
+
+.etoile {
+font-size: 40px;
+margin-right: 5px;
+vertical-align: top;
+margin: 5px;
+line-height: 50px !important;
+color: grey;
+}
 
 
+.etoile_selected {
+    color: orange;
+}
