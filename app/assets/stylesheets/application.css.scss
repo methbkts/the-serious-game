@@ -475,7 +475,8 @@ em{
 
 // Page About
 
-.about {
+.about{
+    font-family: 'IM Fell English', serif;
     // position: relative;
     padding: 30px;
     // align-items: center;
@@ -484,8 +485,16 @@ em{
     box-shadow: 2px 2px 2px 2px #E1DBD7, -2px -2px 2px 2px #E1DBD7;
 }
 
+.about h1, .about h2{
+    color: rgba(63,104,100,1);
+}
+
+.about p, .about h1, .about h2, .about h3, .about a{
+    font-family: 'IM Fell English', serif;
+}
+
 .gamification p:last-child{
- padding-bottom: 2rem;
+    padding-bottom: 2rem;
 }
 
 .transition{
@@ -493,9 +502,22 @@ em{
     box-shadow: 0px 1px grey;
 }
 
-.about .row .contenu .titre_section h2{
 
+.about .row .contenu .titre_section h2{
     margin:2rem 0rem 2rem 0rem ;
+}
+
+.about p{
+    font-size: 1.2rem;
+}
+
+.about a{
+    color: #77ACA2;
+}
+.about a:hover{
+    font-weight: bold;
+    color: rgba(119, 172, 162,0.7);
+    text-decoration: none;
 }
 
 .photo{
@@ -510,7 +532,6 @@ em{
     /*display: none;*/
     background-color: white;
     display: flex;
-
 }
 
 .etoile {
