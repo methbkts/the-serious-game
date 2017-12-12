@@ -260,7 +260,7 @@ body:before {
 }
 
 .welcome {
-    //display: none;
+    display: none;
     position: relative;
     top: 100px;
     padding: 10px;
@@ -271,10 +271,6 @@ body:before {
     background-image: image-url("oldpaper.png");
     border-radius: 40px;
     opacity: 0.8;
-}
-
-h5 > welcome {
-    color: red;
 }
 
 pitch:before {
