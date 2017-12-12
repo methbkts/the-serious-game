@@ -103,14 +103,29 @@ var seventhMarker = L.marker([45.755086, 4.813786], {
 });
 
 function manageStars(etoile){
-    var star = etoile.id;        
+    var star = etoile.id;
     var selectedStar = document.getElementById(star);
+    
     selectedStar.style.color = "yellow";
-    while (star>=0){
+
+    if(selectedStar.style.color === 'yellow'){
+        while (star<=5){
+        star = star+1
+        var befSelectedStar = document.getElementById(star);
+        befSelectedStar.style.color = "grey";
+    }
+   
+    }else{
+        
+     while (star>=0){
         star = star-1
         var befSelectedStar = document.getElementById(star);
         befSelectedStar.style.color = "yellow";
     }
+
+    }
+    
+    
     
     };
 
@@ -124,7 +139,7 @@ $(document).ready(function () {
 
     $('html').on('click', '.start', function () {
 
-        $('.start').hide();
+        $('.personnage').hide();
 
         $('body').append('<style>body:before{-webkit-filter: blur(1.5px) sepia(100%) grayscale(80%) contrast(50%) opacity(50%); -moz-filter: blur(1.5px) sepia(90%) grayscale(80%) contrast(50%) opacity(50%); -o-filter: blur(1.5px) sepia(90%) grayscale(80%) contrast(50%) opacity(50%); -ms-filter: blur(1.5px) sepia(90%) grayscale(80%) contrast(50%) opacity(50%); filter: blur(1.5px) sepia(90%) grayscale(80%) contrast(50%) opacity(50%); transform: scale(1.02)!important;}</style>');
 
