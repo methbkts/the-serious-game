@@ -234,7 +234,16 @@ body:before {
 .footerleft a:hover,
 .footerright a:hover {
     font-weight: bold;
-    color: #1975C5;
+    color: rgba(63,104,100,1);
+}
+
+.footerright i{
+    padding-right: 1rem;
+}
+
+.footerright i:hover{
+    color: rgba(63,104,100,1);
+
 }
 
 .footerright img {
@@ -242,6 +251,14 @@ body:before {
     -webkit-filter: invert(100%);
     filter: invert(100%);
     padding: 0 5px;
+}
+
+.footerright img:hover {
+    width: 2em;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    padding: 0 5px;
+    color: rgba(63,104,100,1);
 }
 
 .footerrightfirst {
