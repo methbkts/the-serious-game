@@ -103,26 +103,24 @@ var seventhMarker = L.marker([45.755086, 4.813786], {
 });
 
 function manageStars(etoile){
-    let star = etoile.id;        
-    let selectedStar = document.getElementById(star);
+    var star = etoile.id;        
+    var selectedStar = document.getElementById(star);
     selectedStar.style.color = "yellow";
     while (star>=0){
         star = star-1
-        let befSelectedStar = document.getElementById(star);
+        var befSelectedStar = document.getElementById(star);
         befSelectedStar.style.color = "yellow";
     }
     
     };
 
 
-<<<<<<< HEAD
 
-=======
 $(document).ready(function () {
    
     
     
->>>>>>> fond_et_nav
+
 
     $('html').on('click', '.start', function () {
 
