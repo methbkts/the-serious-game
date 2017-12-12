@@ -112,13 +112,13 @@ function manageStars(etoile){
     if(baseColor === 'grey'){ 
      
         baseColor = 'yellow'
-        selectedStar.style.color = 'yellow';
+        selectedStar.style.color = '#549690';
         
         while (star>=0){
             
             star--;
             var befSelectedStar = document.getElementById(star);
-            befSelectedStar.style.color = 'yellow';
+            befSelectedStar.style.color = '#549690';
             
         }
     }else{
@@ -132,7 +132,7 @@ function manageStars(etoile){
             ++star;
 
             var befSelectedStar = document.getElementById(star);
-            befSelectedStar.style.color = 'grey';
+            befSelectedStar.style.color = '#D6D6D6';
             
         }
     };
@@ -526,7 +526,8 @@ $(document).ready(function () {
                             });
 
                             $('html').on('click', '.note', function(){
-                                $('.satisfaction').show();
+                                $('#mapid').fadeOut();
+                                $('.satisfaction').fadeIn();
                             });
 
 

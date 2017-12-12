@@ -529,9 +529,8 @@ em{
 }
 
 .satisfaction{
-    /*display: none;*/
+    display: none;
     background-color: white;
-    display: flex;
 }
 
 .etoile {
@@ -541,4 +540,8 @@ vertical-align: top;
 margin: 5px;
 line-height: 50px !important;
 color: grey;
+}
+
+.etoiles{
+    display: flex;
 }

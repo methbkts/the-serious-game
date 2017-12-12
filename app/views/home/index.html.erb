@@ -2,7 +2,7 @@
 <% if user_signed_in? %>
 
 <div class="section1 col-sm-12">
-    <div class="row">
+<div class="row justify-content-center">
 
 
         <div class=" col-sm-4 personnage">
@@ -13,6 +13,23 @@
         </div>
         <div class="col-sm-4 personnage">
             <%= image_submit_tag("personnage_femme.gif", class: 'start img-responsive') %>
+        </div>
+
+        <div class="row satisfaction col-sm-6">
+            <div class="row col-sm-12 justify-content-center">
+                <h1>Merci d'avoir participé à notre jeu</h1>
+                <h2>N'oubliez pas de noter notre application!</h2><br/>
+                <h2>A bientôt</h2>
+                <div class="etoiles">
+
+                    <div class="etoile" id="1" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
+                    <div class="etoile" id="2" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
+                    <div class="etoile" id="3" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
+                    <div class="etoile" id="4" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
+                    <div class="etoile" id="5" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
+                </div>
+            </div>
+
         </div>
 
 
@@ -48,13 +65,3 @@
 
 <% end %>
 
-<div class="satisfaction"><h3></h3>
-    
-
-    <div class="etoile" id="1" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
-    <div class="etoile" id="2" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
-    <div class="etoile" id="3" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
-    <div class="etoile" id="4" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
-    <div class="etoile" id="5" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
-
-</div>
