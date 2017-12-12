@@ -529,8 +529,19 @@ em{
 }
 
 .satisfaction{
-    display: none;
+    /*display: none;*/
     background-color: white;
+}
+
+.satis{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+}
+
+.satis h2{
+    padding-top: 2rem;
 }
 
 .etoile {
@@ -545,3 +556,27 @@ color: grey;
 .etoiles{
     display: flex;
 }
+
+.commentaire{
+    border:none;
+    border-bottom: 2px solid rgba(63,104,100,1);
+    text-align: center;
+    outline: none;
+    line-height: 3rem;  
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.final{
+    align-self: flex-end;
+    border:1px solid rgba(63,104,100,1);;
+    border-radius: 2px;
+    color: rgba(63,104,100,1);
+    padding: 0 2% 0 2%;
+}
+
+.final:hover{
+    cursor: pointer;
+}
+
