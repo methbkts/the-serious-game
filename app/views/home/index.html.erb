@@ -2,11 +2,11 @@
 <% if user_signed_in? %>
 
 <div class="section1 col-sm-12">
-<div class="row justify-content-center">
+    <div class="row justify-content-center">
 
 
         <div class=" col-sm-4 personnage">
-            <%= image_submit_tag("personnage_homme.gif", class: 'start img-responsive') %>
+            <%= image_submit_tag("personnage_homme.png", class: 'start img-responsive') %>
         </div>
         <div class="col-sm-4 personnage">
             <p id="main_titre"><strong>Choisis ton personnage</strong></p>
@@ -29,10 +29,7 @@
                     <div class="etoile" id="5" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
                 </div>
             </div>
-
         </div>
-
-
     </div>
 
     <div id="mapid" class="col-sm-12"></div>
