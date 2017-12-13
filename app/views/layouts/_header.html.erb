@@ -8,18 +8,19 @@
 			<%=link_to image_tag("codex_noir.png", size: "125", class:"logo_lien", data: { turbolinks: false }),root_path%>
 			
 		</div>
-		<div class="col-sm-5 col-lg-3 col-xl-2">
+		<div class="col-sm-8 col-lg-6 col-xl-4">
 			<ul class="row col-sm-12 justify-content-around">
 
 
 				<%if user_signed_in?%>
-				<li class="menu col-sm-8"><%=link_to 'Déconnexion', destroy_user_session_path, method: :delete, class:'connexion_lien' %></li>
+				<li class="menu col-sm-4"><%=link_to 'Déconnexion', destroy_user_session_path, method: :delete, class:'connexion_lien' %></li>
 				<%else%>
-				<li class="menu col-sm-8"><%= link_to 'Se connecter', new_user_session_path, class:'connexion_lien' %></li>
+				<li class="menu col-sm-4"><%= link_to 'Se connecter', new_user_session_path, class:'connexion_lien' %></li>
 				<%end%>
 
-
-				<ul class="menu dropdown_test col-sm-2">
+				<li class="menu col-sm-3">Contact</li>
+				<li class="menu col-sm-3">À Propos</li>
+				<!--<ul class="menu dropdown_test col-sm-2">
 					<a href="#" class="dropdown_test" data-toggle="dropdown">
 
 						<i class="fa fa-bars big"></i>
@@ -28,7 +29,7 @@
 						<li><%= link_to 'Contact', contact_path, class: 'dropdown-item', data: { turbolinks: false }%></li>
 						<li><%= link_to 'À Propos', about_path, class: 'dropdown-item', data: { turbolinks: false }%></li>
 					</ul>
-				</ul>
+				</ul>-->
 
 			</ul>
 		</div>

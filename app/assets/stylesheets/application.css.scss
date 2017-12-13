@@ -31,7 +31,7 @@ body {
 }
 
 * {
-    font-family: 'MedievalSharp', cursive;
+    font-family: 'IM Fell English','MedievalSharp', cursive;
 }
 
 .container-fluid {
@@ -119,14 +119,16 @@ body {
 .menu{
     display: flex;
     justify-content: center;
+    font-weight: bold;
 }
+
 
 .connexion_lien {
     color: black;
     font-weight: bold;
     font-size: 1em;
     font-weight: bold;
-    margin-right: 20px;
+    
     margin-bottom: 0;
 }
 
@@ -238,7 +240,7 @@ body:before {
 .footerleft a:hover,
 .footerright a:hover {
     font-weight: bold;
-    color: rgba(63,104,100,1);
+    color: #61A8A3;
 }
 
 .footerright i{
@@ -246,7 +248,7 @@ body:before {
 }
 
 .footerright i:hover{
-    color: rgba(63,104,100,1);
+    color: #61A8A3;
 
 }
 
@@ -262,7 +264,7 @@ body:before {
     -webkit-filter: invert(100%);
     filter: invert(100%);
     padding: 0 5px;
-    color: rgba(63,104,100,1);
+    color: #786F52;
 }
 
 .footerrightfirst {
