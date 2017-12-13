@@ -28,10 +28,12 @@
 body {
     //min-height: 100%;
     //position: relative;
+    font-family: 'IM Fell English','MedievalSharp', cursive;
+
 }
 
 * {
-    font-family: 'IM Fell English','MedievalSharp', cursive;
+    //font-family: 'IM Fell English','MedievalSharp', cursive;
 }
 
 .container-fluid {
@@ -567,12 +569,12 @@ em{
 }
 
 .etoile {
-font-size: 40px;
-margin-right: 5px;
-vertical-align: top;
-margin: 5px;
-line-height: 50px !important;
-color: grey;
+    font-size: 40px;
+    margin-right: 5px;
+    vertical-align: top;
+    margin: 5px;
+    line-height: 50px !important;
+    color: grey;
 }
 
 .etoiles{
