@@ -588,8 +588,19 @@ em{
 }
 
 .control_audio{
+    padding: 1%;
     display: none;
     position: relative;
+<<<<<<< HEAD
     //top: 200px;
     border:2px solid black;
 }
+=======
+    
+}
+
+.control_audio:hover{
+    cursor: pointer;
+    color: rgba(0,0,0,0.5)
+}
+>>>>>>> fond_et_nav
