@@ -116,19 +116,17 @@ body {
     justify-content: center;
 }
 
-.menu{
+.menu, .nav-link{
     display: flex;
     justify-content: center;
     font-weight: bold;
 }
 
-
-.connexion_lien {
-    color: black;
+.nav-link {
+    color: black!important;
     font-weight: bold;
     font-size: 1em;
-    font-weight: bold;
-    
+    font-weight: bold;    
     margin-bottom: 0;
 }
 
