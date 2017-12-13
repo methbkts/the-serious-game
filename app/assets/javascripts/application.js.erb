@@ -25,7 +25,7 @@
 L.Map.ScrollWheelPan = L.Map.ScrollWheelZoom.extend({
     _performZoom: function () {
         var map = this._map,
-            delta = this._delta;
+        delta = this._delta;
 
         map.stop(); // stop panning and fly animations if any
 
@@ -67,10 +67,10 @@ var firstMarker = L.marker([45.760041, 4.8351343], {
 });
 
 var popup = L.popup({
-        className: 'bookpopup'
-    })
-    .setLatLng([45.7623314, 4.7512])
-    .setContent('<%= image_tag("book.png", width: "850px") %>');
+    className: 'bookpopup'
+})
+.setLatLng([45.7623314, 4.7512])
+.setContent('<%= image_tag("book.png", width: "850px") %>');
 
 var secondMarker = L.marker([45.7623314, 4.8275598], {
     title: 'Etape 1 - Cathédrale Saint-Jean'
@@ -85,10 +85,10 @@ var fourthMarker = L.marker([45.759722, 4.819722], {
 });
 
 var popup2 = L.popup({
-        className: 'bookpopup'
-    })
-    .setLatLng([45.775167, 4.7461])
-    .setContent('<%= image_tag("cnsdm.gif") %>');
+    className: 'bookpopup'
+})
+.setLatLng([45.775167, 4.7461])
+.setContent('<%= image_tag("cnsdm.gif") %>');
 
 var fifthMarker = L.marker([45.769167, 4.8125], {
     title: 'Etape 4 - Conservatoire National Supérieur de Musique et de Danse'
@@ -103,6 +103,8 @@ var seventhMarker = L.marker([45.755086, 4.813786], {
 });
 
 var baseColor = 'grey';
+var player = document.getElementById('sound');
+var audioStatut = 'on';
 
 function manageStars(etoile) {
     var star = etoile.id;
@@ -137,6 +139,8 @@ function manageStars(etoile) {
 
 $(document).ready(function () {
 
+
+
     $('html').on('click', '.start', function () {
 
         $('.personnage').hide();
@@ -145,13 +149,28 @@ $(document).ready(function () {
 
         $('#mapid').css('height', '40rem');
 
+        $('.control_audio').fadeIn();
+
         map.invalidateSize();
 
         $('#mapid').fadeTo(2000, 1);
 
-        player = document.getElementById('sound');
+        
 
         player.play();
+
+        $('html').on('click', '.control_audio', function () {
+            if (audioStatut==='on'){
+              alert(audioStatut);
+                player.pause();
+             audioStatut = 'off';
+                
+            }else{
+              alert(audioStatut);
+            audioStatut = 'on';
+            player.play();
+            }
+        });
 
         $(window).on('beforeunload', function () {
             return 'La partie ne sera pas sauvegardée';
@@ -159,7 +178,7 @@ $(document).ready(function () {
     });
 
     firstMarker.addTo(map)
-        .bindPopup('<p id="startmap">Commencer</p>').openPopup();
+    .bindPopup('<p id="startmap">Commencer</p>').openPopup();
 
     $('html').on('click', '#startmap', function () {
 
@@ -171,7 +190,7 @@ $(document).ready(function () {
         firstMarker.closePopup();
 
         secondMarker.addTo(map)
-            .bindPopup('<span id="startgame2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/De_saint-%C3%89tienne_%C3%A0_Saint-Jean.JPG/800px-De_saint-%C3%89tienne_%C3%A0_Saint-Jean.JPG" width="300px"><center><p>Cathédrale Saint-Jean</p></center></span>').openPopup();
+        .bindPopup('<span id="startgame2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/De_saint-%C3%89tienne_%C3%A0_Saint-Jean.JPG/800px-De_saint-%C3%89tienne_%C3%A0_Saint-Jean.JPG" width="300px"><center><p>Cathédrale Saint-Jean</p></center></span>').openPopup();
 
         $('html').on('click', '#startgame2', function () {
 
@@ -208,7 +227,7 @@ $(document).ready(function () {
                         map.panTo(new L.LatLng(45.773, 4.8326874));
 
                         thirdMarker.addTo(map)
-                            .bindPopup('<span id="startgame3"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Rue-merci%C3%A8re_-_Lyon.JPG/800px-Rue-merci%C3%A8re_-_Lyon.JPG" width="300px"><center><p>Rue Mercière</p></center></span>').openPopup();
+                        .bindPopup('<span id="startgame3"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Rue-merci%C3%A8re_-_Lyon.JPG/800px-Rue-merci%C3%A8re_-_Lyon.JPG" width="300px"><center><p>Rue Mercière</p></center></span>').openPopup();
 
                         $('html').on('click', '#startgame3', function () {
 
@@ -260,7 +279,7 @@ $(document).ready(function () {
                             map.panTo(new L.LatLng(45.769722, 4.819722));
 
                             fourthMarker.addTo(map)
-                                .bindPopup('<span id="startgame4"><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Theatre_antique_Fourviere.jpg" width="300px"><center><p>Théatre Antique de Fourvière</p></center></span>').openPopup();
+                            .bindPopup('<span id="startgame4"><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Theatre_antique_Fourviere.jpg" width="300px"><center><p>Théatre Antique de Fourvière</p></center></span>').openPopup();
 
                             $('html').on('click', '#startgame4', function () {
 
@@ -311,7 +330,7 @@ $(document).ready(function () {
                                 map.panTo(new L.LatLng(45.779167, 4.8125));
 
                                 fifthMarker.addTo(map)
-                                    .bindPopup('<span id="startgame5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Conservatoire_national_sup%C3%A9rieur_musique_et_danse_de_Lyon_de_nuit.JPG/800px-Conservatoire_national_sup%C3%A9rieur_musique_et_danse_de_Lyon_de_nuit.JPG" width="300px"><center><p>Conservatoire National Supérieur de Musique et de Danse</p></center></span>').openPopup();
+                                .bindPopup('<span id="startgame5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Conservatoire_national_sup%C3%A9rieur_musique_et_danse_de_Lyon_de_nuit.JPG/800px-Conservatoire_national_sup%C3%A9rieur_musique_et_danse_de_Lyon_de_nuit.JPG" width="300px"><center><p>Conservatoire National Supérieur de Musique et de Danse</p></center></span>').openPopup();
 
                                 $('html').on('click', '#startgame5', function () {
 
@@ -369,7 +388,7 @@ $(document).ready(function () {
                                     map.panTo(new L.LatLng(45.780556, 4.830556));
 
                                     sixthMarker.addTo(map)
-                                        .bindPopup('<span id="startgame6"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Amphith%C3%A9%C3%A2tre_des_Trois_Gaules_Lyon.jpg/1024px-Amphith%C3%A9%C3%A2tre_des_Trois_Gaules_Lyon.jpg" width="300px"><center><p>Amphithéatre des 3 Gaules</p></center></span>').openPopup();
+                                    .bindPopup('<span id="startgame6"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Amphith%C3%A9%C3%A2tre_des_Trois_Gaules_Lyon.jpg/1024px-Amphith%C3%A9%C3%A2tre_des_Trois_Gaules_Lyon.jpg" width="300px"><center><p>Amphithéatre des 3 Gaules</p></center></span>').openPopup();
 
                                     $('html').on('click', '#startgame6', function () {
 
@@ -421,7 +440,7 @@ $(document).ready(function () {
                                         map.panTo(new L.LatLng(45.765086, 4.813786));
 
                                         seventhMarker.addTo(map)
-                                            .bindPopup('<span id="startgame7"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Eglisesaintireneelyon.JPG/800px-Eglisesaintireneelyon.JPG" width="300px"><center><p>Eglise Saint-Irénée</p></center></span>').openPopup();
+                                        .bindPopup('<span id="startgame7"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Eglisesaintireneelyon.JPG/800px-Eglisesaintireneelyon.JPG" width="300px"><center><p>Eglise Saint-Irénée</p></center></span>').openPopup();
 
                                         $('html').on('click', '#startgame7', function () {
 
@@ -460,9 +479,9 @@ $(document).ready(function () {
                                 $('.satisfaction').fadeIn();
                             });
                         });
-                    });
-                });
-            });
-        });
-    });
+});
+});
+});
+});
+});
 });
