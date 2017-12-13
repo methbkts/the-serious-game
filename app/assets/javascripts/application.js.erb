@@ -161,14 +161,15 @@ $(document).ready(function () {
 
         $('html').on('click', '.control_audio', function () {
             if (audioStatut==='on'){
-              alert(audioStatut);
-                player.pause();
+             player.pause();
              audioStatut = 'off';
+             $('.control_audio').html('<i class="fa fa-volume-off fa-3x" aria-hidden="true"></i>');
                 
             }else{
-              alert(audioStatut);
+                              
             audioStatut = 'on';
             player.play();
+            $('.control_audio').html('<i class="fa fa-volume-up fa-3x" aria-hidden="true"></i>')
             }
         });
 
