@@ -1,9 +1,11 @@
 <% flash.each do |key, value| %>
-<div class="alert alert-<%= key %>">
+<div class="alert alert-<%= key %>" id="alert" >
 	<a href="#" data-dismiss="alert" class="close">×</a>
 	<ul>
 		<li>
-			<%= value %>
+			<div class="alert-child">
+				<%= value %>
+			</div>
 		</li>
 	</ul>
 </div>
