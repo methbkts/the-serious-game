@@ -21,16 +21,19 @@
 </head>
 
 <body>
-   <div class="container-fluid">
-       <%= render 'layouts/messages' %>
-       <%= render 'layouts/header' %>
-       <div class='content'>
-       <%= yield %>
-       <!--charge la musique en avance / Meilleur endroit pour le mettre?-->
+ <div class="container-fluid">
+   <%= render 'layouts/messages' %>
+   <%= render 'layouts/header' %>
+   <div class='content'>
+     <%= yield %>
+     <!--charge la musique en avance / Meilleur endroit pour le mettre?-->
+     <div class="audio">
+      <br>
        <%= audio_tag "sound.mp3", id: "sound", class: "audio_to_play", preload: "auto", loop: "true", controls:"true"%>
-       </div>
-    </div>
-    <%= render 'layouts/footer' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     </div>
+   </div>
+ </div>
+ <%= render 'layouts/footer' %>
+ <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </body>
 </html>
