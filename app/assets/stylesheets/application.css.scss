@@ -286,31 +286,11 @@ body:before {
     //opacity: 0.8;
 }
 
-pitch:before {
-    content: "";
-    position: fixed;
-    z-index: 1;
-
-
-    background-image: image-url("oldpaper.png");
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-
-    //-webkit-filter: blur(2px) grayscale(40%) opacity(70%);
-    //-moz-filter: blur(2px) grayscale(40%) opacity(70%);
-    //-o-filter: blur(2px) grayscale(40%) opacity(70%);
-    //-ms-filter: blur(2px) grayscale(40%) opacity(70%);
-    // filter: blur(2px) grayscale(40%) opacity(70%);
-    // transform: scale(1);
-}
-
 .titre_div {
     
     align-items: center;
     position: absolute;
     //top: 60px;
-    border-radius: 40px;     
     width: 550px;
     // bottom: 165px;
     // opacity: 0.8;
