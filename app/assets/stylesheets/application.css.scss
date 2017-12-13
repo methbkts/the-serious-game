@@ -221,7 +221,7 @@ body:before {
 
 .footerleft,
 .footerright,
-.footerrightlast {
+.footerrightfirst {
     display: flex;
     flex-direction: row;
 }
@@ -267,7 +267,7 @@ body:before {
     color: #786F52;
 }
 
-.footerrightfirst {
+.footerrightlast {
     padding: 0 0 0 10px;
 }
 
