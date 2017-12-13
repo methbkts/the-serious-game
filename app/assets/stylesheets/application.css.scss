@@ -485,6 +485,11 @@ em{
     cursor: pointer;
 }
 
+#mapid a {
+    text-decoration: none;
+    color: white;
+}
+
 .bookpopup .leaflet-popup-content-wrapper {
     background-color: #11ffee00 !important;
     box-shadow: none;
