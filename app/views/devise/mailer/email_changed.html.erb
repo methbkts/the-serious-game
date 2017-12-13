@@ -1,5 +1,5 @@
 <div class='formfor'>
-<p>Salut <%= @email %>!</p>
+<p>Salut <%= @email %> !</p>
 
 <% if @resource.try(:unconfirmed_email?) %>
   <p>Votre email vient d'etre remplacé par <%= @resource.unconfirmed_email %>.</p>
