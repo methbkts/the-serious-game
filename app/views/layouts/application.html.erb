@@ -26,9 +26,8 @@
        <%= render 'layouts/header' %>
        <div class='content'>
        <%= yield %>
-      <!--charge la musique en avance / Meilleur endroit pour le mettre?-->
-      <%= audio_tag "sound.mp3", id: "sound", class: "audio_to_play", preload: "auto", loop: "true", controls:"true"%>
-      
+       <!--charge la musique en avance / Meilleur endroit pour le mettre?-->
+       <%= audio_tag "sound.mp3", id: "sound", class: "audio_to_play", preload: "auto", loop: "true", controls:"true"%>
        </div>
     </div>
     <%= render 'layouts/footer' %>
