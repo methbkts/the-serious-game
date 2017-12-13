@@ -27,10 +27,6 @@
    <div class='content'>
      <%= yield %>
      <!--charge la musique en avance / Meilleur endroit pour le mettre?-->
-     <div class="audio row justify-content-center">
-      <br>
-       <%= audio_tag "sound.mp3", id: "sound", class: "audio_to_play", preload: "auto", loop: "true", controls:"true"%>
-     </div>
    </div>
  </div>
  <%= render 'layouts/footer' %>
