@@ -2,38 +2,33 @@
 <html lang="I18n.locale">
 
 <head>
-  <title>Codex Bezae</title>
-  <%= csrf_meta_tags %>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no ">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-  <link href="https://fonts.googleapis.com/css?family=IM+Fell+English|IM+Fell+English+SC|MedievalSharp" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
-  integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
-  crossorigin=""/>
-  <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
-  <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
-  integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
-  crossorigin=""></script>
-  <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%=favicon_link_tag 'favicon.png'%>
+    <title>Codex Bezae</title>
+    <%= csrf_meta_tags %>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no ">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+        <link href="https://fonts.googleapis.com/css?family=IM+Fell+English|IM+Fell+English+SC|MedievalSharp" rel="stylesheet">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="" />
+        <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+        <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+        <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+            <%=favicon_link_tag 'favicon.png'%>
 </head>
 
 <body>
- <div class="container-fluid">
-   <%= render 'layouts/messages' %>
-   <%= render 'layouts/header' %>
-   <div class='content'>
-     <%= yield %>
-     <!--charge la musique en avance / Meilleur endroit pour le mettre?-->
-
-   </div>
- </div>
- <%= render 'layouts/footer' %>
- <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
- <script>
-  $(".alert").fadeOut(6000);
-</script>
+    <div class="container-fluid">
+        <%= render 'layouts/messages' %>
+            <%= render 'layouts/header' %>
+                <div class='content'>
+                    <%= yield %>
+                </div>
+    </div>
+    <%= render 'layouts/footer' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+            <script>
+                $(".alert").fadeOut(6000);
+            </script>
 </body>
+
 </html>

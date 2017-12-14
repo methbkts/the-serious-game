@@ -1,6 +1,4 @@
-
 <% if user_signed_in? %>
-
 
 <div class="section1 col-sm-12">
     <div class="row justify-content-center">
@@ -37,14 +35,12 @@
         </div>
     </div>
 
-
     <div id="mapid" class="col-sm-12"></div>
     <div class="audio row justify-content-center">
       <br>
 
       <div class="control_audio"><i class="fa fa-volume-up fa-2x" aria-hidden="true"></i></div>
       <%= audio_tag "sound.mp3", id: "sound", class: "audio_to_play", preload: "auto", loop: "true"%>
-
       
   </div>
   <% else %>
@@ -62,8 +58,6 @@
     </div>
 </div>
 </div>
-
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
