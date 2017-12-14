@@ -88,7 +88,7 @@ var popup2 = L.popup({
     className: 'bookpopup'
 })
 .setLatLng([45.775167, 4.7461])
-.setContent('<%= image_tag("cnsdm.gif") %>');
+.setContent('<%= image_tag("enigme4.gif") %>');
 
 var fifthMarker = L.marker([45.769167, 4.8125], {
     title: 'Etape 4 - Conservatoire National Supérieur de Musique et de Danse'
@@ -136,6 +136,7 @@ function manageStars(etoile) {
         }
     };
 };
+
 
 $(document).ready(function () {
 
@@ -202,7 +203,7 @@ $(document).ready(function () {
 
         $('html').on('click', '#cathedrale', function () {
 
-            secondMarker.setPopupContent('<h4>Là où tout devient clair</h4><p>Dans la cathédrale, j\’ai trouvé un extrait de l\’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.</p><p>A l\’aide du texte, tu pourras traduire:</p><%= image_tag("code.png") %><center><p id="openbook">Ouvrir le Livre</p></center><p id="message_alert"><center><input id="reponse1" type="text" placeholder="Saisir la réponse ici"/><button id="valider1">Valider</button></center>');
+            secondMarker.setPopupContent('<h4>Là où tout devient clair</h4><p>Dans la cathédrale, j\’ai trouvé un extrait de l\’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.</p><p>A l\’aide du texte, tu pourras traduire:</p><%= image_tag("enigme1.png") %><center><p id="openbook">Ouvrir le Livre</p></center><p id="message_alert"><center><input id="reponse1" type="text" placeholder="Saisir la réponse ici"/><button id="valider1">Valider</button></center>');
 
             $('html').on('click', '#openbook', function () {
 
@@ -314,7 +315,7 @@ $(document).ready(function () {
 
                 $('html').on('click', '#cybelestart', function () {
 
-                    fourthMarker.setPopupContent('<h4>Là où j\'aurai dû être archéologue</h4></p><p>Au gré de ma balade parmi les ruines de ce temple païen, je suis tombé sur un ancien symbole chrétien gravé sur une pierre.</p><p>A l\'origine, c\'était l\'abréviation d\'un mot signifiant "utile, de bon augure".</p><p>Il serait très mal vu de voler la pierre, mais mon instinct me dicte que ce pourrait être important, mieux vaudrait-il en faire une esquisse pour en garder un trace.</p><center><%= image_tag("chisme.png") %></center><p>Cherche le nom de ce symbole et entre la réponse ci-dessous:</p><p id="message_alert3"><center><input id="reponse3" type="text" placeholder="Saisir la réponse ici"/><button id="valider3">Valider</button></center>');
+                    fourthMarker.setPopupContent('<h4>Là où j\'aurai dû être archéologue</h4></p><p>Au gré de ma balade parmi les ruines de ce temple païen, je suis tombé sur un ancien symbole chrétien gravé sur une pierre.</p><p>A l\'origine, c\'était l\'abréviation d\'un mot signifiant "utile, de bon augure".</p><p>Il serait très mal vu de voler la pierre, mais mon instinct me dicte que ce pourrait être important, mieux vaudrait-il en faire une esquisse pour en garder un trace.</p><center><%= image_tag("enigme3.png") %></center><p>Cherche le nom de ce symbole et entre la réponse ci-dessous:</p><p id="message_alert3"><center><input id="reponse3" type="text" placeholder="Saisir la réponse ici"/><button id="valider3">Valider</button></center>');
 
                     function verif3() {
 

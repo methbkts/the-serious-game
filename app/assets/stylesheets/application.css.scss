@@ -187,7 +187,7 @@ body:before {
     content: "";
     position: fixed;
     z-index: -1;
-    background-image: url('fond_4.png');
+    background-image: url('background.png');
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -280,7 +280,6 @@ body:before {
     max-width: 50%;
     //max-height: 340px;
     font-size: 1.6rem;
-    //background-image: image-url("oldpaper.png");
     border-radius: 40px;
     //opacity: 0.8;
 }
@@ -295,7 +294,6 @@ body:before {
     // opacity: 0.8;
     cursor: pointer;
     // z-index: 1;
-    //background-image: image-url("oldpaper.png");
     
 }
 
