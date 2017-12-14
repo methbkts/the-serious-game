@@ -463,18 +463,18 @@ $(document).ready(function () {
 
                                         $('html').on('click', '#startgame7', function () {
 
-                                            seventhMarker.setPopupContent('<%= image_tag("plantr.gif", class: "egliseplan") %>');
+                                            seventhMarker.setPopupContent('<center><h4>A l\'intérieur de l\'église</h4></center><br><%= image_tag("plantr.gif", class: "egliseplan") %>');
 
                                             seventhMarker.openPopup();
 
                                             $('html').on('click', '.egliseplan', function () {
 
-                                                seventhMarker.setPopupContent('<%= image_tag("cryptetr.jpg", class: "cryptecoffre") %>');
+                                                seventhMarker.setPopupContent('<center><h4>Dans la crypte</h4></center><br><%= image_tag("cryptetr.jpg", class: "cryptecoffre") %>');
                                             });
 
                                             $('html').on('click', '.cryptecoffre', function () {
 
-                                                seventhMarker.setPopupContent('<center><h4>Là où l\'on obtient des réponses</h4></center><p>Bravo cher ami.</p><p>Tu es parvenu au lieu final de notre quête !</p><p>J\'ai pu identifier le lieu où reposent les pages du codex Bezae. C\'est sous terre qu\'elles sont dissimulées à la vue de tous. Dans la cour de l\'église Saint-Irénée, on trouve un portail qui mène à des souterrains qui se perdent sous la ville de Lyon. Ces souterrains ont d\'ailleurs été utilisés par les résistants durant les différentes guerres.</p><p>J\'ai pu retrouver une page lors de mes explorations et je l\'ai dissimulée dans la crypte, car j\'ai peur que notre initiative ne soit pas vue d\'un bon œil par ceux qui gardent le secret.</p><p>Gràce au code obtenu lors de notre voyage, vous découvrirez la page manqante du Codex Bezae dans un coffre fort caché dans la crypte.</p></center><p id="message_alert6"><center><input id="reponse6" type="text" placeholder="Saisir le code ici"/><button id="valider6">Valider</button></center>');
+                                                seventhMarker.setPopupContent('<h4>Là où l\'on obtient des réponses</h4><p>Bravo cher ami.</p><p>Tu es parvenu au lieu final de notre quête !</p><p>J\'ai pu identifier le lieu où reposent les pages du codex Bezae. C\'est sous terre qu\'elles sont dissimulées à la vue de tous. Dans la cour de l\'église Saint-Irénée, on trouve un portail qui mène à des souterrains qui se perdent sous la ville de Lyon. Ces souterrains ont d\'ailleurs été utilisés par les résistants durant les différentes guerres.</p><p>J\'ai pu retrouver une page lors de mes explorations et je l\'ai dissimulée dans la crypte, car j\'ai peur que notre initiative ne soit pas vue d\'un bon œil par ceux qui gardent le secret.</p><p>Gràce au code obtenu lors de notre voyage, vous découvrirez la page manqante du Codex Bezae dans un coffre fort caché dans la crypte.</p></center><p id="message_alert6"><center><input id="reponse6" type="text" placeholder="Saisir le code ici"/><button id="valider6">Valider</button></center>');
 
                                                 function verif6() {
 
