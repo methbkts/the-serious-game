@@ -419,7 +419,13 @@ em {
     color: white;
 }
 
-.bookpopup .leaflet-popup-content-wrapper {
+.bookpopup .leaflet-popup-content-wrapper,
+.bookpopup .leaflet-popup-content {
+    min-width: 900px;
+    justify-content: center;
+}
+.conspopup .leaflet-popup-content-wrapper,
+.conspopup .leaflet-popup-content {
     background-color: #11ffee00 !important;
     box-shadow: none;
 }

@@ -69,8 +69,8 @@ var firstMarker = L.marker([45.760041, 4.8351343], {
 var popup = L.popup({
         className: 'bookpopup'
     })
-    .setLatLng([45.7623314, 4.7512])
-    .setContent('<%= image_tag("book.png", width: "850px") %>');
+    .setLatLng([45.7833314, 4.8275598])
+    .setContent('<%= image_tag("book.png", width: "100%") %>');
 
 var secondMarker = L.marker([45.7623314, 4.8275598], {
     title: 'Etape 1 - Cathédrale Saint-Jean'
@@ -85,9 +85,9 @@ var fourthMarker = L.marker([45.759722, 4.819722], {
 });
 
 var popup2 = L.popup({
-        className: 'bookpopup'
+        className: 'conspopup'
     })
-    .setLatLng([45.775167, 4.7461])
+    .setLatLng([45.775167, 4.7561])
     .setContent('<%= image_tag("enigme4.gif") %>');
 
 var fifthMarker = L.marker([45.769167, 4.8125], {
@@ -210,6 +210,13 @@ $(document).ready(function () {
 
                 popup.addTo(map);
                 secondMarker.addTo(map);
+                map.panTo(new L.LatLng(45.7993314, 4.8275598));
+
+                $('html').on('click', '.bookpopup', function() {
+
+                    map.removeLayer(popup);
+
+                });
             });
 
 
