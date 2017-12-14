@@ -140,7 +140,10 @@ function manageStars(etoile) {
 
 $(document).ready(function () {
 
+    $('html').on('click', '#Btn3', function () {
 
+        map.panTo(new L.LatLng(45.760041, 4.8351343));
+    });
 
     $('html').on('click', '.start', function () {
 
