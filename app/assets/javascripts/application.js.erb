@@ -215,7 +215,7 @@ $(document).ready(function () {
                 secondMarker.addTo(map);
                 map.panTo(new L.LatLng(45.7993314, 4.8275598));
 
-                $('html').on('click', '.bookpopup', function() {
+                $('html').on('click', '.bookpopup', function () {
 
                     map.removeLayer(popup);
                     map.panTo(new L.LatLng(45.7623314, 4.8275598));
@@ -391,7 +391,7 @@ $(document).ready(function () {
 
                             var maReponse4 = document.getElementById('reponse4').value.toLowerCase();
 
-                            if (maReponse4 == '4875'||maReponse4 == '5395') {
+                            if (maReponse4 == '4875' || maReponse4 == '5395') {
 
                                 $('#message_alert4').html('Bien joué ! Pour passer à l\'étape suivante, <span id="next_step4">cliquez ici</a>').css('color', 'white').css('background-color', 'green').css('text-align', 'center').css('font-size', '1rem');
 
@@ -459,9 +459,39 @@ $(document).ready(function () {
 
                                         $('html').on('click', '#startgame7', function () {
 
-                                            seventhMarker.setPopupContent('<center><h4>Là où l\'on obtient des réponses</h4></center><p>Bravo cher ami.</p><p>Tu es parvenu au lieu final de notre quête !</p><p>J\'ai pu identifier le lieu où reposent les pages du codex Bezae. C\'est sous terre qu\'elles sont dissimulées à la vue de tous. Dans la cour de l\'église Saint-Irénée, on trouve un portail qui mène à des souterrains qui se perdent sous la ville de Lyon. Ces souterrains ont d\'ailleurs été utilisés par les résistants durant les différentes guerres.</p><p>J\'ai pu retrouver une page lors de mes explorations et je l\'ai dissimulée dans la crypte, car j\'ai peur que notre initiative ne soit pas vue d\'un bon œil par ceux qui gardent le secret.</p><p>Gràce au code obtenu lors de notre voyage, vous découvrirez la page manqante du Codex Bezae dans un coffre fort caché dans la crypte.</p><p>Féliciations ! Vous avez terminé le jeu!</p><span class="note">Noter le jeu</span>');
+                                            seventhMarker.setPopupContent('<center><h4>Là où l\'on obtient des réponses</h4></center><p>Bravo cher ami.</p><p>Tu es parvenu au lieu final de notre quête !</p><p>J\'ai pu identifier le lieu où reposent les pages du codex Bezae. C\'est sous terre qu\'elles sont dissimulées à la vue de tous. Dans la cour de l\'église Saint-Irénée, on trouve un portail qui mène à des souterrains qui se perdent sous la ville de Lyon. Ces souterrains ont d\'ailleurs été utilisés par les résistants durant les différentes guerres.</p><p>J\'ai pu retrouver une page lors de mes explorations et je l\'ai dissimulée dans la crypte, car j\'ai peur que notre initiative ne soit pas vue d\'un bon œil par ceux qui gardent le secret.</p><p>Gràce au code obtenu lors de notre voyage, vous découvrirez la page manqante du Codex Bezae dans un coffre fort caché dans la crypte.</p></center><p id="message_alert6"><center><input id="reponse6" type="text" placeholder="Saisir le code ici"/><button id="valider6">Valider</button></center>');
 
                                             seventhMarker.openPopup();
+
+                                            function verif6() {
+
+                                                var maReponse6 = document.getElementById('reponse6').value.toLowerCase();
+
+                                                if (maReponse6 == '4875' || maReponse6 == '5395') {
+
+                                                    seventhMarker.setPopupContent('<p>Féliciations!Vous avez terminé le jeu!</p><span class="note">Noter le jeu</span>');
+
+                                                } else {
+
+                                                    $('#message_alert6').html('Malheureusement, ce n\est pas le code qu\'il fallait deviner. Essaie encore !').css('color', 'white').css('background-color', 'red').css('text-align', 'center').css('font-size', '1rem');
+                                                }
+                                            }
+
+                                            $('html').on('click', '#valider6', function () {
+
+                                                verif6()
+                                            });
+
+                                            // Lance la fonction verif quand on presse entrée
+                                            $('html').on('keypress', '#reponse6', function (e) {
+
+                                                var key = e.which;
+
+                                                if (key == 13) { //The Enter press Key
+
+                                                    verif6()
+                                                }
+                                            });
                                         });
                                     });
 
