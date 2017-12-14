@@ -558,6 +558,10 @@ em {
     color: rgba(0, 0, 0, 0.5)
 }
 
+span img {
+    width: 300px;
+}
+
 @media screen and (max-width: 600px){
     span img {
         width: 100%;
