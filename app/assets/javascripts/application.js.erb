@@ -16,6 +16,7 @@
 //= require rails-ujs
 //= require bootstrap
 //= require turbolinks
+//= require jquery.elevatezoom
 //= require_tree .
 
 //Quand le joueur est connecté, et qu'il clique sur commencer la partie => Changement du background, apparition de la map, lancement musique.
@@ -69,8 +70,8 @@ var firstMarker = L.marker([45.760041, 4.8351343], {
 var popup = L.popup({
         className: 'bookpopup'
     })
-    .setLatLng([45.7833314, 4.8275598])
-    .setContent('<%= image_tag("book.png", width: "100%") %>');
+    .setLatLng([45.7623314, 4.7512])
+    .setContent('<%= image_tag("book.png", width: "850px", id:"zoom", data_zoom_image:"book.png") %>');
 
 var secondMarker = L.marker([45.7623314, 4.8275598], {
     title: 'Etape 1 - Cathédrale Saint-Jean'
@@ -85,9 +86,9 @@ var fourthMarker = L.marker([45.759722, 4.819722], {
 });
 
 var popup2 = L.popup({
-        className: 'conspopup'
+        className: 'bookpopup'
     })
-    .setLatLng([45.775167, 4.7561])
+    .setLatLng([45.775167, 4.7461])
     .setContent('<%= image_tag("enigme4.gif") %>');
 
 var fifthMarker = L.marker([45.769167, 4.8125], {
@@ -209,14 +210,8 @@ $(document).ready(function () {
 
 
                 popup.addTo(map);
+                $('#zoom').elevateZoom();
                 secondMarker.addTo(map);
-                map.panTo(new L.LatLng(45.7993314, 4.8275598));
-
-                $('html').on('click', '.bookpopup', function() {
-
-                    map.removeLayer(popup);
-
-                });
             });
 
 
