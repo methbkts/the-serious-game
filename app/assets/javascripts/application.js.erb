@@ -25,7 +25,7 @@
 L.Map.ScrollWheelPan = L.Map.ScrollWheelZoom.extend({
     _performZoom: function () {
         var map = this._map,
-        delta = this._delta;
+            delta = this._delta;
 
         map.stop(); // stop panning and fly animations if any
 
@@ -67,10 +67,10 @@ var firstMarker = L.marker([45.760041, 4.8351343], {
 });
 
 var popup = L.popup({
-    className: 'bookpopup'
-})
-.setLatLng([45.7623314, 4.7512])
-.setContent('<%= image_tag("book.png", width: "850px") %>');
+        className: 'bookpopup'
+    })
+    .setLatLng([45.7623314, 4.7512])
+    .setContent('<%= image_tag("book.png", width: "850px") %>');
 
 var secondMarker = L.marker([45.7623314, 4.8275598], {
     title: 'Etape 1 - Cathédrale Saint-Jean'
@@ -85,10 +85,10 @@ var fourthMarker = L.marker([45.759722, 4.819722], {
 });
 
 var popup2 = L.popup({
-    className: 'bookpopup'
-})
-.setLatLng([45.775167, 4.7461])
-.setContent('<%= image_tag("enigme4.gif") %>');
+        className: 'bookpopup'
+    })
+    .setLatLng([45.775167, 4.7461])
+    .setContent('<%= image_tag("enigme4.gif") %>');
 
 var fifthMarker = L.marker([45.769167, 4.8125], {
     title: 'Etape 4 - Conservatoire National Supérieur de Musique et de Danse'
@@ -122,7 +122,7 @@ function manageStars(etoile) {
             befSelectedStar.style.color = '#549690';
 
         }
-        
+
     } else {
 
         baseColor = 'grey'
@@ -156,21 +156,21 @@ $(document).ready(function () {
 
         $('#mapid').fadeTo(2000, 1);
 
-        
+
 
         player.play();
 
         $('html').on('click', '.control_audio', function () {
-            if (audioStatut==='on'){
-             player.pause();
-             audioStatut = 'off';
-             $('.control_audio').html('<i class="fa fa-volume-off fa-2x" aria-hidden="true"></i>');
-                
-            }else{
-                              
-            audioStatut = 'on';
-            player.play();
-            $('.control_audio').html('<i class="fa fa-volume-up fa-2x" aria-hidden="true"></i>')
+            if (audioStatut === 'on') {
+                player.pause();
+                audioStatut = 'off';
+                $('.control_audio').html('<i class="fa fa-volume-off fa-2x" aria-hidden="true"></i>');
+
+            } else {
+
+                audioStatut = 'on';
+                player.play();
+                $('.control_audio').html('<i class="fa fa-volume-up fa-2x" aria-hidden="true"></i>')
             }
         });
 
@@ -180,11 +180,11 @@ $(document).ready(function () {
     });
 
     firstMarker.addTo(map)
-    .bindPopup('<p id="startmap">Commencer</p>').openPopup();
+        .bindPopup('<p id="startmap">Commencer</p>').openPopup();
 
     $('html').on('click', '#startmap', function () {
 
-        firstMarker.setPopupContent('<h4>Cher Collègue,</h4><p>Je travaille actuellement à l\'étude du Codex Bezae, un manuscrit bilingue grec et latin du Vème siècle contenant les évangiles et les actes des apôtres.</p><p>Au cours de mon travail, j\'ai identifié une piste solide dans la recherche des pages disparues en 1562 lorsque le Codex a été volé à l\'Eglise par les Huguenots.</p><p>C\'est un de mes confrères, Palamède, qui s\'est rendu à Lyon pour enquêter sur place.</p><p>J\'ai reçu de manière cryptée chaque étape de ses avancées, mais depuis son dernier message la semaine dernière, je suis sans nouvelles.</p><p>Il semble avoir disparu\nNe pouvant venir moi-même à sa recherche, je vous prie de bien vouloir mettre tout en œuvre pour les retrouver: lui, et les fameuses pages manquantes.</p><p>Tous les éléments à ma disposition, dont nos derniers échanges, vous ont été transmis dans cette missive.</p><p>D\'avance je vous remercie,</p><p>Epiphane</p><center><p id="startgame">Commencer</p></center>');
+        firstMarker.setPopupContent('<h4>Chere Collègue,</h4><p>Je travaille actuellement à l\'étude du Codex Bezae, un manuscrit bilingue grec et latin du Vème siècle contenant les évangiles et les actes des apôtres.</p><p>Au cours de mon travail, j\'ai identifié une piste solide dans la recherche des pages disparues en 1562 lorsque le Codex a été volé à l\'Eglise par les Huguenots.</p><p>C\'est un de mes confrères, Palamède, qui s\'est rendu à Lyon pour enquêter sur place.</p><p>J\'ai reçu de manière cryptée chaque étape de ses avancées, mais depuis son dernier message la semaine dernière, je suis sans nouvelles.</p><p>Il semble avoir disparu.</p><p>Ne pouvant venir moi-même à sa recherche, je vous prie de bien vouloir mettre tout en œuvre pour les retrouver: lui, et les fameuses pages manquantes.</p><p>Tous les éléments à ma disposition, dont nos derniers échanges, vous ont été transmis dans cette missive.</p><p>D\'avance je vous remercie,</p><p>Epiphane</p><center><p id="startgame">Commencer</p></center>');
     });
 
     $('html').on('click', '#startgame', function () {
@@ -192,11 +192,11 @@ $(document).ready(function () {
         firstMarker.closePopup();
 
         secondMarker.addTo(map)
-        .bindPopup('<span id="startgame2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/De_saint-%C3%89tienne_%C3%A0_Saint-Jean.JPG/800px-De_saint-%C3%89tienne_%C3%A0_Saint-Jean.JPG" width="300px"><center><p>Cathédrale Saint-Jean</p></center></span>').openPopup();
+            .bindPopup('<span id="startgame2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/De_saint-%C3%89tienne_%C3%A0_Saint-Jean.JPG/800px-De_saint-%C3%89tienne_%C3%A0_Saint-Jean.JPG" width="300px"><center><p>Cathédrale Saint-Jean</p></center></span>').openPopup();
 
         $('html').on('click', '#startgame2', function () {
 
-            secondMarker.setPopupContent('<h4>Là où l\'on se recueille</h4><p>Cher Ami,</p><p>Au cœur du vieux Lyon se trouve la cathédrale St Jean. Elle fut le théâtre d\'événements importants: couronnement du Pape, mariage royal, conciles et autres distinctions...</p><p>Sa construction s\'étale sur 3 siècles, mélangeant les styles gothiques et romans sur sa façade. Elle possède une horloge astronomique du XIVème siècle. Je suis resté sous le charme de la rosace de sa façade.</p><p>La cathédrale a été dévastée par les troupes du Baron des Adrets en 1562. L\'intérieur de l\'édifice a subi de nombreuses transformations et il est encore régulièrement rénové.</p><p>Heureusement, j\'ai tout de même pu localiser un livre enluminé en exposition. Les paragraphes de l\'Évangile selon St Jean m\'ont donné une indication précieuse.</p><p>Palamède</p><center><p id="cathedrale">Commencer</p></center>');
+            secondMarker.setPopupContent('<h4>Là où l\'on se recueille</h4><p>Cher Ami,</p><p>Au cœur du vieux Lyon se trouve la cathédrale Saint-Jean. Elle fut le théâtre d\'événements importants: couronnement du Pape, mariage royal, conciles et autres distinctions...</p><p>Sa construction s\'étale sur 3 siècles, mélangeant les styles gothiques et romans sur sa façade. Elle possède une horloge astronomique du XIVème siècle. Je suis resté sous le charme de la rosace de sa façade.</p><p>La cathédrale a été dévastée par les troupes du Baron des Adrets en 1562. L\'intérieur de l\'édifice a subi de nombreuses transformations et il est encore régulièrement rénové.</p><p>Heureusement, j\'ai tout de même pu localiser un livre enluminé en exposition. Les paragraphes de l\'Évangile selon Saint-Jean m\'ont donné une indication précieuse.</p><p>Palamède</p><center><p id="cathedrale">Commencer</p></center>');
 
             secondMarker.openPopup();
         });
@@ -229,7 +229,7 @@ $(document).ready(function () {
                         map.panTo(new L.LatLng(45.773, 4.8326874));
 
                         thirdMarker.addTo(map)
-                        .bindPopup('<span id="startgame3"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Rue-merci%C3%A8re_-_Lyon.JPG/800px-Rue-merci%C3%A8re_-_Lyon.JPG" width="300px"><center><p>Rue Mercière</p></center></span>').openPopup();
+                            .bindPopup('<span id="startgame3"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Rue-merci%C3%A8re_-_Lyon.JPG/800px-Rue-merci%C3%A8re_-_Lyon.JPG" width="300px"><center><p>Rue Mercière</p></center></span>').openPopup();
 
                         $('html').on('click', '#startgame3', function () {
 
@@ -242,7 +242,7 @@ $(document).ready(function () {
                 } else {
 
 
-                    $('#message_alert').html('Malheureusement, ce n\est pas le mot qu\'il fallait deviner. Essaie encore !').css('color', 'white').css('background-color', 'red').css('text-align', 'center').css('font-size', '1rem');
+                    $('#message_alert').html('Malheureusement, ce n\est pas le mot qu\'il fallait deviner. Un indice: la deuxième lettre du mot est un "G". Essaie encore !').css('color', 'white').css('background-color', 'red').css('text-align', 'center').css('font-size', '1rem');
                 }
             }
 
@@ -281,7 +281,7 @@ $(document).ready(function () {
                             map.panTo(new L.LatLng(45.769722, 4.819722));
 
                             fourthMarker.addTo(map)
-                            .bindPopup('<span id="startgame4"><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Theatre_antique_Fourviere.jpg" width="300px"><center><p>Théatre Antique de Fourvière</p></center></span>').openPopup();
+                                .bindPopup('<span id="startgame4"><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Theatre_antique_Fourviere.jpg" width="300px"><center><p>Théatre Antique de Fourvière</p></center></span>').openPopup();
 
                             $('html').on('click', '#startgame4', function () {
 
@@ -315,7 +315,7 @@ $(document).ready(function () {
 
                 $('html').on('click', '#cybelestart', function () {
 
-                    fourthMarker.setPopupContent('<h4>Là où j\'aurai dû être archéologue</h4></p><p>Au gré de ma balade parmi les ruines de ce temple païen, je suis tombé sur un ancien symbole chrétien gravé sur une pierre.</p><p>A l\'origine, c\'était l\'abréviation d\'un mot signifiant "utile, de bon augure".</p><p>Il serait très mal vu de voler la pierre, mais mon instinct me dicte que ce pourrait être important, mieux vaudrait-il en faire une esquisse pour en garder un trace.</p><center><%= image_tag("enigme3.png") %></center><p>Cherche le nom de ce symbole et entre la réponse ci-dessous:</p><p id="message_alert3"><center><input id="reponse3" type="text" placeholder="Saisir la réponse ici"/><button id="valider3">Valider</button></center>');
+                    fourthMarker.setPopupContent('<h4>Là où j\'aurai dû être archéologue</h4></p><p>Au gré de ma balade parmi les ruines de ce temple païen, je suis tombé sur un ancien symbole chrétien gravé sur une pierre.</p><p>A l\'origine, c\'était l\'abréviation d\'un mot signifiant "utile, de bon augure".</p><p>Il serait très mal vu de voler la pierre, mais mon instinct me dicte que ce pourrait être important, mieux vaudrait-il en faire une esquisse pour en garder une trace.</p><center><%= image_tag("enigme3.png") %></center><p>Cherche le nom de ce symbole et entre la réponse ci-dessous:</p><p id="message_alert3"><center><input id="reponse3" type="text" placeholder="Saisir la réponse ici"/><button id="valider3">Valider</button></center>');
 
                     function verif3() {
 
@@ -332,7 +332,7 @@ $(document).ready(function () {
                                 map.panTo(new L.LatLng(45.779167, 4.8125));
 
                                 fifthMarker.addTo(map)
-                                .bindPopup('<span id="startgame5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Conservatoire_national_sup%C3%A9rieur_musique_et_danse_de_Lyon_de_nuit.JPG/800px-Conservatoire_national_sup%C3%A9rieur_musique_et_danse_de_Lyon_de_nuit.JPG" width="300px"><center><p>Conservatoire National Supérieur de Musique et de Danse</p></center></span>').openPopup();
+                                    .bindPopup('<span id="startgame5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Conservatoire_national_sup%C3%A9rieur_musique_et_danse_de_Lyon_de_nuit.JPG/800px-Conservatoire_national_sup%C3%A9rieur_musique_et_danse_de_Lyon_de_nuit.JPG" width="300px"><center><p>Conservatoire National Supérieur de Musique et de Danse</p></center></span>').openPopup();
 
                                 $('html').on('click', '#startgame5', function () {
 
@@ -344,7 +344,7 @@ $(document).ready(function () {
 
                         } else {
 
-                            $('#message_alert3').html('Malheureusement, ce n\est pas le mot qu\'il fallait deviner. Essaie encore !').css('color', 'white').css('background-color', 'red').css('text-align', 'center').css('font-size', '1rem');
+                            $('#message_alert3').html('Malheureusement, ce n\est pas le mot qu\'il fallait deviner.Indice: ce symbole est composé des deux lettres grecques Χ (chi) et Ρ (rhô). Essaie encore !').css('color', 'white').css('background-color', 'red').css('text-align', 'center').css('font-size', '1rem');
                         }
                     }
 
@@ -366,7 +366,7 @@ $(document).ready(function () {
 
                     $('html').on('click', '#artistestart', function () {
 
-                        fifthMarker.setPopupContent('<h4>Là où les arts et les maths se rejoignent</h4><p>C\'est étrange, le bâtiment est assez différents de ce que j\'imaginais.</p><p>J\'ai trouvé ce matin un message sous ma porte de chambre qui m\'a fait froid dans le dos. J\'ai donc décidé de protéger mes dernières conclusions dans ma boite de sureté et j\'en ai changé le code. Pour être sûr que toi seul puisses le retrouver, j\'ai fait appel à ton goût pour les mathématiques :</p><p>*Soustrait le nombre de cloches se trouvant sur le toit au nombres d\'arches en rez de jardin.</p><p>Multiplie ce chiffre par le nombre de fenetres ouvertes sur la photo.</p><p>Ajoutes-y le nombre de fenetres présentes sur la façace (au premier, second et troisième étages) et multiplie le tout par le nombre d\années qu\a vécu Saturnin Arloing, célèbre vétérinaire ayant occupé les lieux.*</p><center><p id="openimg">Voir le Conservatoire</p></center><p id="message_alert4"><center><input id="reponse4" type="text" placeholder="Saisir la réponse ici"/><button id="valider4">Valider</button></center>');
+                        fifthMarker.setPopupContent('<h4>Là où les arts et les maths se rejoignent</h4><p>C\'est étrange, le bâtiment est assez différent de ce que j\'imaginais.</p><p>J\'ai trouvé ce matin un message sous ma porte de chambre qui m\'a fait froid dans le dos. J\'ai donc décidé de protéger mes dernières conclusions dans ma boite de sureté et j\'en ai changé le code. Pour être sûr que toi seul puisses le retrouver, j\'ai fait appel à ton goût pour les mathématiques :</p><center><em><p>Soustrait le nombre de cloches se trouvant sur le toit au nombres d\'arches en rez de jardin.</p><p>Multiplie ce chiffre par le nombre de fenetres ouvertes sur la photo.</p><p>Ajoutes-y le nombre de fenetres présentes sur la façace (au premier, second et troisième étages) et multiplie le tout par le nombre d\années qu\'a vécu Saturnin Arloing, célèbre vétérinaire ayant occupé les lieux.</p></em></center><center><p id="openimg">Voir le Conservatoire</p></center><p id="message_alert4"><center><input id="reponse4" type="text" placeholder="Saisir la réponse ici"/><button id="valider4">Valider</button></center>');
 
                         $('html').on('click', '#openimg', function () {
 
@@ -390,11 +390,11 @@ $(document).ready(function () {
                                     map.panTo(new L.LatLng(45.780556, 4.830556));
 
                                     sixthMarker.addTo(map)
-                                    .bindPopup('<span id="startgame6"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Amphith%C3%A9%C3%A2tre_des_Trois_Gaules_Lyon.jpg/1024px-Amphith%C3%A9%C3%A2tre_des_Trois_Gaules_Lyon.jpg" width="300px"><center><p>Amphithéatre des 3 Gaules</p></center></span>').openPopup();
+                                        .bindPopup('<span id="startgame6"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Amphith%C3%A9%C3%A2tre_des_Trois_Gaules_Lyon.jpg/1024px-Amphith%C3%A9%C3%A2tre_des_Trois_Gaules_Lyon.jpg" width="300px"><center><p>Amphithéatre des 3 Gaules</p></center></span>').openPopup();
 
                                     $('html').on('click', '#startgame6', function () {
 
-                                        sixthMarker.setPopupContent('<h4>Là où j\'ai visité les martyrs</h4></center><p>Cher Ami,</p><p>Lyon est vraiment une ville riche pour quiconque s\'intéresse à son histoire. Notre quête vient juste de me mener à l\'Amphithéâtre des 3 Gaules.</p><p>C\'est le plus ancien amphithéâtre romain de la Gaule et il permettait à près de 20 000 personnes de témoignern leur fidélité à Rome et d\'assister aux jeux du cirque.</p><p>En 177 après J-C, les spectateurs ont assisité au supplice des martyrs chrétiens de Gaule: 48 personnes dont la célébre Ste Blandine et le premier évêque de Lyon: St Pothin.</p><p>La légende raconte que Blandine fût une jeune esclave qui, après avoir été incarcérée, fut livrée aux lions avec ses compagnons. Les bêtes refusèrent de lui fair ele moindre mal. Elle fut ensuite torturée, tandis que les autres furent assassinés devant elle, puis flagellée et brûlée au gril et enfin enfermée dans un filet et livrée à un taureau. Cela ne suffit cependant pas à la tuer et c\'est finalement sous la lame d\'un bourreau qu\'elle rendit son dernier souffle, sans jamais avoir renié sa foi.</p><p>Dans les faits, Blandine aurait été une femme mûre.</p><p>Mais l\'intégralité de son martyr est avéré.</p><center><p id="blandinestart">Commencer</p></center>');
+                                        sixthMarker.setPopupContent('<h4>Là où j\'ai visité les martyrs</h4></center><p>Cher Ami,</p><p>Lyon est vraiment une ville riche pour quiconque s\'intéresse à son histoire. Notre quête vient juste de me mener à l\'Amphithéâtre des 3 Gaules.</p><p>C\'est le plus ancien amphithéâtre romain de la Gaule et il permettait à près de 20 000 personnes de témoigner leur fidélité à Rome et d\'assister aux jeux du cirque.</p><p>En 177 après J-C, les spectateurs ont assisité au supplice des martyrs chrétiens de Gaule: 48 personnes dont la célébre Sainte-Blandine et le premier évêque de Lyon: Saint-Pothin.</p><p>La légende raconte que Blandine fût une jeune esclave qui, après avoir été incarcérée, fut livrée aux lions avec ses compagnons. Les bêtes refusèrent de lui faire le moindre mal. Elle fut ensuite torturée, tandis que les autres furent assassinés devant elle, puis flagellée et brûlée au grill et enfin enfermée dans un filet et livrée à un taureau. Cela ne suffit cependant pas à la tuer et c\'est finalement sous la lame d\'un bourreau qu\'elle rendit son dernier souffle, sans jamais avoir renié sa foi.</p><p>Dans les faits, Blandine aurait été une femme mûre.</p><p>Mais l\'intégralité de son martyr est avéré.</p><center><p id="blandinestart">Commencer</p></center>');
 
                                         sixthMarker.openPopup();
                                     });
@@ -425,13 +425,13 @@ $(document).ready(function () {
 
                         $('html').on('click', '#blandinestart', function () {
 
-                            sixthMarker.setPopupContent('<h4>Le pacifique de Smyrne</h4><p>J\ai découvert ici des indices qui me laissent penser que notre destination est en rapport avec un Saint.</p><P>Sur place, j\'ai trouvé des morceaux de parchemin provenant de Smyrne, en Turquie. Ces derniers mentionnents un Saint ayant probablement connu Saint-Polycarpe et auteur de "Contre les hérésies".</p><p>Mes recherches m\'ont menées à une date en rapport avec l\'église catholique: le 28 juin</p><p id="message_alert5"><center><input id="reponse5" type="text" placeholder="Saisir la réponse ici"/><button id="valider5">Valider</button></center>');
+                            sixthMarker.setPopupContent('<h4>Le pacifique de Smyrne</h4><p>J\ai découvert ici des indices qui me laissent penser que notre destination est en rapport avec un Saint.</p><P>Sur place, j\'ai trouvé des morceaux de parchemin provenant de Smyrne, en Turquie. Ces derniers mentionnents un Saint ayant probablement connu Saint-Polycarpe et auteur de "Contre les hérésies".</p><p>Mes recherches m\'ont menées à une date en rapport avec l\'église catholique: le 28 juin.</p><p id="message_alert5"><center><input id="reponse5" type="text" placeholder="Saisir la réponse ici"/><button id="valider5">Valider</button></center>');
 
                             function verif5() {
 
                                 var maReponse5 = document.getElementById('reponse5').value.toLowerCase();
 
-                                if ((maReponse5.toLowerCase().indexOf("irene") >= 0) || (maReponse5.toLowerCase().indexOf("iréne") >= 0) || (maReponse5.toLowerCase().indexOf("irené") >= 0) || (maReponse5.toLowerCase().indexOf("iréné") >= 0) ) {
+                                if ((maReponse5.toLowerCase().indexOf("irene") >= 0) || (maReponse5.toLowerCase().indexOf("iréne") >= 0) || (maReponse5.toLowerCase().indexOf("irené") >= 0) || (maReponse5.toLowerCase().indexOf("iréné") >= 0)) {
 
                                     $('#message_alert5').html('Bien joué ! Pour passer à l\'étape suivante, <span id="next_step5">cliquez ici</span>').css('color', 'white').css('background-color', 'green').css('text-align', 'center').css('font-size', '1rem');
 
@@ -442,11 +442,11 @@ $(document).ready(function () {
                                         map.panTo(new L.LatLng(45.765086, 4.813786));
 
                                         seventhMarker.addTo(map)
-                                        .bindPopup('<span id="startgame7"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Eglisesaintireneelyon.JPG/800px-Eglisesaintireneelyon.JPG" width="300px"><center><p>Eglise Saint-Irénée</p></center></span>').openPopup();
+                                            .bindPopup('<span id="startgame7"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Eglisesaintireneelyon.JPG/800px-Eglisesaintireneelyon.JPG" width="300px"><center><p>Eglise Saint-Irénée</p></center></span>').openPopup();
 
                                         $('html').on('click', '#startgame7', function () {
 
-                                            seventhMarker.setPopupContent('<center><h4>Là où l\'on obtient des réponses</h4></center><p>Bravo cher ami.</p><p>Tu es parvenu au lieu final de notre quête !</p><p>J\'ai pu identifier le lieu où reposent les pages du codex Bezae. C\'est sous terre qu\'elles sont dissimulées à la vue de tous. Dans la cour de l\'église Sainte Irénée, on trouve un portail qui mène à des souterrains qui se perdent sous la ville de Lyon. Ces souterrains ont d\'ailleurs été utilisés par les résistants durant les différentes guerres.</p><p>J\'ai pu retrouver une page lors de mes explorations et je l\'ai dissimulée dans la crypte, car j\'ai peur que notre initiative ne soit pas vue d\'un bon œil par ceux qui gardent le secret.</p><p>Gràce au code obtenu lors de notre voyage, vous découvrirez la page manqante du Codex Bezae dans un coffre fort caché dans la crypte.</p><p>Féliciations ! Vous avez terminé le jeu!</p><span class="note">Noter le jeu</span>');
+                                            seventhMarker.setPopupContent('<center><h4>Là où l\'on obtient des réponses</h4></center><p>Bravo cher ami.</p><p>Tu es parvenu au lieu final de notre quête !</p><p>J\'ai pu identifier le lieu où reposent les pages du codex Bezae. C\'est sous terre qu\'elles sont dissimulées à la vue de tous. Dans la cour de l\'église Saint-Irénée, on trouve un portail qui mène à des souterrains qui se perdent sous la ville de Lyon. Ces souterrains ont d\'ailleurs été utilisés par les résistants durant les différentes guerres.</p><p>J\'ai pu retrouver une page lors de mes explorations et je l\'ai dissimulée dans la crypte, car j\'ai peur que notre initiative ne soit pas vue d\'un bon œil par ceux qui gardent le secret.</p><p>Gràce au code obtenu lors de notre voyage, vous découvrirez la page manqante du Codex Bezae dans un coffre fort caché dans la crypte.</p><p>Féliciations ! Vous avez terminé le jeu!</p><span class="note">Noter le jeu</span>');
 
                                             seventhMarker.openPopup();
                                         });
@@ -481,9 +481,9 @@ $(document).ready(function () {
                                 $('.satisfaction').fadeIn();
                             });
                         });
-});
-});
-});
-});
-});
+                    });
+                });
+            });
+        });
+    });
 });
