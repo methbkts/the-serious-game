@@ -463,14 +463,14 @@ $(document).ready(function () {
 
                                         $('html').on('click', '#startgame7', function () {
 
-                                            seventhMarker.setPopupContent('<%= image_tag("plantr.gif", class: "egliseplan") %>');
+                                            seventhMarker.setPopupContent('<%= image_tag("plantr.gif", class: "egliseplan", usemap:"#exemple-map-1") %>');
 
                                             seventhMarker.openPopup();
 
-                                            $('html').on('click', '.egliseplan', function () {
+                                            //$('html').on('click', '.egliseplan', function () {
 
-                                                seventhMarker.setPopupContent('<%= image_tag("cryptetr.jpg", class: "cryptecoffre") %>');
-                                            });
+//                                                seventhMarker.setPopupContent('<%= image_tag("cryptetr.jpg", class: "cryptecoffre") %>');
+  //                                          });
 
                                             $('html').on('click', '.cryptecoffre', function () {
 
