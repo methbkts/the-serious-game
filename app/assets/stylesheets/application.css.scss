@@ -424,9 +424,11 @@ em {
     box-shadow: none;
 }
 
-.leaflet-popup-content {
+.leaflet-popup-content,
+.leaflet-popup-content-wrapper {
     font-weight: bold;
     font-size: 1em;
+    max-width: 70vw;
 }
 
 // Page About
