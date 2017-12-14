@@ -469,6 +469,17 @@ $(document).ready(function () {
 
                                             seventhMarker.openPopup();
 
+                                            $('html').on('click','#plan_true',function(){
+                                                seventhMarker.setPopupContent('<center><h4>Bienvenue dans la crypte</h4></center><br><p>Le coffre est tout près...</p><%= image_tag("cryptetr.jpg", class: "cryptecoffre") %>');
+
+                                            });
+
+
+                                            $('html').on('click','#plan_false',function(){
+                                                seventhMarker.setPopupContent('<h4>Ce n\'est pas l\'endroit où il faut se rendre</h4>');
+
+                                            });
+
 
                                             //$('html').on('click', '.egliseplan', function () {
 
