@@ -368,8 +368,6 @@ $(document).ready(function () {
 
                     $('html').on('click', '#artistestart', function () {
 
-
-
                         fifthMarker.setPopupContent('<h4>Là où les arts et les maths se rejoignent</h4><p>C\'est étrange, le bâtiment est assez différent de ce que j\'imaginais.</p><p>J\'ai trouvé ce matin un message sous ma porte de chambre qui m\'a fait froid dans le dos. J\'ai donc décidé de protéger mes dernières conclusions dans ma boîte de sureté et j\'en ai changé le code. Pour être sûr que toi seul puisses le retrouver, j\'ai fait appel à ton goût pour les mathématiques :</p><p><center><em>Soustrais le nombre de cloches se trouvant sur le toit au nombre d\'arches en rez de jardin.</p><p>Multiplie ce chiffre par le nombre de fenêtres ouvertes sur la photo.</p><p>Ajoutes-y le nombre de fenêtres présentes sur la façace (aux premier, second et troisième étages) et multiplie le tout par le nombre d\'années qu\'a vécu Saturnin Arloing, célèbre vétérinaire ayant occupé les lieux.</em></center></p><center><p id="openimg">Voir le Conservatoire</p></center><p id="message_alert4"><center><input id="reponse4" type="text" placeholder="Saisir la réponse ici"/><button id="valider4">Valider</button></center>');
 
                         $('html').on('click', '#openimg', function () {
@@ -382,7 +380,7 @@ $(document).ready(function () {
 
                             var maReponse4 = document.getElementById('reponse4').value.toLowerCase();
 
-                            if (maReponse4 == '4875') {
+                            if (maReponse4 == '4875'||maReponse4 == '5395') {
 
                                 $('#message_alert4').html('Bien joué ! Pour passer à l\'étape suivante, <span id="next_step4">cliquez ici</a>').css('color', 'white').css('background-color', 'green').css('text-align', 'center').css('font-size', '1rem');
 
