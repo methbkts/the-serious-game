@@ -537,15 +537,19 @@ em {
 .final {
     align-self: flex-end;
     border: 1px solid rgba(63, 104, 100, 1);
-    ;
     border-radius: 2px;
-    color: rgba(63, 104, 100, 1);
     padding: 0 2% 0 2%;
+}
+
+.final{
+    color: rgba(63, 104, 100, 1);
 }
 
 .final:hover {
     cursor: pointer;
+    font-weight: bold;
 }
+
 
 .control_audio {
     padding: 1%;
@@ -568,4 +572,13 @@ span img,
     span img {
         width: 100%;
     }
+}
+
+.merci{
+    display: none;
+    font-size: 2rem;
+}
+
+.essai{
+    cursor: pointer;
 }

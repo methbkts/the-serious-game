@@ -16,54 +16,55 @@
         </div>
 
         
-       <map name="exemple-map-1">
+        <map name="exemple-map-1">
 
-       <area id="plan_true" shape="rect" coords="20,190,80,295"
-    href="#" alt="exemple de rectangle" />
-       <area id="plan_false" shape="rect" coords="0,0,300,500"
-    href="#" alt="exemple de rectangle" />
-  
-  
-
-</map>
+         <area id="plan_true" shape="rect" coords="20,190,80,295"
+         href="#" alt="exemple de rectangle" />
+         <area id="plan_false" shape="rect" coords="0,0,300,500"
+         href="#" alt="exemple de rectangle" />
 
 
 
-        <div class="row satisfaction col-sm-6">
-            <div class="row satis col-sm-12 align-items-center">
+     </map>
 
-                <h1>Merci d'avoir participé à notre jeu</h1>
-                <h2>N'oubliez pas de noter notre application!</h2><br>
-                
-                <div class="etoiles">
-                    <div class="etoile" id="1" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
-                    <div class="etoile" id="2" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
-                    <div class="etoile" id="3" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
-                    <div class="etoile" id="4" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
-                    <div class="etoile" id="5" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
-                </div><br>
-                <input class="commentaire" type="text" placeholder="Commentaire...">
-                <h2>À bientôt</h2>
-                <div class="final">Fermer</div>
-            </div>
+
+
+     <div class="row satisfaction col-sm-6">
+        <div class="row satis col-sm-12 align-items-center">
+
+            <h1>Merci d'avoir participé à notre jeu</h1>
+            <h2>N'oubliez pas de noter notre application!</h2><br>
+
+            <div class="etoiles">
+                <div class="etoile" id="1" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
+                <div class="etoile" id="2" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
+                <div class="etoile" id="3" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
+                <div class="etoile" id="4" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
+                <div class="etoile" id="5" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
+            </div><br>
+            <input class="commentaire" type="text" placeholder="Commentaire...">
+            <h2>À bientôt</h2>
+            <div class="final">Valider</div>
         </div>
     </div>
+    <div class="merci"><p>Merci d'avoir participé!</p><a href="<%root_path%>"><i class="fa fa-times-circle" aria-hidden="true"></i></a></div>
+</div>
 
-    <div id="mapid" class="col-sm-12">
-        <div class="leaflet-top leaflet-right">
-            <input type="button" id="Btn3" value="Recentrer la carte" class="btnStyle span3 leaflet-control" />
-        </div>
+<div id="mapid" class="col-sm-12">
+    <div class="leaflet-top leaflet-right">
+        <input type="button" id="Btn3" value="Recentrer la carte" class="btnStyle span3 leaflet-control" />
     </div>
-    <div class="audio row justify-content-center">
-      <br>
+</div>
+<div class="audio row justify-content-center">
+  <br>
 
-      <div class="control_audio"><i class="fa fa-volume-up fa-2x" aria-hidden="true"></i></div>
-      <%= audio_tag "sound.mp3", id: "sound", class: "audio_to_play", preload: "auto", loop: "true"%>
-      
-  </div>
-  <% else %>
+  <div class="control_audio"><i class="fa fa-volume-up fa-2x" aria-hidden="true"></i></div>
+  <%= audio_tag "sound.mp3", id: "sound", class: "audio_to_play", preload: "auto", loop: "true"%>
 
-  <div class="row col-sm-12 justify-content-center">
+</div>
+<% else %>
+
+<div class="row col-sm-12 justify-content-center">
     <div class="titre_div col-sm-12"><h1 class="titre">CODEX BEZAE</h1></div>
     <div class="welcome col-sm-6">
         <div class="pitch">
