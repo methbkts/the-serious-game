@@ -197,7 +197,7 @@ $(document).ready(function () {
 
         $('html').on('click', '#cathedrale', function () {
 
-            secondMarker.setPopupContent('<h4>Là où tout devient clair</h4><p>Dans la cathédrale, j\’ai trouvé un extrait de l\’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.</p><p>A l\’aide du texte, vous pourrez traduire:</p><%= image_tag("enigme1.png") %><center><h6 id="openbook">Ouvrir le Livre</h6></center><p id="message_alert"><center><input id="reponse1" type="text" placeholder="Saisir la réponse ici"/><button id="valider1">Valider</button></center>');
+            secondMarker.setPopupContent('<h4>Là où tout devient clair</h4><p>Dans la cathédrale, j\’ai trouvé un extrait de l\’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.</p><p>A l\’aide du texte, vous pourrez traduire:</p><center><%= image_tag("enigme1.png") %></center><center><h6 id="openbook">Ouvrir le Livre</h6></center><p id="message_alert"><center><input id="reponse1" type="text" placeholder="Saisir la réponse ici"/><button id="valider1">Valider</button></center>');
 
             $('html').on('click', '#openbook', function () {
 
