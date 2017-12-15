@@ -19,16 +19,12 @@
 //= require jquery.elevatezoom
 //= require_tree .
 
-//Quand le joueur est connecté, et qu'il clique sur commencer la partie => Changement du background, apparition de la map, lancement musique.
-
-
-//Ajout de la carte Leaflet dans la div #mapid avec coordonnées et niveau de zoom
 L.Map.ScrollWheelPan = L.Map.ScrollWheelZoom.extend({
     _performZoom: function () {
         var map = this._map,
             delta = this._delta;
 
-        map.stop(); // stop panning and fly animations if any
+        map.stop();
 
         delta = delta > 0 ? Math.ceil(delta) : Math.floor(delta);
         delta = Math.max(Math.min(delta, 4), -4);
@@ -40,7 +36,7 @@ L.Map.ScrollWheelPan = L.Map.ScrollWheelZoom.extend({
             return;
         }
 
-        map.panBy([0, -delta * 30]); // Adjust 40 to your feeling.
+        map.panBy([0, -delta * 30]);
     }
 });
 
@@ -53,7 +49,6 @@ var map = L.map('mapid', {
     scrollWheelPan: true
 }).setView([45.760041, 4.8351343], 14);
 
-//Ajout du thème (Impossibilité de le modifier pour le moment)
 L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}', {
     attribution: '2017 © Codex Bezae',
     subdomains: 'abcd',
@@ -62,7 +57,6 @@ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{e
     ext: 'png'
 }).addTo(map);
 
-//Ajout d'un marqueur aux positions indiquées et d'un popup cliquable qui affiche le texte
 var firstMarker = L.marker([45.760041, 4.8351343], {
     title: 'Lieu de départ - Place des Jacobins'
 });
@@ -121,7 +115,6 @@ function manageStars(etoile) {
             star--;
             var befSelectedStar = document.getElementById(star);
             befSelectedStar.style.color = '#549690';
-
         }
 
     } else {
@@ -137,7 +130,6 @@ function manageStars(etoile) {
         }
     }
 }
-
 
 $(document).ready(function () {
 
@@ -159,8 +151,6 @@ $(document).ready(function () {
         map.invalidateSize();
 
         $('#mapid').fadeTo(2000, 1);
-
-
 
         player.play();
 
@@ -211,7 +201,6 @@ $(document).ready(function () {
 
             $('html').on('click', '#openbook', function () {
 
-
                 popup.addTo(map);
                 secondMarker.addTo(map);
 
@@ -221,11 +210,9 @@ $(document).ready(function () {
 
                     map.removeLayer(popup);
                     map.panTo(new L.LatLng(45.7623314, 4.8275598));
-
                 });
 
             });
-
 
             function verif() {
 
@@ -253,10 +240,7 @@ $(document).ready(function () {
                         });
                     });
 
-
-
                 } else {
-
 
                     $('#message_alert').html('Malheureusement, ce n\'est pas le mot qu\'il fallait deviner. Un indice: la deuxième lettre du mot est un "G". Essaie encore !').css('color', 'white').css('background-color', 'red').css('text-align', 'center').css('font-size', '1rem');
                 }
@@ -267,12 +251,11 @@ $(document).ready(function () {
                 verif()
             });
 
-            // Lance la fonction verif quand on presse entrée
             $('html').on('keypress', '#reponse1', function (e) {
 
                 var key = e.which;
 
-                if (key == 13) { //The Enter press Key
+                if (key == 13) {
 
                     verif()
                 }
@@ -318,12 +301,11 @@ $(document).ready(function () {
                     verif2()
                 });
 
-                // Lance la fonction verif quand on presse entrée
                 $('html').on('keypress', '#reponse2', function (e) {
 
                     var key = e.which;
 
-                    if (key == 13) { //The Enter press Key
+                    if (key == 13) {
 
                         verif2()
                     }
@@ -369,12 +351,11 @@ $(document).ready(function () {
                         verif3()
                     });
 
-                    // Lance la fonction verif quand on presse entrée
                     $('html').on('keypress', '#reponse3', function (e) {
 
                         var key = e.which;
 
-                        if (key == 13) { //The Enter press Key
+                        if (key == 13) {
 
                             verif3()
                         }
@@ -418,7 +399,6 @@ $(document).ready(function () {
 
                             } else {
 
-
                                 $('#message_alert4').html('Malheureusement, ce n\'est pas le code qu\'il fallait deviner. Essaie encore !').css('color', 'white').css('background-color', 'red').css('text-align', 'center').css('font-size', '1rem');
                             }
                         }
@@ -428,12 +408,11 @@ $(document).ready(function () {
                             verif4()
                         });
 
-                        // Lance la fonction verif quand on presse entrée
                         $('html').on('keypress', '#reponse4', function (e) {
 
                             var key = e.which;
 
-                            if (key == 13) { //The Enter press Key
+                            if (key == 13) {
 
                                 verif4()
                             }
@@ -462,41 +441,33 @@ $(document).ready(function () {
 
                                         $('html').on('click', '#startgame7', function () {
 
-
                                             seventhMarker.setPopupContent('<center><h4>A l\'intérieur de l\'église</h4></center><br><%= image_tag("plantr.gif", class: "egliseplan", usemap:"#exemple-map-1") %><p>Souvenez-vous, grace aux énigmes, vous avez pu découvrir que les pages manquantes du codex se trouvaient à l\'intérieur de l\'église...</p><p>Mais dans quelle partie de l\'église ?</p>');
-
-
 
                                             seventhMarker.openPopup();
 
-                                            $('html').on('click','#plan_true',function(){
+                                            $('html').on('click', '#plan_true', function () {
                                                 seventhMarker.setPopupContent('<center><h4>Bienvenue dans la crypte</h4></center><br><p><center>Le coffre est tout près...</center></p><%= image_tag("cryptetr.jpg", class: "cryptecoffre") %>');
 
                                             });
 
-
-                                            $('html').on('click','#plan_false',function(){
+                                            $('html').on('click', '#plan_false', function () {
                                                 seventhMarker.setPopupContent('<h4>Ce n\'est pas l\'endroit où il faut se rendre</h4><p class="essai"><center><strong class="essai">Essayer à nouveau</strong></center></p>');
-                                                $('html').on('click','.essai',function(){
+                                                $('html').on('click', '.essai', function () {
                                                     seventhMarker.setPopupContent('<center><h4>A l\'intérieur de l\'église</h4></center><br><%= image_tag("plantr.gif", class: "egliseplan", usemap:"#exemple-map-1") %><p>Souvenez-vous, grêce aux énigmes, vous avez pu découvrir que les pages manquantes du codex se trouvaient à l\'intérieur de l\'église...</p><p>Mais dans quelle partie de l\'église ?</p>');
-
-                                                })
+                                                });
                                             });
 
 
                                             //$('html').on('click', '.egliseplan', function () {
 
 
-//                                                seventhMarker.setPopupContent('<center><h4>Dans la crypte</h4></center><br><%= image_tag("cryptetr.jpg", class: "cryptecoffre") %><p>Les pages manquantes du Codex se trouvent à l\'intérieur d'un coffre-fort...</p>');
-//                                            });
+                                            //                                                seventhMarker.setPopupContent('<center><h4>Dans la crypte</h4></center><br><%= image_tag("cryptetr.jpg", class: "cryptecoffre") %><p>Les pages manquantes du Codex se trouvent à l\'intérieur d'un coffre-fort...</p>');
+                                            //                                            });
 
 
                                             $('html').on('click', '.cryptecoffre', function () {
 
-
                                                 seventhMarker.setPopupContent('<h4>Là où l\'on obtient des réponses</h4><p>Bravo cher(e) Ami(e).</p><p>Vous êtes parvenu au lieu final de notre quête !</p><p>J\'ai pu identifier le lieu où reposent les pages du codex Bezae. C\'est sous terre qu\'elles sont dissimulées à la vue de tous. Dans la cour de l\'église Saint-Irénée, on trouve un portail qui mène à des souterrains qui se perdent sous la ville de Lyon. Ces souterrains ont d\'ailleurs été utilisés par les résistants durant les différentes guerres.</p><p>J\'ai pu retrouver une page lors de mes explorations et je l\'ai dissimulée dans la crypte, car j\'ai peur que notre initiative ne soit pas vue d\'un bon œil par ceux qui gardent le secret.</p><p>Gràce au code obtenu lors de notre voyage, vous découvrirez la page manqante du Codex Bezae dans le coffre fort que vous venez de découvrir.</p></center><p id="message_alert6"><center><input id="reponse6" type="text" placeholder="Saisir le code ici"/><button id="valider6">Valider</button></center>');
-
-                                                
 
                                                 function verif6() {
 
@@ -517,12 +488,11 @@ $(document).ready(function () {
                                                     verif6()
                                                 });
 
-                                                // Lance la fonction verif quand on presse entrée
                                                 $('html').on('keypress', '#reponse6', function (e) {
 
                                                     var key = e.which;
 
-                                                    if (key == 13) { //The Enter press Key
+                                                    if (key == 13) {
 
                                                         verif6()
                                                     }
@@ -542,12 +512,11 @@ $(document).ready(function () {
                                 verif5()
                             });
 
-                            // Lance la fonction verif quand on presse entrée
                             $('html').on('keypress', '#reponse5', function (e) {
 
                                 var key = e.which;
 
-                                if (key == 13) { //The Enter press Key
+                                if (key == 13) {
 
                                     verif5()
                                 }
@@ -559,10 +528,9 @@ $(document).ready(function () {
 
                                 $('.satisfaction').fadeIn();
 
-                                $('html').on('click','.final',function(){
+                                $('html').on('click', '.final', function () {
                                     $('.satisfaction').fadeOut();
                                     $('.merci').fadeIn()
-                                    
                                 });
                             });
                         });
