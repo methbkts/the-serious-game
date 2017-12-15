@@ -430,6 +430,7 @@ em {
     min-width: 900px;
     justify-content: center;
 }
+
 .conspopup .leaflet-popup-content-wrapper,
 .conspopup .leaflet-popup-content {
     background-color: #11ffee00 !important;
@@ -547,7 +548,7 @@ em {
     padding: 0 2% 0 2%;
 }
 
-.final{
+.final {
     color: rgba(63, 104, 100, 1);
 }
 
@@ -574,14 +575,13 @@ span img,
     width: 300px;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
     span img {
         width: 100%;
     }
 }
 
-.merci{
+.merci {
     display: none;
     font-size: 2rem;
 }
-
