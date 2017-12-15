@@ -186,7 +186,7 @@ $(document).ready(function () {
         firstMarker.closePopup();
 
         secondMarker.addTo(map)
-            .bindPopup('<span id="startgame2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/De_saint-%C3%89tienne_%C3%A0_Saint-Jean.JPG/800px-De_saint-%C3%89tienne_%C3%A0_Saint-Jean.JPG" width="300px"><center><p>Cathédrale Saint-Jean</p></center></span>').openPopup();
+            .bindPopup('<span id="startgame2"><%= image_tag("cathedrale_st_jean.jpg", width: "300px") %><center><h6>Cathédrale Saint-Jean</h6></center></span>').openPopup();
 
         $('html').on('click', '#startgame2', function () {
 
@@ -230,7 +230,7 @@ $(document).ready(function () {
                         map.panTo(new L.LatLng(45.773, 4.8326874));
 
                         thirdMarker.addTo(map)
-                            .bindPopup('<span id="startgame3"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Rue-merci%C3%A8re_-_Lyon.JPG/800px-Rue-merci%C3%A8re_-_Lyon.JPG"><center><p>Rue Mercière</p></center></span>').openPopup();
+                            .bindPopup('<span id="startgame3"><%= image_tag("rue_merciere.jpg", width: "300px") %><center><h6>Rue Mercière</h6></center></span>').openPopup();
 
                         $('html').on('click', '#startgame3', function () {
 
@@ -280,7 +280,7 @@ $(document).ready(function () {
                             map.panTo(new L.LatLng(45.769722, 4.819722));
 
                             fourthMarker.addTo(map)
-                                .bindPopup('<span id="startgame4"><img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Theatre_antique_Fourviere.jpg"><center><p>Théatre Antique de Fourvière</p></center></span>').openPopup();
+                                .bindPopup('<span id="startgame4"><%= image_tag("theatre_antique_fourviere.jpg", width: "300px") %><center><h6>Théatre Antique de Fourvière</h6></center></span>').openPopup();
 
                             $('html').on('click', '#startgame4', function () {
 
@@ -330,7 +330,7 @@ $(document).ready(function () {
                                 map.panTo(new L.LatLng(45.779167, 4.8125));
 
                                 fifthMarker.addTo(map)
-                                    .bindPopup('<span id="startgame5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Conservatoire_national_sup%C3%A9rieur_musique_et_danse_de_Lyon_de_nuit.JPG/800px-Conservatoire_national_sup%C3%A9rieur_musique_et_danse_de_Lyon_de_nuit.JPG"><center><p>Conservatoire National Supérieur de Musique et de Danse</p></center></span>').openPopup();
+                                    .bindPopup('<span id="startgame5"><%= image_tag("conservatoire.jpg", width: "300px") %><center><h6>Conservatoire National Supérieur de Musique et de Danse</h6></center></span>').openPopup();
 
                                 $('html').on('click', '#startgame5', function () {
 
@@ -387,7 +387,7 @@ $(document).ready(function () {
                                     map.panTo(new L.LatLng(45.780556, 4.830556));
 
                                     sixthMarker.addTo(map)
-                                        .bindPopup('<span id="startgame6"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Amphith%C3%A9%C3%A2tre_des_Trois_Gaules_Lyon.jpg/1024px-Amphith%C3%A9%C3%A2tre_des_Trois_Gaules_Lyon.jpg"><center><p>Amphithéatre des 3 Gaules</p></center></span>').openPopup();
+                                        .bindPopup('<span id="startgame6"><%= image_tag("Trois_Gaules.jpg", width: "300px") %><center><h6>Amphithéatre des 3 Gaules</h6></center></span>').openPopup();
 
                                     $('html').on('click', '#startgame6', function () {
 
@@ -437,7 +437,7 @@ $(document).ready(function () {
                                         map.panTo(new L.LatLng(45.765086, 4.813786));
 
                                         seventhMarker.addTo(map)
-                                            .bindPopup('<span id="startgame7"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Eglisesaintireneelyon.JPG/800px-Eglisesaintireneelyon.JPG"><center><p>Eglise Saint-Irénée</p></center></span>').openPopup();
+                                            .bindPopup('<span id="startgame7"><%= image_tag("stirenee", width: "300px") %><center><h6>Eglise Saint-Irénée</h6></center></span>').openPopup();
 
                                         $('html').on('click', '#startgame7', function () {
 
