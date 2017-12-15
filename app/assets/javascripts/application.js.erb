@@ -500,7 +500,9 @@ $(document).ready(function () {
 
                                                     if (xValue6 == '\u0034\u0038\u0037\u0035' || xValue6 == '\u0035\u0033\u0039\u0035') {
 
-                                                        seventhMarker.setPopupContent('<center><h4>Félicitations '+role+'!</h4></center><p>Vous m\'avez bien aidé! Je suis heureux que vous ayez retrouvé mon ami Palamède!</p><%= image_tag("bravo.gif", width: '300px', class: 'bravo img-responsive') %><center><h6 class="note">Noter le jeu</h6></center>');
+                                                        seventhMarker.setPopupContent('<center><h4>Félicitations '+role+'!</h4></center><p>Vous m\'avez bien aidé et grace à vous, nous avons enfin mis la main sur les pages manquantes du Codex Bezae !</p><p>Je suis également heureux que vous ayez retrouvé mon ami Palamède!</p><%= image_tag("bravo.gif", width: '300px', class: 'bravo img-responsive') %><center><h6 class="note">Noter le jeu</h6></center>');
+
+                                                        map.panTo(new L.LatLng(45.770556, 4.813786));
 
                                                     } else {
 
