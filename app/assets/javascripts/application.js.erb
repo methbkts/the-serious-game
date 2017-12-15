@@ -461,7 +461,7 @@ $(document).ready(function () {
                                         map.panTo(new L.LatLng(45.765086, 4.813786));
 
                                         seventhMarker.addTo(map)
-                                            .bindPopup('<span id="startgame7"><%= image_tag("stirenee.jpg", width: "300px") %><center><h6>Eglise Saint-Irénée</h6></center></span>').openPopup();
+                                            .bindPopup('<span id="startgame7"><%= image_tag("stirenee.JPG", width: "300px") %><center><h6>Eglise Saint-Irénée</h6></center></span>').openPopup();
 
                                         $('html').on('click', '#startgame7', function () {
 
@@ -480,14 +480,6 @@ $(document).ready(function () {
                                                     seventhMarker.setPopupContent('<center><h4>A l\'intérieur de l\'église</h4></center><br><%= image_tag("plantr.gif", class: "egliseplan", usemap:"#exemple-map-1") %><p>Souvenez-vous, grêce aux énigmes, vous avez pu découvrir que les pages manquantes du codex se trouvaient à l\'intérieur de l\'église...</p><p>Mais dans quelle partie de l\'église ?</p>');
                                                 });
                                             });
-
-
-                                            //$('html').on('click', '.egliseplan', function () {
-
-
-                                            //                                                seventhMarker.setPopupContent('<center><h4>Dans la crypte</h4></center><br><%= image_tag("cryptetr.jpg", class: "cryptecoffre") %><p>Les pages manquantes du Codex se trouvent à l\'intérieur d'un coffre-fort...</p>');
-                                            //                                            });
-
 
                                             $('html').on('click', '.cryptecoffre', function () {
 
