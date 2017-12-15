@@ -134,18 +134,18 @@ function manageStars(etoile) {
 var role = 'no_one'
 
 $(document).ready(function () {
-$('html').on('click','.personnage_h', function(){
-        
+    $('html').on('click', '.personnage_h', function () {
+
         role = 'Eugène';
-        
-       
+
+
     });
 
-    $('html').on('click','.personnage_f', function(){
-        
+    $('html').on('click', '.personnage_f', function () {
+
         role = 'Joséphine';
 
-        
+
     });
 });
 
@@ -154,7 +154,7 @@ $(document).ready(function () {
     $('html').on('click', '#Btn3', function () {
 
         map.panTo(new L.LatLng(45.760041, 4.8351343));
-    });    
+    });
 
 
     $('html').on('click', '.start', function () {
@@ -197,13 +197,13 @@ $(document).ready(function () {
 
     $('html').on('click', '#startmap', function () {
 
-        if (role ==='Eugène'){
-        
+        if (role === 'Eugène') {
 
-        firstMarker.setPopupContent('<h4>Cher ' + role  +',</h4><p>Je travaille actuellement à l\'étude du Codex Bezae, un manuscrit bilingue grec et latin du Vème siècle contenant les évangiles et les actes des apôtres.</p><p>Au cours de mon travail, j\'ai identifié une piste solide dans la recherche des pages disparues en 1562 lorsque le Codex a été volé à l\'Eglise par les Huguenots.</p><p>C\'est un de mes confrères, Palamède, qui s\'est rendu à Lyon pour enquêter sur place.</p><p>J\'ai reçu de manière cryptée chaque étape de ses avancées, mais depuis son dernier message la semaine dernière, je suis sans nouvelles.</p><p>Il semble avoir disparu.</p><p>Ne pouvant venir moi-même à sa recherche, je vous prie de bien vouloir mettre tout en œuvre pour les retrouver: lui, et les fameuses pages manquantes.</p><p>Tous les éléments à ma disposition, dont nos derniers échanges, vous ont été transmis dans cette missive.</p><p>D\'avance je vous remercie,</p><p>Epiphane</p><center><h6 id="startgame">Commencer</h6></center>');
-        }else{
-            
-        firstMarker.setPopupContent('<h4>Chère ' + role + ',</h4><p>Je travaille actuellement à l\'étude du Codex Bezae, un manuscrit bilingue grec et latin du Vème siècle contenant les évangiles et les actes des apôtres.</p><p>Au cours de mon travail, j\'ai identifié une piste solide dans la recherche des pages disparues en 1562 lorsque le Codex a été volé à l\'Eglise par les Huguenots.</p><p>C\'est un de mes confrères, Palamède, qui s\'est rendu à Lyon pour enquêter sur place.</p><p>J\'ai reçu de manière cryptée chaque étape de ses avancées, mais depuis son dernier message la semaine dernière, je suis sans nouvelles.</p><p>Il semble avoir disparu.</p><p>Ne pouvant venir moi-même à sa recherche, je vous prie de bien vouloir mettre tout en œuvre pour les retrouver: lui, et les fameuses pages manquantes.</p><p>Tous les éléments à ma disposition, dont nos derniers échanges, vous ont été transmis dans cette missive.</p><p>D\'avance je vous remercie,</p><p>Epiphane</p><center><h6 id="startgame">Commencer</h6></center>');
+
+            firstMarker.setPopupContent('<h4>Cher ' + role + ',</h4><p>Je travaille actuellement à l\'étude du Codex Bezae, un manuscrit bilingue grec et latin du Vème siècle contenant les évangiles et les actes des apôtres.</p><p>Au cours de mon travail, j\'ai identifié une piste solide dans la recherche des pages disparues en 1562 lorsque le Codex a été volé à l\'Eglise par les Huguenots.</p><p>C\'est un de mes confrères, Palamède, qui s\'est rendu à Lyon pour enquêter sur place.</p><p>J\'ai reçu de manière cryptée chaque étape de ses avancées, mais depuis son dernier message la semaine dernière, je suis sans nouvelles.</p><p>Il semble avoir disparu.</p><p>Ne pouvant venir moi-même à sa recherche, je vous prie de bien vouloir mettre tout en œuvre pour les retrouver: lui, et les fameuses pages manquantes.</p><p>Tous les éléments à ma disposition, dont nos derniers échanges, vous ont été transmis dans cette missive.</p><p>D\'avance je vous remercie,</p><p>Epiphane</p><center><h6 id="startgame">Commencer</h6></center>');
+        } else {
+
+            firstMarker.setPopupContent('<h4>Chère ' + role + ',</h4><p>Je travaille actuellement à l\'étude du Codex Bezae, un manuscrit bilingue grec et latin du Vème siècle contenant les évangiles et les actes des apôtres.</p><p>Au cours de mon travail, j\'ai identifié une piste solide dans la recherche des pages disparues en 1562 lorsque le Codex a été volé à l\'Eglise par les Huguenots.</p><p>C\'est un de mes confrères, Palamède, qui s\'est rendu à Lyon pour enquêter sur place.</p><p>J\'ai reçu de manière cryptée chaque étape de ses avancées, mais depuis son dernier message la semaine dernière, je suis sans nouvelles.</p><p>Il semble avoir disparu.</p><p>Ne pouvant venir moi-même à sa recherche, je vous prie de bien vouloir mettre tout en œuvre pour les retrouver: lui, et les fameuses pages manquantes.</p><p>Tous les éléments à ma disposition, dont nos derniers échanges, vous ont été transmis dans cette missive.</p><p>D\'avance je vous remercie,</p><p>Epiphane</p><center><h6 id="startgame">Commencer</h6></center>');
 
         }
     });
@@ -218,14 +218,14 @@ $(document).ready(function () {
         $('html').on('click', '#startgame2', function () {
 
             secondMarker.setPopupContent('<h4>Là où l\'on se recueille</h4><p>Cher Ami,</p><p>Au cœur du vieux Lyon se trouve la cathédrale Saint-Jean. Elle fut le théâtre d\'événements importants: couronnement du Pape, mariage royal, conciles et autres distinctions...</p><p>Sa construction s\'étale sur 3 siècles, mélangeant les styles gothiques et romans sur sa façade. Elle possède une horloge astronomique du XIVème siècle. Je suis resté sous le charme de la rosace de sa façade.</p><p>La cathédrale a été dévastée par les troupes du Baron des Adrets en 1562. L\'intérieur de l\'édifice a subi de nombreuses transformations et il est encore régulièrement rénové.</p><p>Heureusement, j\'ai tout de même pu localiser un livre enluminé en exposition. Les paragraphes de l\'Évangile selon Saint-Jean m\'ont donné une indication précieuse.</p><p>Palamède</p><center><h6 id="cathedrale">Commencer</h6></center>');
-            
+
             secondMarker.openPopup();
-        
+
         });
 
         $('html').on('click', '#cathedrale', function () {
 
-            secondMarker.setPopupContent('<h4>Là où tout devient clair</h4><p>Dans la cathédrale, j\’ai trouvé un extrait de l\’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.</p><p>A l\’aide du texte, vous pourrez traduire:</p><center><%= image_tag("enigme1.png") %></center><center><h6 id="openbook">Ouvrir le Livre</h6></center><p id="message_alert"><center><input id="reponse1" type="text" placeholder="Saisir la réponse ici"/><button id="valider1">Valider</button></center>');
+            secondMarker.setPopupContent('<h4>Là où tout devient clair</h4><p>Dans la cathédrale, j\’ai trouvé un extrait de l\’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.</p><p>A l\’aide du texte, vous pourrez traduire:</p><center><%= image_tag("enigme1.png") %></center><center><h6 id="openbook">Ouvrir le Livre</h6></center><p id="message_alert"><center><input id="yValue1" type="text" placeholder="Saisir la réponse ici"/><button id="valider1">Valider</button></center>');
 
             $('html').on('click', '#openbook', function () {
 
@@ -244,11 +244,11 @@ $(document).ready(function () {
 
             function verif() {
 
-                var maReponse = document.getElementById('reponse1').value.toLowerCase();
+                var xValue = document.getElementById('yValue1').value.toLowerCase();
 
-                if (maReponse == 'eglise' || maReponse == 'église') {
+                if (xValue == '\u0065\u0067\u006c\u0069\u0073\u0065' || xValue == '\u00e9\u0067\u006c\u0069\u0073\u0065') {
 
-                    $('#message_alert').html('Bien joué '+role+'! Pour passer à l\'étape suivante, <span id="next_step">cliquez ici</span>').css('color', 'white').css('background-color', 'green').css('text-align', 'center').css('font-size', '1rem');
+                    $('#message_alert').html('Bien joué ' + role + '! Pour passer à l\'étape suivante, <span id="next_step">cliquez ici</span>').css('color', 'white').css('background-color', 'green').css('text-align', 'center').css('font-size', '1rem');
 
                     $('html').on('click', '#next_step', function () {
 
@@ -279,7 +279,7 @@ $(document).ready(function () {
                 verif()
             });
 
-            $('html').on('keypress', '#reponse1', function (e) {
+            $('html').on('keypress', '#yValue1', function (e) {
 
                 var key = e.which;
 
@@ -291,13 +291,13 @@ $(document).ready(function () {
 
             $('html').on('click', '#encre', function () {
 
-                thirdMarker.setPopupContent('<h4>Là où l\'on ouvre les yeux</h4><p>C\'est une phrase en latin qui m\a poussé à me rendre sur Lyon. Cette phrase, la voici:</p><p>T E M P V S C E S T I A M T I</p><p>C A R E S A R G E R M A N I C E</p><p>D E T E G E R E T E P A T Y R I B V S</p><p>C O N S C R I P T I S Q V O</p><p>T E N D A T O R A T I O T V A</p><p>I P A M E N I M A D E X T R E M O S</p><p>F I N E S G A L L I T A E N A R</p><p>B O N E N E S I S V E N I S T I</p><p>J\'ai cependant noté quelques différences avec l\'originale provenant des Tables Claudiennes (Discours de Claude).<p><p id="message_alert2"><center><input id="reponse2" type="text" placeholder="Saisir la réponse ici"/><button id="valider2">Valider</button></center>');
+                thirdMarker.setPopupContent('<h4>Là où l\'on ouvre les yeux</h4><p>C\'est une phrase en latin qui m\a poussé à me rendre sur Lyon. Cette phrase, la voici:</p><p>T E M P V S C E S T I A M T I</p><p>C A R E S A R G E R M A N I C E</p><p>D E T E G E R E T E P A T Y R I B V S</p><p>C O N S C R I P T I S Q V O</p><p>T E N D A T O R A T I O T V A</p><p>I P A M E N I M A D E X T R E M O S</p><p>F I N E S G A L L I T A E N A R</p><p>B O N E N E S I S V E N I S T I</p><p>J\'ai cependant noté quelques différences avec l\'originale provenant des Tables Claudiennes (Discours de Claude).<p><p id="message_alert2"><center><input id="yValue2" type="text" placeholder="Saisir la réponse ici"/><button id="valider2">Valider</button></center>');
 
                 function verif2() {
 
-                    var maReponse2 = document.getElementById('reponse2').value.toLowerCase();
+                    var xValue2 = document.getElementById('yValue2').value.toLowerCase();
 
-                    if (maReponse2 == 'crypte') {
+                    if (xValue2 == '\u0063\u0072\u0079\u0070\u0074\u0065') {
 
                         $('#message_alert2').html('Bien joué ! Pour passer à l\'étape suivante, <span id="next_step2">cliquez ici</span>').css('color', 'white').css('background-color', 'green').css('text-align', 'center').css('font-size', '1rem');
 
@@ -329,7 +329,7 @@ $(document).ready(function () {
                     verif2()
                 });
 
-                $('html').on('keypress', '#reponse2', function (e) {
+                $('html').on('keypress', '#yValue2', function (e) {
 
                     var key = e.which;
 
@@ -341,13 +341,13 @@ $(document).ready(function () {
 
                 $('html').on('click', '#cybelestart', function () {
 
-                    fourthMarker.setPopupContent('<h4>Là où j\'aurai dû être archéologue</h4></p><p>Au gré de ma balade parmi les ruines de ce temple païen, je suis tombé sur un ancien symbole chrétien gravé sur une pierre.</p><p>A l\'origine, c\'était l\'abréviation d\'un mot signifiant "utile, de bon augure".</p><p>Il serait très mal vu de voler la pierre, mais mon instinct me dicte que ce pourrait être important, mieux vaudrait-il en faire une esquisse pour en garder une trace.</p><center><%= image_tag("enigme3.png") %></center><p>Cherche le nom de ce symbole et entre la réponse ci-dessous:</p><p id="message_alert3"><center><input id="reponse3" type="text" placeholder="Saisir la réponse ici"/><button id="valider3">Valider</button></center>');
+                    fourthMarker.setPopupContent('<h4>Là où j\'aurai dû être archéologue</h4></p><p>Au gré de ma balade parmi les ruines de ce temple païen, je suis tombé sur un ancien symbole chrétien gravé sur une pierre.</p><p>A l\'origine, c\'était l\'abréviation d\'un mot signifiant "utile, de bon augure".</p><p>Il serait très mal vu de voler la pierre, mais mon instinct me dicte que ce pourrait être important, mieux vaudrait-il en faire une esquisse pour en garder une trace.</p><center><%= image_tag("enigme3.png") %></center><p>Cherche le nom de ce symbole et entre la réponse ci-dessous:</p><p id="message_alert3"><center><input id="yValue3" type="text" placeholder="Saisir la réponse ici"/><button id="valider3">Valider</button></center>');
 
                     function verif3() {
 
-                        var maReponse3 = document.getElementById('reponse3').value.toLowerCase();
+                        var xValue3 = document.getElementById('yValue3').value.toLowerCase();
 
-                        if (maReponse3 == 'chrisme') {
+                        if (xValue3 == '\u0063\u0068\u0072\u0069\u0073\u006d\u0065') {
 
                             $('#message_alert3').html('Bien joué ! Pour passer à l\'étape suivante, <span id="next_step3">cliquez ici</span>').css('color', 'white').css('background-color', 'green').css('text-align', 'center').css('font-size', '1rem');
 
@@ -379,7 +379,7 @@ $(document).ready(function () {
                         verif3()
                     });
 
-                    $('html').on('keypress', '#reponse3', function (e) {
+                    $('html').on('keypress', '#yValue3', function (e) {
 
                         var key = e.which;
 
@@ -391,7 +391,7 @@ $(document).ready(function () {
 
                     $('html').on('click', '#artistestart', function () {
 
-                        fifthMarker.setPopupContent('<h4>Là où les arts et les maths se rejoignent</h4><p>C\'est étrange, le bâtiment est assez différent de ce que j\'imaginais.</p><p>J\'ai trouvé ce matin un message sous ma porte de chambre qui m\'a fait froid dans le dos. J\'ai donc décidé de protéger mes dernières conclusions dans ma boîte de sureté et j\'en ai changé le code. Pour être sûr que vous seul puisses le retrouver, j\'ai fait appel à ton goût pour les mathématiques :</p><p><center><em>Soustrais le nombre de cloches se trouvant sur le toit au nombre d\'arches en rez de jardin.</p><p>Multiplie ce chiffre par le nombre de fenêtres ouvertes sur la photo.</p><p>Ajoutes-y le nombre de fenêtres présentes sur la façace (aux premier, second et troisième étages) et multiplie le tout par le nombre d\'années qu\'a vécu Saturnin Arloing, célèbre vétérinaire ayant occupé les lieux.</em></center></p><center><h6 id="openimg">Voir le Conservatoire</h6></center><p id="message_alert4"><center><input id="reponse4" type="text" placeholder="Saisir la réponse ici"/><button id="valider4">Valider</button></center>');
+                        fifthMarker.setPopupContent('<h4>Là où les arts et les maths se rejoignent</h4><p>C\'est étrange, le bâtiment est assez différent de ce que j\'imaginais.</p><p>J\'ai trouvé ce matin un message sous ma porte de chambre qui m\'a fait froid dans le dos. J\'ai donc décidé de protéger mes dernières conclusions dans ma boîte de sureté et j\'en ai changé le code. Pour être sûr que vous seul puisses le retrouver, j\'ai fait appel à ton goût pour les mathématiques :</p><p><center><em>Soustrais le nombre de cloches se trouvant sur le toit au nombre d\'arches en rez de jardin.</p><p>Multiplie ce chiffre par le nombre de fenêtres ouvertes sur la photo.</p><p>Ajoutes-y le nombre de fenêtres présentes sur la façace (aux premier, second et troisième étages) et multiplie le tout par le nombre d\'années qu\'a vécu Saturnin Arloing, célèbre vétérinaire ayant occupé les lieux.</em></center></p><center><h6 id="openimg">Voir le Conservatoire</h6></center><p id="message_alert4"><center><input id="yValue4" type="text" placeholder="Saisir la réponse ici"/><button id="valider4">Valider</button></center>');
 
                         $('html').on('click', '#openimg', function () {
 
@@ -401,11 +401,11 @@ $(document).ready(function () {
 
                         function verif4() {
 
-                            var maReponse4 = document.getElementById('reponse4').value.toLowerCase();
+                            var xValue4 = document.getElementById('yValue4').value.toLowerCase();
 
-                            if (maReponse4 == '4875' || maReponse4 == '5395') {
+                            if (xValue4 == '\u0034\u0038\u0037\u0035' || xValue4 == '\u0035\u0033\u0039\u0035') {
 
-                                $('#message_alert4').html('Bien joué '+role+'! Pour passer à l\'étape suivante, <span id="next_step4">cliquez ici</a>').css('color', 'white').css('background-color', 'green').css('text-align', 'center').css('font-size', '1rem');
+                                $('#message_alert4').html('Bien joué ' + role + '! Pour passer à l\'étape suivante, <span id="next_step4">cliquez ici</a>').css('color', 'white').css('background-color', 'green').css('text-align', 'center').css('font-size', '1rem');
 
                                 $('html').on('click', '#next_step4', function () {
 
@@ -436,7 +436,7 @@ $(document).ready(function () {
                             verif4()
                         });
 
-                        $('html').on('keypress', '#reponse4', function (e) {
+                        $('html').on('keypress', '#yValue4', function (e) {
 
                             var key = e.which;
 
@@ -448,13 +448,13 @@ $(document).ready(function () {
 
                         $('html').on('click', '#blandinestart', function () {
 
-                            sixthMarker.setPopupContent('<h4>Le pacifique de Smyrne</h4><p>J\ai découvert ici des indices qui me laissent penser que notre destination est en rapport avec un Saint.</p><P>Sur place, j\'ai trouvé des morceaux de parchemin provenant de Smyrne, en Turquie. Ces derniers mentionnents un Saint ayant probablement connu Saint-Polycarpe et auteur de "Contre les hérésies".</p><p>Mes recherches m\'ont menées à une date en rapport avec l\'église catholique: le 28 juin.</p><p id="message_alert5"><center><input id="reponse5" type="text" placeholder="Saisir la réponse ici"/><button id="valider5">Valider</button></center>');
+                            sixthMarker.setPopupContent('<h4>Le pacifique de Smyrne</h4><p>J\ai découvert ici des indices qui me laissent penser que notre destination est en rapport avec un Saint.</p><P>Sur place, j\'ai trouvé des morceaux de parchemin provenant de Smyrne, en Turquie. Ces derniers mentionnents un Saint ayant probablement connu Saint-Polycarpe et auteur de "Contre les hérésies".</p><p>Mes recherches m\'ont menées à une date en rapport avec l\'église catholique: le 28 juin.</p><p id="message_alert5"><center><input id="yValue5" type="text" placeholder="Saisir la réponse ici"/><button id="valider5">Valider</button></center>');
 
                             function verif5() {
 
-                                var maReponse5 = document.getElementById('reponse5').value.toLowerCase();
+                                var xValue5 = document.getElementById('yValue5').value.toLowerCase();
 
-                                if ((maReponse5.toLowerCase().indexOf("irene") >= 0) || (maReponse5.toLowerCase().indexOf("iréne") >= 0) || (maReponse5.toLowerCase().indexOf("irené") >= 0) || (maReponse5.toLowerCase().indexOf("iréné") >= 0)) {
+                                if ((xValue5.toLowerCase().indexOf("\u0069\u0072\u0065\u006e\u0065") >= 0) || (xValue5.toLowerCase().indexOf("\u0069\u0072\u00e9\u006e\u0065") >= 0) || (xValue5.toLowerCase().indexOf("\u0069\u0072\u0065\u006e\u00e9") >= 0) || (xValue5.toLowerCase().indexOf("\u0069\u0072\u00e9\u006e\u00e9") >= 0)) {
 
                                     $('#message_alert5').html('Bien joué ! Pour vous rendre à l\'église Saint-Irénée, <span id="next_step5">cliquez ici</span>').css('color', 'white').css('background-color', 'green').css('text-align', 'center').css('font-size', '1rem');
 
@@ -487,19 +487,20 @@ $(document).ready(function () {
 
                                             $('html').on('click', '.cryptecoffre', function () {
 
-                                                if(role==='Eugène'){
+                                                if (role === 'Eugène') {
 
-                                                seventhMarker.setPopupContent('<h4>Là où l\'on obtient des réponses</h4><p>Bravo '+role+'!</p><p>Vous êtes parvenu au lieu final de notre quête !</p><p>J\'ai pu identifier le lieu où reposent les pages du codex Bezae. C\'est sous terre qu\'elles sont dissimulées à la vue de tous. Dans la cour de l\'église Saint-Irénée, on trouve un portail qui mène à des souterrains qui se perdent sous la ville de Lyon. Ces souterrains ont d\'ailleurs été utilisés par les résistants durant les différentes guerres.</p><p>J\'ai pu retrouver une page lors de mes explorations et je l\'ai dissimulée dans la crypte, car j\'ai peur que notre initiative ne soit pas vue d\'un bon œil par ceux qui gardent le secret.</p><p>Grâce au code obtenu lors de notre voyage, vous découvrirez la page manquante du Codex Bezae dans le coffre fort que vous venez de découvrir.</p></center><p id="message_alert6"><center><input id="reponse6" type="text" placeholder="Saisir le code ici"/><button id="valider6">Valider</button></center>');
-                                                }else{
-                                                seventhMarker.setPopupContent('<h4>Là où l\'on obtient des réponses</h4><p>Bravo '+role+'!</p><p>Vous êtes parvenue au lieu final de notre quête !</p><p>J\'ai pu identifier le lieu où reposent les pages du codex Bezae. C\'est sous terre qu\'elles sont dissimulées à la vue de tous. Dans la cour de l\'église Saint-Irénée, on trouve un portail qui mène à des souterrains qui se perdent sous la ville de Lyon. Ces souterrains ont d\'ailleurs été utilisés par les résistants durant les différentes guerres.</p><p>J\'ai pu retrouver une page lors de mes explorations et je l\'ai dissimulée dans la crypte, car j\'ai peur que notre initiative ne soit pas vue d\'un bon œil par ceux qui gardent le secret.</p><p>Grâce au code obtenu lors de notre voyage, vous découvrirez la page manquante du Codex Bezae dans le coffre fort que vous venez de découvrir.</p></center><p id="message_alert6"><center><input id="reponse6" type="text" placeholder="Saisir le code ici"/><button id="valider6">Valider</button></center>');          
+                                                    seventhMarker.setPopupContent('<h4>Là où l\'on obtient des réponses</h4><p>Bravo ' + role + '!</p><p>Vous êtes parvenu au lieu final de notre quête !</p><p>J\'ai pu identifier le lieu où reposent les pages du codex Bezae. C\'est sous terre qu\'elles sont dissimulées à la vue de tous. Dans la cour de l\'église Saint-Irénée, on trouve un portail qui mène à des souterrains qui se perdent sous la ville de Lyon. Ces souterrains ont d\'ailleurs été utilisés par les résistants durant les différentes guerres.</p><p>J\'ai pu retrouver une page lors de mes explorations et je l\'ai dissimulée dans la crypte, car j\'ai peur que notre initiative ne soit pas vue d\'un bon œil par ceux qui gardent le secret.</p><p>Grâce au code obtenu lors de notre voyage, vous découvrirez la page manquante du Codex Bezae dans le coffre fort que vous venez de découvrir.</p></center><p id="message_alert6"><center><input id="yValue6" type="text" placeholder="Saisir le code ici"/><button id="valider6">Valider</button></center>');
+                                                } else {
+                                                    seventhMarker.setPopupContent('<h4>Là où l\'on obtient des réponses</h4><p>Bravo ' + role + '!</p><p>Vous êtes parvenue au lieu final de notre quête !</p><p>J\'ai pu identifier le lieu où reposent les pages du codex Bezae. C\'est sous terre qu\'elles sont dissimulées à la vue de tous. Dans la cour de l\'église Saint-Irénée, on trouve un portail qui mène à des souterrains qui se perdent sous la ville de Lyon. Ces souterrains ont d\'ailleurs été utilisés par les résistants durant les différentes guerres.</p><p>J\'ai pu retrouver une page lors de mes explorations et je l\'ai dissimulée dans la crypte, car j\'ai peur que notre initiative ne soit pas vue d\'un bon œil par ceux qui gardent le secret.</p><p>Grâce au code obtenu lors de notre voyage, vous découvrirez la page manquante du Codex Bezae dans le coffre fort que vous venez de découvrir.</p></center><p id="message_alert6"><center><input id="yValue6" type="text" placeholder="Saisir le code ici"/><button id="valider6">Valider</button></center>');
                                                 }
+
                                                 function verif6() {
 
-                                                    var maReponse6 = document.getElementById('reponse6').value.toLowerCase();
+                                                    var xValue6 = document.getElementById('yValue6').value.toLowerCase();
 
-                                                    if (maReponse6 == '4875' || maReponse6 == '5395') {
+                                                    if (xValue6 == '\u0034\u0038\u0037\u0035' || xValue6 == '\u0035\u0033\u0039\u0035') {
 
-                                                        seventhMarker.setPopupContent('<p>Féliciations '+role+'! Vous m\'avez bien aidé! Je suis heureux que vous ayez retrouvé mon ami Palamède!</p><span class="note">Noter le jeu</span>');
+                                                        seventhMarker.setPopupContent('<p>Féliciations ' + role + '! Vous m\'avez bien aidé! Je suis heureux que vous ayez retrouvé mon ami Palamède!</p><span class="note">Noter le jeu</span>');
 
                                                     } else {
 
@@ -512,7 +513,7 @@ $(document).ready(function () {
                                                     verif6()
                                                 });
 
-                                                $('html').on('keypress', '#reponse6', function (e) {
+                                                $('html').on('keypress', '#yValue6', function (e) {
 
                                                     var key = e.which;
 
@@ -536,7 +537,7 @@ $(document).ready(function () {
                                 verif5()
                             });
 
-                            $('html').on('keypress', '#reponse5', function (e) {
+                            $('html').on('keypress', '#yValue5', function (e) {
 
                                 var key = e.which;
 
@@ -553,10 +554,10 @@ $(document).ready(function () {
                                 $('.satisfaction').fadeIn();
 
 
-                                $('html').on('click','.final',function(){
+                                $('html').on('click', '.final', function () {
                                     $('.satisfaction').hide();
                                     $('.merci').fadeIn('slow');
-                                    
+
 
                                 });
                             });
