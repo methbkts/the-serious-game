@@ -207,7 +207,7 @@ $(document).ready(function () {
 
         $('html').on('click', '#cathedrale', function () {
 
-            secondMarker.setPopupContent('<h4>Là où tout devient clair</h4><p>Dans la cathédrale, j\’ai trouvé un extrait de l\’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.</p><p>A l\’aide du texte, tu pourras traduire:</p><%= image_tag("enigme1.png") %><center><p id="openbook">Ouvrir le Livre</p></center><p id="message_alert"><center><input id="reponse1" type="text" placeholder="Saisir la réponse ici"/><button id="valider1">Valider</button></center>');
+            secondMarker.setPopupContent('<h4>Là où tout devient clair</h4><p>Dans la cathédrale, j\’ai trouvé un extrait de l\’Évangile selon Saint-Jean. C’est un Évangile que l’on trouve également dans le Codex.</p><p>A l\’aide du texte, vous pourrez traduire:</p><%= image_tag("enigme1.png") %><center><p id="openbook">Ouvrir le Livre</p></center><p id="message_alert"><center><input id="reponse1" type="text" placeholder="Saisir la réponse ici"/><button id="valider1">Valider</button></center>');
 
             $('html').on('click', '#openbook', function () {
 
@@ -382,7 +382,7 @@ $(document).ready(function () {
 
                     $('html').on('click', '#artistestart', function () {
 
-                        fifthMarker.setPopupContent('<h4>Là où les arts et les maths se rejoignent</h4><p>C\'est étrange, le bâtiment est assez différent de ce que j\'imaginais.</p><p>J\'ai trouvé ce matin un message sous ma porte de chambre qui m\'a fait froid dans le dos. J\'ai donc décidé de protéger mes dernières conclusions dans ma boîte de sureté et j\'en ai changé le code. Pour être sûr que toi seul puisses le retrouver, j\'ai fait appel à ton goût pour les mathématiques :</p><p><center><em>Soustrais le nombre de cloches se trouvant sur le toit au nombre d\'arches en rez de jardin.</p><p>Multiplie ce chiffre par le nombre de fenêtres ouvertes sur la photo.</p><p>Ajoutes-y le nombre de fenêtres présentes sur la façace (aux premier, second et troisième étages) et multiplie le tout par le nombre d\'années qu\'a vécu Saturnin Arloing, célèbre vétérinaire ayant occupé les lieux.</em></center></p><center><p id="openimg">Voir le Conservatoire</p></center><p id="message_alert4"><center><input id="reponse4" type="text" placeholder="Saisir la réponse ici"/><button id="valider4">Valider</button></center>');
+                        fifthMarker.setPopupContent('<h4>Là où les arts et les maths se rejoignent</h4><p>C\'est étrange, le bâtiment est assez différent de ce que j\'imaginais.</p><p>J\'ai trouvé ce matin un message sous ma porte de chambre qui m\'a fait froid dans le dos. J\'ai donc décidé de protéger mes dernières conclusions dans ma boîte de sureté et j\'en ai changé le code. Pour être sûr que vous seul puisses le retrouver, j\'ai fait appel à ton goût pour les mathématiques :</p><p><center><em>Soustrais le nombre de cloches se trouvant sur le toit au nombre d\'arches en rez de jardin.</p><p>Multiplie ce chiffre par le nombre de fenêtres ouvertes sur la photo.</p><p>Ajoutes-y le nombre de fenêtres présentes sur la façace (aux premier, second et troisième étages) et multiplie le tout par le nombre d\'années qu\'a vécu Saturnin Arloing, célèbre vétérinaire ayant occupé les lieux.</em></center></p><center><p id="openimg">Voir le Conservatoire</p></center><p id="message_alert4"><center><input id="reponse4" type="text" placeholder="Saisir la réponse ici"/><button id="valider4">Valider</button></center>');
 
                         $('html').on('click', '#openimg', function () {
 
@@ -463,22 +463,22 @@ $(document).ready(function () {
                                         $('html').on('click', '#startgame7', function () {
 
 
-                                            seventhMarker.setPopupContent('<center><h4>A l\'intérieur de l\'église</h4></center><br><%= image_tag("plantr.gif", class: "egliseplan", usemap:"#exemple-map-1") %><p>Souviens-toi, grace aux énigmes, tu as pu découvrir que les pages manquantes du codex se trouvaient à l\'intérieur de l\'église...</p><p>Mais dans quelle partie de l\'église ?</p>');
+                                            seventhMarker.setPopupContent('<center><h4>A l\'intérieur de l\'église</h4></center><br><%= image_tag("plantr.gif", class: "egliseplan", usemap:"#exemple-map-1") %><p>Souvenez-vous, grace aux énigmes, vous avez pu découvrir que les pages manquantes du codex se trouvaient à l\'intérieur de l\'église...</p><p>Mais dans quelle partie de l\'église ?</p>');
 
 
 
                                             seventhMarker.openPopup();
 
                                             $('html').on('click','#plan_true',function(){
-                                                seventhMarker.setPopupContent('<center><h4>Bienvenue dans la crypte</h4></center><br><p>Le coffre est tout près...</p><%= image_tag("cryptetr.jpg", class: "cryptecoffre") %>');
+                                                seventhMarker.setPopupContent('<center><h4>Bienvenue dans la crypte</h4></center><br><p><center>Le coffre est tout près...</center></p><%= image_tag("cryptetr.jpg", class: "cryptecoffre") %>');
 
                                             });
 
 
                                             $('html').on('click','#plan_false',function(){
-                                                seventhMarker.setPopupContent('<h4>Ce n\'est pas l\'endroit où il faut se rendre</h4><p class="essai">Essayer à nouveau</p>');
+                                                seventhMarker.setPopupContent('<h4>Ce n\'est pas l\'endroit où il faut se rendre</h4><p class="essai"><center><strong class="essai">Essayer à nouveau</strong></center></p>');
                                                 $('html').on('click','.essai',function(){
-                                                    seventhMarker.setPopupContent('<center><h4>A l\'intérieur de l\'église</h4></center><br><%= image_tag("plantr.gif", class: "egliseplan", usemap:"#exemple-map-1") %><p>Souviens-toi, grace aux énigmes, tu as pu découvrir que les pages manquantes du codex se trouvaient à l\'intérieur de l\'église...</p><p>Mais dans quelle partie de l\'église ?</p>');
+                                                    seventhMarker.setPopupContent('<center><h4>A l\'intérieur de l\'église</h4></center><br><%= image_tag("plantr.gif", class: "egliseplan", usemap:"#exemple-map-1") %><p>Souvenez-vous, grêce aux énigmes, vous avez pu découvrir que les pages manquantes du codex se trouvaient à l\'intérieur de l\'église...</p><p>Mais dans quelle partie de l\'église ?</p>');
 
                                                 })
                                             });
@@ -493,7 +493,10 @@ $(document).ready(function () {
 
                                             $('html').on('click', '.cryptecoffre', function () {
 
-                                                seventhMarker.setPopupContent('<h4>Là où l\'on obtient des réponses</h4><p>Bravo cher(e) Ami(e).</p><p>Tu es parvenu au lieu final de notre quête !</p><p>J\'ai pu identifier le lieu où reposent les pages du codex Bezae. C\'est sous terre qu\'elles sont dissimulées à la vue de tous. Dans la cour de l\'église Saint-Irénée, on trouve un portail qui mène à des souterrains qui se perdent sous la ville de Lyon. Ces souterrains ont d\'ailleurs été utilisés par les résistants durant les différentes guerres.</p><p>J\'ai pu retrouver une page lors de mes explorations et je l\'ai dissimulée dans la crypte, car j\'ai peur que notre initiative ne soit pas vue d\'un bon œil par ceux qui gardent le secret.</p><p>Gràce au code obtenu lors de notre voyage, vous découvrirez la page manqante du Codex Bezae dans un coffre fort caché dans la crypte.</p></center><p id="message_alert6"><center><input id="reponse6" type="text" placeholder="Saisir le code ici"/><button id="valider6">Valider</button></center>');
+
+                                                seventhMarker.setPopupContent('<h4>Là où l\'on obtient des réponses</h4><p>Bravo cher(e) Ami(e).</p><p>Vous êtes parvenu au lieu final de notre quête !</p><p>J\'ai pu identifier le lieu où reposent les pages du codex Bezae. C\'est sous terre qu\'elles sont dissimulées à la vue de tous. Dans la cour de l\'église Saint-Irénée, on trouve un portail qui mène à des souterrains qui se perdent sous la ville de Lyon. Ces souterrains ont d\'ailleurs été utilisés par les résistants durant les différentes guerres.</p><p>J\'ai pu retrouver une page lors de mes explorations et je l\'ai dissimulée dans la crypte, car j\'ai peur que notre initiative ne soit pas vue d\'un bon œil par ceux qui gardent le secret.</p><p>Gràce au code obtenu lors de notre voyage, vous découvrirez la page manqante du Codex Bezae dans le coffre fort que vous venez de découvrir.</p></center><p id="message_alert6"><center><input id="reponse6" type="text" placeholder="Saisir le code ici"/><button id="valider6">Valider</button></center>');
+
+                                                
 
                                                 function verif6() {
 

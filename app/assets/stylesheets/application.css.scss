@@ -414,7 +414,9 @@ em {
 #next_step5,
 #startgame7,
 #endstart,
-.note {
+.note,
+.essai,
+.cryptecoffre {
     cursor: pointer;
 }
 
@@ -582,7 +584,10 @@ span img,
     display: none;
     font-size: 2rem;
 }
+<<<<<<< HEAD
 
 .essai{
     cursor: pointer;
 }
+=======
+>>>>>>> fond_et_nav
