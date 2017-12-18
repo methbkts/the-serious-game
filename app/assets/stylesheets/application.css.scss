@@ -451,7 +451,7 @@ em {
 // Page About
 .about {
     font-family: 'IM Fell English', serif;
-    padding: 30px;
+    //padding: 30px;
     text-align: center;
     background-color: rgba(250, 250, 250, 1);
     box-shadow: 2px 2px 2px 2px #E1DBD7, -2px -2px 2px 2px #E1DBD7;
@@ -460,14 +460,6 @@ em {
 .about h1,
 .about h2 {
     color: rgba(63, 104, 100, 1);
-}
-
-.about p,
-.about h1,
-.about h2,
-.about h3,
-.about a {
-    font-family: 'IM Fell English', serif;
 }
 
 .gamification p:last-child {
