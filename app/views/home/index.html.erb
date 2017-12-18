@@ -1,24 +1,24 @@
 <% if user_signed_in? %>
 
-<div class="section1 col-sm-12">
-    <div class="row justify-content-center">
+    <div class="section1 col-sm-12">
+        <div class="row justify-content-center">
 
-        <div class=" col-sm-4 personnage">
-            <%= image_submit_tag("perso_homme.png", width: '300px', class: 'personnage_h start img-responsive') %>
+            <div class=" col-sm-4 personnage">
+                <%= image_submit_tag("perso_homme.png", width: '300px', class: 'personnage_h start img-responsive') %>
 
-        </div>
+            </div>
 
-        <div class="col-sm-4 personnage">
-            <p id="main_titre"><strong>Choisis ton personnage</strong></p>
-        </div>
+            <div class="col-sm-4 personnage">
+                <p id="main_titre"><strong>Choisis ton personnage</strong></p>
+            </div>
 
-        <div class="col-sm-4 personnage">
-            <%= image_submit_tag("perso_femme.png", width: '300px', class: 'personnage_f start img-responsive') %>
+            <div class="col-sm-4 personnage">
+                <%= image_submit_tag("perso_femme.png", width: '300px', class: 'personnage_f start img-responsive') %>
 
-        </div>
+            </div>
 
-        
-        <map name="exemple-map-1">
+
+            <map name="exemple-map-1">
 
          <area id="plan_true" shape="rect" coords="20,190,80,295"
          href="#" alt="exemple de rectangle" />
@@ -29,7 +29,7 @@
 
      </map>
 
-     <map name="exemple-map-2">
+            <map name="exemple-map-2">
 
          <area id="coffret" shape="rect" coords="100,90,120,120"
          href="#" alt="exemple de rectangle" />
@@ -37,64 +37,69 @@
 
 
 
-     <div class="row satisfaction col-sm-6">
-        <div class="row satis col-sm-12 align-items-center">
+            <div class="row satisfaction col-sm-6">
+                <div class="row satis col-sm-12 align-items-center">
 
-            <h1>Merci d'avoir participé à notre jeu</h1>
-            <h2>N'oubliez pas de noter notre application!</h2><br>
+                    <h1>Merci d'avoir participé à notre jeu</h1>
+                    <h2>N'oubliez pas de noter notre application!</h2><br>
 
-            <div class="etoiles">
-                <div class="etoile" id="1" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
-                <div class="etoile" id="2" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
-                <div class="etoile" id="3" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
-                <div class="etoile" id="4" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
-                <div class="etoile" id="5" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
-            </div><br>
-            <input class="commentaire" type="text" placeholder="Commentaire...">
-            <h2>À bientôt</h2>
-            <div class="final">Valider</div>
+                    <div class="etoiles">
+                        <div class="etoile" id="1" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
+                        <div class="etoile" id="2" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
+                        <div class="etoile" id="3" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
+                        <div class="etoile" id="4" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
+                        <div class="etoile" id="5" onmouseenter="manageStars(this)"><i class="fa fa-star" aria-hidden="true"></i></div>
+                    </div><br>
+                    <input class="commentaire" type="text" placeholder="Commentaire...">
+                    <h2>À bientôt</h2>
+                    <div class="final">Valider</div>
+                </div>
+            </div>
+            <div class="merci">
+                <p>Merci d'avoir participé!</p><a href="<%root_path%>"><i class="fa fa-times-circle" aria-hidden="true"></i></a></div>
         </div>
-    </div>
-    <div class="merci"><p>Merci d'avoir participé!</p><a href="<%root_path%>"><i class="fa fa-times-circle" aria-hidden="true"></i></a></div>
-</div>
 
-<div id="mapid" class="col-sm-12">
-    <div class="leaflet-top leaflet-right">
-        <input type="button" id="Btn3" value="Recentrer la carte" class="btnStyle span3 leaflet-control" />
-    </div>
-</div>
-<div class="audio row justify-content-center">
-  <br>
+        <div id="mapid" class="col-sm-12">
+            <div class="leaflet-top leaflet-right">
+                <input type="button" id="Btn3" value="Recentrer la carte" class="btnStyle span3 leaflet-control" />
+            </div>
+        </div>
+        <div class="audio row justify-content-center">
+            <br>
 
-  <div class="control_audio"><i class="fa fa-volume-up fa-2x" aria-hidden="true"></i></div>
-  <%= audio_tag "sound.mp3", id: "sound", class: "audio_to_play", preload: "auto", loop: "true"%>
-
-</div>
-<% else %>
-
-<div class="row col-sm-12 justify-content-center">
-    <div class="titre_div col-sm-12"><h1 class="titre">CODEX BEZAE</h1></div>
-    <div class="welcome col-sm-6">
-        <div class="pitch">
-
-            <p>Rejoins l'historien Epiphane dans sa quête des pages disparues du Codex Bezae.</p>
-            <p>Arpente la ville, découvre les indices dissimulés dans les plus anciens bâtiments de Lyon et aide à résoudre une des plus grandes intrigues historiques!!</p>
-            <h5><%= link_to 'JOUER', new_user_session_path, class:'jouer_lien' %></h5>
+            <div class="control_audio"><i class="fa fa-volume-up fa-2x" aria-hidden="true"></i></div>
+            <%= audio_tag "sound.mp3", id: "sound", class: "audio_to_play", preload: "auto", loop: "true"%>
 
         </div>
+        <% else %>
+
+            <div class="row col-sm-12 justify-content-center">
+                <div class="titre_div col-sm-12">
+                    <h1 class="titre">CODEX BEZAE</h1>
+                </div>
+                <div class="welcome col-sm-6">
+                    <div class="pitch">
+
+                        <p>Rejoins l'historien Epiphane dans sa quête des pages disparues du Codex Bezae.</p>
+                        <p>Arpente la ville, découvre les indices dissimulés dans les plus anciens bâtiments de Lyon et aide à résoudre une des plus grandes intrigues historiques!!</p>
+                        <h5>
+                            <%= link_to 'JOUER', new_user_session_path, class:'jouer_lien' %>
+                        </h5>
+
+                    </div>
+                </div>
+            </div>
     </div>
-</div>
-</div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<script> 
-    $(document).ready(function(){
-        $(".titre").click(function(){
-            $(".welcome").fadeIn(3000);
+    <script>
+        $(document).ready(function() {
+            $(".titre").click(function() {
+                $(".welcome").fadeIn(3000);
+            });
         });
-    });
-</script>
 
-<% end %>
+    </script>
 
+    <% end %>

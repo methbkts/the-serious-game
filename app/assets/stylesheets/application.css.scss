@@ -419,8 +419,7 @@ em {
 #startgame7,
 #endstart,
 .note,
-.essai
-{
+.essai {
     cursor: pointer;
 }
 
@@ -451,8 +450,7 @@ em {
 
 // Page About
 .about {
-    font-family: 'IM Fell English', serif;
-    //padding: 30px;
+    font-family: 'IM Fell English', serif; //padding: 30px;
     text-align: center;
     background-color: rgba(250, 250, 250, 1);
     box-shadow: 2px 2px 2px 2px #E1DBD7, -2px -2px 2px 2px #E1DBD7;
@@ -583,6 +581,6 @@ span img,
     font-size: 2.3rem;
 }
 
-.fa-times-circle{
+.fa-times-circle {
     color: black;
 }
