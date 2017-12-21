@@ -96,6 +96,8 @@ var seventhMarker = L.marker([45.755086, 4.813786], {
     title: 'Lieu final - Eglise Saint-Irénée'
 });
 
+var etape = localStorage.getItem("etape");
+
 var baseColor = 'grey';
 var player = document.getElementById('sound');
 var audioStatut = 'on';
@@ -149,13 +151,18 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-
+    $('html').on('click', '.deconnection_lien', function () {
+        localStorage.setItem("etape","0");
+        confirm('Si vous vous déconnectez, votre partie ne sera pas sauvegardée. Voulez-vous vraiment vous déconnecter?');
+        
+    });
+    //Recentrer la carte
     $('html').on('click', '#Btn3', function () {
 
         map.panTo(new L.LatLng(45.760041, 4.8351343));
     });
 
-
+    //Début de partie
     $('html').on('click', '.start', function () {
 
         $('.personnage').hide();
@@ -172,6 +179,7 @@ $(document).ready(function () {
 
         player.play();
 
+        //Gestion du son
         $('html').on('click', '.control_audio', function () {
             if (audioStatut === 'on') {
                 player.pause();
@@ -185,11 +193,32 @@ $(document).ready(function () {
                 $('.control_audio').html('<i class="fa fa-volume-up fa-2x" aria-hidden="true"></i>')
             }
         });
-
+        //alerte avant de sortir de la page
         $(window).on('beforeunload', function () {
             return 'La partie ne sera pas sauvegardée';
         });
     });
+
+    if (etape==='2'){
+         $('.personnage').hide();
+
+        $('body').append('<style>body:before{-webkit-filter: blur(1.5px) sepia(100%) grayscale(80%) contrast(50%) opacity(50%); -moz-filter: blur(1.5px) sepia(90%) grayscale(80%) contrast(50%) opacity(50%); -o-filter: blur(1.5px) sepia(90%) grayscale(80%) contrast(50%) opacity(50%); -ms-filter: blur(1.5px) sepia(90%) grayscale(80%) contrast(50%) opacity(50%); filter: blur(1.5px) sepia(90%) grayscale(80%) contrast(50%) opacity(50%); transform: scale(1.02)!important;}</style>');
+
+        $('#mapid').css('height', '40rem');
+
+        $('.control_audio').fadeIn();
+
+        map.invalidateSize();
+
+        $('#mapid').fadeTo(2000, 1);
+
+        player.play();
+       firstMarker.addTo(map) ;
+       secondMarker.addTo(map);
+       thirdMarker.addTo(map);
+       thirdMarker.bindPopup('testok').openPopup();
+
+    }else{
 
     firstMarker.addTo(map)
         .bindPopup('<p id="startmap">Commencer</p>').openPopup();
@@ -249,7 +278,13 @@ $(document).ready(function () {
 
                     $('#message_alert').html('Bien joué ' + role + '! Pour passer à l\'étape suivante, <span id="next_step">cliquez ici</span>').css('color', 'white').css('background-color', 'green').css('text-align', 'center').css('font-size', '1rem');
 
+                    localStorage.setItem("etape","1");
+
+
+                    
                     $('html').on('click', '#next_step', function () {
+                        localStorage.setItem("etape","1");
+                        alert(etape);
 
                         map.removeLayer(popup);
                         secondMarker.closePopup();
@@ -258,7 +293,7 @@ $(document).ready(function () {
 
                         thirdMarker.addTo(map)
                             .bindPopup('<span id="startgame3"><%= image_tag("rue_merciere.jpg", width: "300px") %><center><h6>Rue Mercière</h6></center></span>').openPopup();
-
+                        
                         $('html').on('click', '#startgame3', function () {
 
                             thirdMarker.setPopupContent('<h4>Là où il y a des tâches d\'encre</h4><p>Cher Ami,</p><p>Lyon est la capitale de beaucoup de domaines : la capitale des Gaules, celle de la gastronomie... mais également celle de l\'imprimerie en son temps.</p><p>En 1472, Barthélemy Buyer installe le premier atelier dans sa maison sur les quais de Saône. Au cours du siècle suivant, presque un tiers des éditions françaises sont imprimées à Lyon notamment dans la rue Mercière et ses alentours.</p><p>Beaucoup d\'imprimeurs sont d\'ailleurs protestants. Tant et si bien que lorsque la ville fut reprise par les catholiques, ils fuirent aux Pays-Bas ou à Genève. C\'est d\'ailleurs là-bas que s\'était réfugié Théodore de Bèze. Il y réceptionna le Codex, qu\'il avait demandé à ses amis de voler pour lui.</p><p>Mais au IXème siècle, bien avant la Bible de Gutenberg et les presses, Lyon a accueilli un diacre reconnu pour son ouvrage littéraire : Florus. Celui-ci a été authentifié comme l\'auteur de plusieurs pages du Codex.</p><p>Le musée de l\'imprimerie, déjà en lien avec le Codex par ces biais, possède également les Tables Claudiennes, qui, bien qu\'antérieures à la disparition des pages, a visiblement inspiré ceux qui les ont cachées.</p><center><h6 id="encre">Commencer</h6></center>');
@@ -300,7 +335,15 @@ $(document).ready(function () {
 
                         $('#message_alert2').html('Bien joué ! Pour passer à l\'étape suivante, <span id="next_step2">cliquez ici</span>').css('color', 'white').css('background-color', 'green').css('text-align', 'center').css('font-size', '1rem');
 
+                        
+
                         $('html').on('click', '#next_step2', function () {
+                            //supprime première donnée
+                            //localStorage.removeItem(etape);
+                                //inscris à quelle étape nous en sommes
+                                localStorage.setItem("etape","2");
+                                //ligne de verif pour voir quelle étape a été enregistrée
+                                alert(etape);
 
                             thirdMarker.closePopup();
 
@@ -308,9 +351,10 @@ $(document).ready(function () {
 
                             fourthMarker.addTo(map)
                                 .bindPopup('<span id="startgame4"><%= image_tag("theatre_antique_fourviere.jpg", width: "300px") %><center><h6>Théatre Antique de Fourvière</h6></center></span>').openPopup();
-
+                                
+                            
                             $('html').on('click', '#startgame4', function () {
-
+                                
                                 fourthMarker.setPopupContent('<h4>Là où j\'ai retrouvé Cybèle</h4><p>Cher Ami,</p><p>Je suis allé visiter le Théâtre de Fourvière, l\'Odéon, le musée qui y est accolé est le temple de Cybèle. J\'aime beaucoup l\'idée de donner une seconde vie à ces lieux en y organisant des concerts où les spectateurs peuvent venir assister à des spectacles, presque dans les conditions de l\'époque ! Bien que dans le temps, celui-ci possédait un mur en fond de scène et était probablement couvert.</p><p>J\'ai appris que le Théâtre a été trouvé par hasard, alors que les fouilles avaient pour but de localiser l’Amphithéâtre des 3 Gaules.</p><p>Le lieu daterait de la fin du 1er siècle, soit en même temps que le texte fondateur du Codex... Les personnes qui ont caché les pages semblent faire un lien. J\'ai donc cherché un lien entre le lieu d\'origine du Codex, la Phrygie, et le Théâtre.</p><p>Ce qui m\'amène à Cybèle, grande déesse-Mère de l\'Antiquité au Proche Orient, symbole de la nature sauvage et de la fertilité... C\'est en parcourant le supposé temple que j\'ai trouvé l\'indice suivant.</p><center><h6 id="cybelestart">Commencer</h6></center>');
 
                                 fourthMarker.openPopup();
@@ -349,6 +393,8 @@ $(document).ready(function () {
                         if (xValue3 == '\u0063\u0068\u0072\u0069\u0073\u006d\u0065') {
 
                             $('#message_alert3').html('Bien joué ! Pour passer à l\'étape suivante, <span id="next_step3">cliquez ici</span>').css('color', 'white').css('background-color', 'green').css('text-align', 'center').css('font-size', '1rem');
+                            //inscris à quelle étape nous en sommes
+                                localStorage.setItem("etape","3");
 
                             $('html').on('click', '#next_step3', function () {
 
@@ -358,7 +404,7 @@ $(document).ready(function () {
 
                                 fifthMarker.addTo(map)
                                     .bindPopup('<span id="startgame5"><%= image_tag("conservatoire.jpg", width: "300px") %><center><h6>Conservatoire National Supérieur de Musique et de Danse</h6></center></span>').openPopup();
-
+                                    alert(etape);
                                 $('html').on('click', '#startgame5', function () {
 
                                     fifthMarker.setPopupContent('<h4>Là où les artistes grandissent</h4><p>Cher Ami,</p><p>Mon instinct me dit que les prêtres qui ont sauvegardé les pages du Codex ont bien dû se cacher le temps que les catholiques reprennent la ville après la révolte des Huguenots.</p><p>De ce fait, et après quelques recherches, j\'ai retrouvé leur trace dans un couvent des bords de Saône. Malheureusement, le couvent des cordeliers de l\'observance a lui aussi été en partie détruit par les protestants et j\'ai peu d\'indices sur le temps qu\'ils y ont passé.</p><p>Cela dit, l\'édifice mérite d\'être observé : depuis les thermes de la période gallo-romaine, jusqu\'au conservatoire national supérieur de musique et de danse aujourd\'hui, ce ne sont pas moins de 2 couvents, un hôpital et une école vétérinaire qui se sont succédé en ces lieux.</p><center><h6 id="artistestart">Commencer</h6></center>');
@@ -406,6 +452,8 @@ $(document).ready(function () {
 
                                 $('#message_alert4').html('Bien joué ' + role + '! Pour passer à l\'étape suivante, <span id="next_step4">cliquez ici</a>').css('color', 'white').css('background-color', 'green').css('text-align', 'center').css('font-size', '1rem');
 
+                                localStorage.setItem("etape","4");
+
                                 $('html').on('click', '#next_step4', function () {
 
                                     map.removeLayer(popup2);
@@ -415,7 +463,7 @@ $(document).ready(function () {
 
                                     sixthMarker.addTo(map)
                                         .bindPopup('<span id="startgame6"><%= image_tag("Trois_Gaules.jpg", width: "300px") %><center><h6>Amphithéatre des 3 Gaules</h6></center></span>').openPopup();
-
+                                        alert(etape);
                                     $('html').on('click', '#startgame6', function () {
 
                                         sixthMarker.setPopupContent('<h4>Là où j\'ai visité les martyrs</h4></center><p>Cher Ami,</p><p>Lyon est vraiment une ville riche pour quiconque s\'intéresse à son histoire. Notre quête vient juste de me mener à l\'Amphithéâtre des 3 Gaules.</p><p>C\'est le plus ancien amphithéâtre romain de la Gaule et il permettait à près de 20 000 personnes de témoigner leur fidélité à Rome et d\'assister aux jeux du cirque.</p><p>En 177 après J-C, les spectateurs ont assisité au supplice des martyrs chrétiens de Gaule: 48 personnes dont la célébre Sainte-Blandine et le premier évêque de Lyon: Saint-Pothin.</p><p>La légende raconte que Blandine fût une jeune esclave qui, après avoir été incarcérée, fut livrée aux lions avec ses compagnons. Les bêtes refusèrent de lui faire le moindre mal. Elle fut ensuite torturée, tandis que les autres furent assassinés devant elle, puis flagellée et brûlée au grill et enfin enfermée dans un filet et livrée à un taureau. Cela ne suffit cependant pas à la tuer et c\'est finalement sous la lame d\'un bourreau qu\'elle rendit son dernier souffle, sans jamais avoir renié sa foi.</p><p>Dans les faits, Blandine aurait été une femme mûre.</p><p>Mais l\'intégralité de son martyr est avéré.</p><center><h6 id="blandinestart">Commencer</h6></center>');
@@ -457,6 +505,8 @@ $(document).ready(function () {
 
                                     $('#message_alert5').html('Bien joué ! Pour vous rendre à l\'église Saint-Irénée, <span id="next_step5">cliquez ici</span>').css('color', 'white').css('background-color', 'green').css('text-align', 'center').css('font-size', '1rem');
 
+                                    localStorage.setItem("etape","5");
+
                                     $('html').on('click', '#next_step5', function () {
 
                                         sixthMarker.closePopup();
@@ -465,7 +515,7 @@ $(document).ready(function () {
 
                                         seventhMarker.addTo(map)
                                             .bindPopup('<span id="startgame7"><%= image_tag("stirenee.JPG", width: "300px") %><center><h6>Eglise Saint-Irénée</h6></center></span>').openPopup();
-
+                                            alert(etape);
                                         $('html').on('click', '#startgame7', function () {
 
                                             seventhMarker.setPopupContent('<center><h4>A l\'intérieur de l\'église</h4></center><br><%= image_tag("plantr.gif", class: "egliseplan", usemap:"#exemple-map-1") %><p>Souvenez-vous, grace aux énigmes, vous avez pu découvrir que les pages manquantes du codex se trouvaient à l\'intérieur de l\'église...</p><p>Mais dans quelle partie de l\'église ?</p>');
@@ -568,4 +618,5 @@ $(document).ready(function () {
             });
         });
     });
+    }   
 });
