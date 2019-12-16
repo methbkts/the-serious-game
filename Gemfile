@@ -13,10 +13,10 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
-gem 'bootstrap', '~> 4.1.3'
+gem 'bootstrap'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
-gem 'font-awesome-sass', '~> 4.7.0'
+gem 'font-awesome-sass'
 gem "autoprefixer-rails"
 
 group :development, :test do
