@@ -19,15 +19,18 @@ gem 'font-awesome-sass', "~> 4.7.0"
 gem "autoprefixer-rails"
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'capybara', '~> 2.13'
-  gem 'selenium-webdriver'
   gem 'sqlite3'
+  gem "debug", "~> 1.5", platforms: %i[ mri mingw x64_mingw ]
 end
 
 group :development do
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
+end
+
+group :test do
+  gem 'capybara', '~> 2.13'
+  gem 'selenium-webdriver'
 end
 
 group :production do
