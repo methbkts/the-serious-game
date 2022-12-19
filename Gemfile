@@ -3,18 +3,18 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.6.5"
 
-gem 'rails', '5.1.6'
-gem 'puma', '5.6.4'
+gem 'rails', '~> 5.1.4'
+gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.11'
+gem 'jbuilder', '~> 2.5'
 gem 'devise'
-gem 'bootstrap'
+gem 'bootstrap', '~> 4.0'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
-gem 'font-awesome-sass'
+gem 'font-awesome-sass', "~> 4.7.0"
 gem "autoprefixer-rails"
 
 group :development, :test do
@@ -32,5 +32,5 @@ group :development do
 end
 
 group :production do
-  gem 'pg', '1.3.5'
+  gem 'pg', '0.20.0'
 end
