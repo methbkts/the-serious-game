@@ -7,4 +7,4 @@ test:
 production:
   adapter: redis
   url: redis://localhost:6379/1
-  channel_prefix: the-serious-game_production
+  channel_prefix: the_serious_game_production
